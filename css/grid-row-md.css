@@ -1,0 +1,230 @@
+/* GRID ROW-MD
+The Grid it is building for pattern Mobile first 
+The screen is falowing the standart 18:9; contenting 12 cols;
+razon: 18 / 9 = 2 | cols = 12 and rows = 24
+Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
+Were on content 12 cols the of width;
+*/
+
+/* Tablets - Middle Devices (Tablets, 680px > 767px) */
+@media ( min-height: 600px ) {
+    body .row-md-fluid {
+        height: auto !important;
+    }
+
+    body .row-md-1 {
+        height: calc( 100vh / 24 );
+        min-height: calc( 100vh / 24 );
+    }
+
+    body .row-md-2 {
+        height: calc( ( 100vh / 24 ) * 2 );
+        min-height: calc( ( 100vh / 24 ) * 2 );
+    }
+
+    body .row-md-3 {
+        height: calc( ( 100vh / 24 ) * 3 );
+        min-height: calc( (100vh / 24 ) * 3 );
+    }
+
+    body .row-md-4 {
+        height: calc( ( 100vh / 24 ) * 4 );
+        min-height: calc( ( 100vh / 24 ) * 4 );
+    }
+
+    body .row-md-5 {
+        height: calc( ( 100vh / 24 ) * 5 );
+        min-height: calc( ( 100vh / 24 ) * 5 );
+    }
+
+    body .row-md-6 {
+        height: calc( ( 100vh / 24 ) * 6 );
+        min-height: calc( ( 100vh / 24 ) * 6 );
+    }
+
+    body .row-md-7 {
+        height: calc( ( 100vh / 24 ) * 7 );
+        min-height: calc( ( 100vh / 24 ) * 7 );
+    }
+
+    body .row-md-8 {
+        height: calc( ( 100vh / 24 ) * 8 );
+        min-height: calc( ( 100vh / 24 ) * 8 );
+    }
+
+    body .row-md-9 {
+        height: calc( ( 100vh / 24 ) * 9 );    
+        min-height: calc( ( 100vh / 24 ) * 9 );
+    }
+
+    body .row-md-10 {
+        height: calc( ( 100vh / 24 ) * 10 );
+        min-height: calc( ( 100vh / 24 ) * 10 );
+    }
+
+    body .row-md-11 {
+        height: calc( ( 100vh / 24 ) * 11 );
+        min-height: calc( ( 100vh / 24 ) * 11 );
+    }
+
+    body .row-md-12 {
+        height: calc( ( 100vh / 24 ) * 12 );
+        min-height: calc( ( 100vh / 24 ) * 12 );
+    }
+
+    body .row-md-13 {
+        height: calc( ( 100vh / 24 ) * 13 );
+        min-height: calc( ( 100vh / 24 ) * 13 );
+    }
+
+    body .row-md-14 {
+        height: calc( ( 100vh / 24 ) * 14 );
+        min-height: calc( ( 100vh / 24 ) * 14 );
+    }
+
+    body .row-md-15 {
+        height: calc( ( 100vh / 24 ) * 15 );
+        min-height: calc( ( 100vh / 24 ) * 15 );
+    }
+
+    body .row-md-16 {
+        height: calc( ( 100vh / 24 ) * 16 );
+        min-height: calc( ( 100vh / 24 ) * 16 );
+    }
+
+    body .row-md-17 {
+        height: calc( ( 100vh / 24 ) * 17 );
+        min-height: calc( ( 100vh / 24 ) * 17 );
+    }
+
+    body .row-md-18 {
+        height: calc( ( 100vh / 24 ) * 18 );
+        min-height: calc( ( 100vh / 24 ) * 18 );
+    }
+
+    body .row-md-19 {
+        height: calc( ( 100vh / 24 ) * 19 );
+        min-height: calc( ( 100vh / 24 ) * 19 );
+    }
+
+    body .row-md-20 {
+        height: calc( ( 100vh / 24 ) * 20 );
+        min-height: calc( ( 100vh / 24 ) * 20 );
+    }
+
+    body .row-md-21 {
+        height: calc( ( 100vh / 24 ) * 21 );
+        min-height: calc( ( 100vh / 24 ) * 21 );
+    }
+
+    body .row-md-22 {
+        height: calc( ( 100vh / 24 ) * 22 );
+        min-height: calc( ( 100vh / 24 ) * 22 );
+    }
+
+    body .row-md-23 {
+        height: calc( ( 100vh / 24 ) * 23 );
+        min-height: calc( ( 100vh / 24 ) * 23 );
+    }
+
+    body .row-md-24 {
+        height: calc( 100vh - 0.2px );
+        min-height: calc( 480px - 0.2px );
+    }
+
+    body .row-md-offset-1 {
+        margin-top: calc( 100vh / 24 );
+    }
+
+    body .row-md-offset-2 {
+        margin-top: calc( ( 100vh / 24 ) * 2 );
+    }
+
+    body .row-md-offset-3 {
+        margin-top: calc( ( 100vh / 24 ) * 3 );
+    }
+
+    body .row-md-offset-4 {
+        margin-top: calc( ( 100vh / 24 ) * 4 );
+    }
+
+    body .row-md-offset-5 {
+        margin-top: calc( ( 100vh / 24 ) * 5 );
+    }
+
+    body .row-md-offset-6 {
+        margin-top: calc( ( 100vh / 24 ) * 6 );
+    }
+
+    body .row-md-offset-7 {
+        margin-top: calc( ( 100vh / 24 ) * 7 );
+    }
+
+    body .row-md-offset-8 {
+        margin-top: calc( ( 100vh / 24 ) * 8 );
+    }
+
+    body .row-md-offset-9 {
+        margin-top: calc( ( 100vh / 24 ) * 9 );
+    }
+
+    body .row-md-offset-10 {
+        margin-top: calc( ( 100vh / 24 ) * 10 );
+    }
+
+    body .row-md-offset-11 {
+        margin-top: calc( ( 100vh / 24 ) * 11 );
+    }
+
+    body .row-md-offset-12 {
+        margin-top: calc( ( 100vh / 24 ) * 12 );
+    }
+
+    body .row-md-offset-13 {
+        margin-top: calc( ( 100vh / 24 ) * 13 );
+    }
+
+    body .row-md-offset-14 {
+        margin-top: calc( ( 100vh / 24 ) * 14 );
+    }
+
+    body .row-md-offset-15 {
+        margin-top: calc( ( 100vh / 24 ) * 15 );
+    }
+
+    body .row-md-offset-16 {
+        margin-top: calc( ( 100vh / 24 ) * 16 );
+    }
+
+    body .row-md-offset-17 {
+        margin-top: calc( ( 100vh / 24 ) * 17 );
+    }
+
+    body .row-md-offset-18 {
+        margin-top: calc( ( 100vh / 24 ) * 18 );
+    }
+
+    body .row-md-offset-19 {
+        margin-top: calc( ( 100vh / 24 ) * 19 );
+    }
+
+    body .row-md-offset-20 {
+        margin-top: calc( ( 100vh / 24 ) * 20 );
+    }
+
+    body .row-md-offset-21 {
+        margin-top: calc( ( 100vh / 24 ) * 21 );
+    }
+
+    body .row-md-offset-22 {
+        margin-top: calc( ( 100vh / 24 ) * 22 );
+    }
+
+    body .row-md-offset-23 {
+        margin-top: calc( ( 100vh / 24 ) * 23 );
+    }
+
+    body .row-md-offset-24 {
+        margin-top: calc( 100vh - 0.2px );
+    }
+}
