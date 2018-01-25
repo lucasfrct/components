@@ -1,0 +1,28 @@
+header {
+	padding: 2em;
+	background-color: #FFF;
+	clear: both;
+}
+
+header::after {
+	content: "";
+	clear: both;
+}
+
+header > nav > ul {
+	padding: 0.25em;
+}
+
+header > nav > ul > li {
+	width: calc( ( 100% / 3 ) - 3px);
+	display: inline-block;
+	margin: 5px 0;	
+}
+
+header > nav > ul > li > a, .btn {
+	border: solid 1px #DDD;
+	background-color: #2196F3;
+	color: #FFF;
+	text-align: center;
+	font-size: 1.4em;
+}

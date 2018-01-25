@@ -1,0 +1,1 @@
+var imprime = function($obj){ alert(String(JSON.stringify($obj))); }; var p = imprime; var toText = function($obj){ return String(JSON.stringify($obj)); }; stamp = function($id, $value){ document.getElementById($id).innerHTML = String(JSON.stringify($value)); };

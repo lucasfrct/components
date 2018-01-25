@@ -1,0 +1,125 @@
+/* GRID COL-XS
+The Grid it is building for pattern Mobile first 
+The screen is falowing the standart 18:9; contenting 12 cols;
+razon: 18 / 9 = 2 | cols = 12 and rows = 24
+Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
+Were on content 12 cols the of width;
+*/
+
+body * [ class*="col-" ] {
+    display: inline-block;
+    border: none;
+    bottom: 0;
+    box-sizing: border-box !important;
+    clear: none;
+    float: left;
+    left: 0;
+    margin: 0;
+    right: 0;
+    padding: 0;
+    top: 0;
+    vertical-align: top !important;
+}
+
+body * [ class*="row-" ] {
+    overflow: auto;
+}
+
+/* Extra Phones - Small Devices (portrait phones, 320px - 575px) */
+@media ( min-width: 320px ) {
+    body .col-xs-1 {
+        width: calc( ( 100% / 12 ) * 1 ); 
+    }
+
+    body .col-xs-2 {
+        width: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-xs-3 {
+        width: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-xs-4 {
+        width: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-xs-5 {
+        width: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-xs-6 {
+        width: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-xs-7 {
+        width: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-xs-8 {
+        width: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-xs-9 {
+        width: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-xs-10 {
+        width: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-xs-11 {
+        width: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-xs-12 {
+        width: 100%;
+    }
+
+    body .col-xs-offset-1 {
+    	margin-left: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-xs-offset-2 {
+        margin-left: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-xs-offset-3 {
+        margin-left: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-xs-offset-4 {
+        margin-left: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-xs-offset-5 {
+        margin-left: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-xs-offset-6 {
+        margin-left: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-xs-offset-7 {
+        margin-left: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-xs-offset-8 {
+        margin-left: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-xs-offset-9 {
+        margin-left: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-xs-offset-10 {
+        margin-left: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-xs-offset-11 {
+        margin-left: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-xs-offset-12 {
+        margin-left: 100%;
+    }
+}
