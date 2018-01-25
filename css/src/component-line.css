@@ -1,0 +1,27 @@
+/*
+COMPONENT LINE
+The Grid it is building for pattern Mobile first 
+Were on content components for to facility the building of the applications;
+*/
+
+html .line, 
+html * [ class*="line-" ] {
+    border-color: rgba( 255, 0, 0, 0.3 );
+    border-width: 0.25px !important;
+}
+
+html .line {
+	border-style: solid !important;
+}
+
+html .line-dashed {
+    border-style: dashed !important;
+}
+
+html .line-dotted {
+    border-style: dotted !important;
+}
+
+html .line-double {
+    border-style: double !important;
+}

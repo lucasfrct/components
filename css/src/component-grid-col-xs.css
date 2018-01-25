@@ -7,22 +7,18 @@ Were on content 12 cols the of width;
 */
 
 body * [ class*="col-" ] {
-    display: inline-block;
     border: none;
     bottom: 0;
     box-sizing: border-box !important;
+    display: inline-block;
     clear: none;
     float: left;
     left: 0;
     margin: 0;
-    right: 0;
     padding: 0;
+    right: 0;
     top: 0;
     vertical-align: top !important;
-}
-
-body * [ class*="row-" ] {
-    overflow: auto;
 }
 
 /* Extra Phones - Small Devices (portrait phones, 320px - 575px) */
@@ -121,5 +117,53 @@ body * [ class*="row-" ] {
 
     body .col-xs-offset-12 {
         margin-left: 100%;
+    }
+
+    body .col-xs-pull-1 {
+        margin-right: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-xs-pull-2 {
+        margin-right: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-xs-pull-3 {
+        margin-right: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-xs-pull-4 {
+        margin-right: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-xs-pull-5 {
+        margin-right: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-xs-pull-6 {
+        margin-right: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-xs-pull-7 {
+        margin-right: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-xs-pull-8 {
+        margin-right: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-xs-pull-9 {
+        margin-right: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-xs-pull-10 {
+        margin-right: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-xs-pull-11 {
+        margin-right: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-xs-pull-12 {
+        margin-right: 100%;
     }
 }
