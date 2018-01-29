@@ -2,7 +2,7 @@
 
 html {
     background-color: #F5F5F5;
-    color: #424242;
+    color: #212121;
     font-family: Verdana, Arial, Sans-serif !important;
     font-size: 62.5% !important;
     font-weight: normal !important;
@@ -207,7 +207,6 @@ body h1,
 body h2, 
 body h3,
 body h4 {
-
 }
 
 body h1 {
@@ -237,7 +236,7 @@ body h6 {
 body pre, 
 body p {
     background-color: #FDFDFD;
-    color: #565656;
+    color: #424242; /* #616161 */
     font-family: inherit;
     font-size: 1.4em;
     font-weight: inherit;
@@ -246,20 +245,14 @@ body p {
     text-align: left;
 }
 
-body .text-left {
-    text-align: left;
-}
-
-body .text-center {
-    text-align: center;
-}
-
-body .text-right {
-    text-align: right;
-}
-
-body .small-caps {
-    font-variant: small-caps;
+body xmp {
+    display: inline-block;
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
 }
 
 body div::after, 
@@ -286,15 +279,47 @@ body xmp::after {
     display:block;
 }
 
+:focus {
+    outline: 0;
+}
+
 body .clear {
     clear: both !important;
     content: "";
 }
 
-body xmp {
-    display: inline-block;
-    font-size: 1.4em;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
+body .color-text {
+    color: #424242;
+}
+
+body .color-text-black {
+    color: #212121;
+}
+
+body .color-text-white {
+    color: #FAFAFA;
+}
+
+body .background-color {
+    background-color: #F5F5F5;
+}
+
+body .contrast-color {
+    background-color: #757575;
+}
+
+body .text-left {
+    text-align: left;
+}
+
+body .text-center {
+    text-align: center;
+}
+
+body .text-right {
+    text-align: right;
+}
+
+body .small-caps {
+    font-variant: small-caps;
 }

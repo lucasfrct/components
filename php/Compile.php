@@ -45,6 +45,11 @@ class Compile
 		return self::$compile;
 	}
 
+	public static function data ( ): string 
+	{
+		return self::$compile;
+	}
+
 	public static function write ( string $source = "" ): bool
 	{
 		$write = false;

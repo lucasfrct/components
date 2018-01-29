@@ -1,10 +1,23 @@
 /* GRID COL-MD
-The Grid it is building for pattern Mobile first 
-The screen is falowing the standart 18:9; contenting 12 cols;
-razon: 18 / 9 = 2 | cols = 12 and rows = 24
+These grids are built in the mobile first.
+Here contains 12 wide columns.
 Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
-Were on content 12 cols the of width;
 */
+
+body * [ class*="col-md-" ] {
+    border: none;
+    bottom: 0;
+    box-sizing: border-box !important;
+    display: inline-block;
+    clear: none;
+    float: left;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    vertical-align: top;
+}
 
 /* Tablets - Medium Devices (tablets, 768px > 991px) */
 @media ( min-width: 768px ) {
@@ -102,5 +115,53 @@ Were on content 12 cols the of width;
 
     body .col-md-offset-12 {
         margin-left: 100%;
+    }
+
+    body .col-md-pull-1 {
+        margin-right: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-md-pull-2 {
+        margin-right: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-md-pull-3 {
+        margin-right: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-md-pull-4 {
+        margin-right: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-md-pull-5 {
+        margin-right: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-md-pull-6 {
+        margin-right: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-md-pull-7 {
+        margin-right: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-md-pull-8 {
+        margin-right: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-md-pull-9 {
+        margin-right: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-md-pull-10 {
+        margin-right: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-md-pull-11 {
+        margin-right: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-md-pull-12 {
+        margin-right: 100%;
     }
 }

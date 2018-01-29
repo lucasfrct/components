@@ -1,10 +1,23 @@
 /* GRID ROW-XL
-The Grid it is building for pattern Mobile first 
-The screen is falowing the standart 18:9; contenting 24 rows;
-razon: 18 / 9 = 2 | cols = 12 and rows = 24
+These grids are built in the mobile first.
+Here contains 24 wide rows.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
-Were on content 24 rows the of height;
 */
+
+body * [ class*="row-xl-" ] {
+    border: none;
+    bottom: 0;
+    box-sizing: border-box !important;
+    display: inline-block;
+    clear: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    vertical-align: top;
+    overflow: auto;
+}
 
 /* TVs and Multimedia - Extra Large Devices ( Tvs ) */
 @media ( min-height: 1050px ) {
@@ -226,5 +239,101 @@ Were on content 24 rows the of height;
 
     body .row-xl-offset-24 {
         margin-top: calc( 100vh - 0.2px );
+    }
+
+     body .row-xl-pull-1 {
+        margin-bottom: calc( 100vh / 24 );
+    }
+
+    body .row-xl-pull-2 {
+        margin-bottom: calc( ( 100vh / 24 ) * 2 );
+    }
+
+    body .row-xl-pull-3 {
+        margin-bottom: calc( ( 100vh / 24 ) * 3 );
+    }
+
+    body .row-xl-pull-4 {
+        margin-bottom: calc( ( 100vh / 24 ) * 4 );
+    }
+
+    body .row-xl-pull-5 {
+        margin-bottom: calc( ( 100vh / 24 ) * 5 );
+    }
+
+    body .row-xl-pull-6 {
+        margin-bottom: calc( ( 100vh / 24 ) * 6 );
+    }
+
+    body .row-xl-pull-7 {
+        margin-bottom: calc( ( 100vh / 24 ) * 7 );
+    }
+
+    body .row-xl-pull-8 {
+        margin-bottom: calc( ( 100vh / 24 ) * 8 );
+    }
+
+    body .row-xl-pull-9 {
+        margin-bottom: calc( ( 100vh / 24 ) * 9 );
+    }
+
+    body .row-xl-pull-10 {
+        margin-bottom: calc( ( 100vh / 24 ) * 10 );
+    }
+
+    body .row-xl-pull-11 {
+        margin-bottom: calc( ( 100vh / 24 ) * 11 );
+    }
+
+    body .row-xl-pull-12 {
+        margin-bottom: calc( ( 100vh / 24 ) * 12 );
+    }
+
+    body .row-xl-pull-13 {
+        margin-bottom: calc( ( 100vh / 24 ) * 13 );
+    }
+
+    body .row-xl-pull-14 {
+        margin-bottom: calc( ( 100vh / 24 ) * 14 );
+    }
+
+    body .row-xl-pull-15 {
+        margin-bottom: calc( ( 100vh / 24 ) * 15 );
+    }
+
+    body .row-xl-pull-16 {
+        margin-bottom: calc( ( 100vh / 24 ) * 16 );
+    }
+
+    body .row-xl-pull-17 {
+        margin-bottom: calc( ( 100vh / 24 ) * 17 );
+    }
+
+    body .row-xl-pull-18 {
+        margin-bottom: calc( ( 100vh / 24 ) * 18 );
+    }
+
+    body .row-xl-pull-19 {
+        margin-bottom: calc( ( 100vh / 24 ) * 19 );
+    }
+
+    body .row-xl-pull-20 {
+        margin-bottom: calc( ( 100vh / 24 ) * 20 );
+    }
+
+    body .row-xl-pull-21 {
+        margin-bottom: calc( ( 100vh / 24 ) * 21 );
+    }
+
+    body .row-xl-pull-22 {
+        margin-bottom: calc( ( 100vh / 24 ) * 22 );
+    }
+
+    body .row-xl-pull-23 {
+        margin-bottom: calc( ( 100vh / 24 ) * 23 );
+    }
+
+    body .row-xl-pull-24 {
+        margin-bottom: calc( 100vh - 0.2px );
     }
 }

@@ -1,9 +1,7 @@
 /* GRID COL-XS
-The Grid it is building for pattern Mobile first 
-The screen is falowing the standart 18:9; contenting 12 cols;
-razon: 18 / 9 = 2 | cols = 12 and rows = 24
+These grids are built in the mobile first.
+Here contains 12 wide columns.
 Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
-Were on content 12 cols the of width;
 */
 
 body * [ class*="col-" ] {
@@ -18,7 +16,7 @@ body * [ class*="col-" ] {
     padding: 0;
     right: 0;
     top: 0;
-    vertical-align: top !important;
+    vertical-align: top;
 }
 
 /* Extra Phones - Small Devices (portrait phones, 320px - 575px) */
