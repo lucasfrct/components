@@ -1,0 +1,61 @@
+/* COMPONENT SHAPE ARROWS*/
+
+body [data-shape="arrow-top"], 
+body [data-shape="arrow-right"],
+body [data-shape="arrow-bottom"], 
+body [data-shape="arrow-left"] {
+	position: relative;
+	border-color: currentColor;
+  font-size: 1em;
+  width: auto;
+  height: 16px;
+  margin-bottom: 0;
+}
+
+body [data-shape="arrow-top"]::before, 
+body [data-shape="arrow-right"]::before,
+body [data-shape="arrow-bottom"]::before, 
+body [data-shape="arrow-left"]::before {
+  content: "";
+  display: inherit;
+  width: 0; 
+  height: 0; 
+  font-size: 0;
+  line-height: 0;  
+  padding: 0;
+  position: relative;
+  border-width: 8px;
+  border-style: solid;
+  border-color: inherit;
+  margin-right: 4px;
+}
+
+body [data-shape="arrow-top"]::before {
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  top: -2px;
+}
+
+body [data-shape="arrow-right"]::before {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  top: 1px;
+  left: 5px;
+}
+
+body [data-shape="arrow-bottom"]::before {
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  top: 7px;
+}
+
+body [data-shape="arrow-left"]::before {
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	top: 1px;
+  left: -5px;
+}

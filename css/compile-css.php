@@ -16,6 +16,14 @@ $componentsCss = array (
 	'src/component-grid-row-lg.css',
 	'src/component-grid-row-xl.css',
 	'src/component-btn.css',
+	'src/component-shape-reset.css',
+	'src/component-shape-bar-code.css',
+	'src/component-shape-lock.css',
+	'src/component-shape-arrows.css',
+	'src/component-shape-credit-card.css',
+	'src/component-shape-cash-out.css',
+	'src/component-animation-reset.css',
+	'src/component-animation-loader.css',
 );
 
 Compile::list ( $componentsCss );

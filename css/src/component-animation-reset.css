@@ -1,0 +1,22 @@
+/*COMPONENT ANIMATION RESET | 30px x 30px */
+
+body [data-animation] {
+    bottom: 0;
+    box-sizing: border-box;
+    color: #212121;
+    display: inline-block;
+    font-size: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    will-change: transform;
+    height: 30px;
+}

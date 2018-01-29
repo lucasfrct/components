@@ -1,0 +1,43 @@
+/*COMPONENT SHAPE - BAR CODE- icon boleto*/
+
+body [data-shape="bar-code"],
+body [data-shape="bar-code"]::before,
+body [data-shape="bar-code"]::after {
+	border-bottom: transparent;
+	border-left-style: solid;
+	border-top: transparent;
+	border-right-style: solid;
+}
+
+body [data-shape="bar-code"]::before,
+body [data-shape="bar-code"]::after {
+	border-left-color: inherit;
+	border-right-color: inherit;
+	content: "";
+	display: inherit;
+	height: inherit;
+	position: absolute;
+}
+
+body [data-shape="bar-code"] {
+	border-left-width: 3px;
+	border-left-color:  currentColor;
+	border-right-width: 2px;
+	border-right-color: currentColor;
+	width: 16px;
+	position: relative;
+}
+
+body [data-shape="bar-code"]::before {
+	border-left-width: 1px;
+	border-right-width: 1px;
+	left: 1px;
+	width: 7px;
+}
+
+body [data-shape="bar-code"]::after {
+	border-left-width: 3px;
+	border-right-width: 1px;
+	left: 3px;
+	width: 1px; 
+}

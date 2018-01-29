@@ -1,0 +1,29 @@
+/* COMPONENT CREDIT-CARD */
+
+body [data-shape="credit-card"] {
+	border: solid 1px;
+	border-color: currentColor;
+	position: relative;
+	height: 14px;
+	margin-top: 2px;
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	-o-border-radius: 3px; 
+	-ms-border-radius: 3px; 
+	border-radius: 3px;
+	width: 18px;
+	margin-right: 3px;
+}
+
+body [data-shape="credit-card"]::before {
+	content: "";
+	position: absolute;
+	display: inherit;
+	border-top: solid 3px;
+	width: inherit;
+	border-right: transparent;
+	border-bottom: transparent;
+	border-left: transparent;
+	top: 3px;
+	left: -1px;
+}
