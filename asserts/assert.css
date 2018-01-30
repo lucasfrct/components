@@ -36,7 +36,7 @@ body .demonstration > p {
 	padding: 8px;
 }
 
-body .demonstration span {
+body .demonstration span:not( [data-shape] ):not( [data-animation]) {
 	color: #F00;
 }
 
