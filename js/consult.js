@@ -1,6 +1,6 @@
 //	query = { url:'url', before:'', send:objSend, receive:function(data){ ... }, }; consult(query);
 var __consult = function($option){
-    let $defaults = {
+    var $defaults = {
         type: 'text',
         url: null,
         send: null,
@@ -9,7 +9,7 @@ var __consult = function($option){
         data: null,
     };
     
-    let $opt = $.extend($defaults, $option);
+    var $opt = $.extend($defaults, $option);
 
     if($.isFunction($opt.before)){ 
         $opt.before($opt.send);
