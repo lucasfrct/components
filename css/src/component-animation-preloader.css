@@ -1,0 +1,70 @@
+/* component-animation-preloader.css */
+
+body [data-animation="preloader"], 
+body [data-animation="preloader"]::before, 
+body [data-animation="preloader"]::after {
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-name: preloader;
+	background-color: #FFF;
+	border: solid 0.5px;
+	border-color: #AAA;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	height: 12px;
+	-webkit-transition: background-color, border-color 0.1s ease-in-out;
+	-moz-transition: background-color, border-color 0.1s ease-in-out;
+	-o-transition: background-color, border-color 0.1s ease-in-out;
+	-ms-transition: background-color, border-color 0.1s ease-in-out;
+	transition: background-color, border-color 0.1s ease-in-out;
+	width: 12px;
+}
+
+body [data-animation="preloader"] {
+	animation-delay: 0.33s;
+	color: #424242;
+	display: block;
+	margin-bottom: 9px;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 9px;
+}
+
+body [data-animation="preloader"]::before, 
+body [data-animation="preloader"]::after {
+	color: inherit;
+	content: "";
+	display: inline-block;
+	height: 11px;
+	position: absolute;
+	width: 11px;
+}
+
+body [data-animation="preloader"]::before {
+	left: -19px;
+	top: -0.5px;
+}
+
+body [data-animation="preloader"]::after {
+	animation-delay: 0.66s;
+	left: 19px;
+	top: -0.5px;
+}
+
+@keyframes preloader {
+	0% { 
+		background-color: #FFF;
+		border-color: currentColor; 
+	}
+	90% { 
+		background-color: currentColor;
+		border-color: currentColor;
+	}
+	100% { 
+		background-color: #FFF; 
+		border-color: currentColor;
+	}
+}

@@ -1,4 +1,5 @@
-/* GRID ROW-XL
+/*
+component-grid-row-xl.css
 These grids are built in the mobile first.
 Here contains 24 wide rows.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
@@ -19,7 +20,7 @@ body * [ class*="row-xl-" ] {
     overflow: auto;
 }
 
-/* TVs and Multimedia - Extra Large Devices ( Tvs ) */
+/* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1050px and up) */
 @media ( min-height: 1050px ) {
     body .row-xl-fluid {
         height: auto !important;

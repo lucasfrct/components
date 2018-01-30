@@ -1,37 +1,78 @@
-header {
-	padding: 2em;
-	background-color: #FFF;
-	clear: both;
+body header {
+	background-color: #212121;
+	color: #FFF;
 }
 
-header::after {
-	content: "";
-	clear: both;
-}
-
-header > nav > ul {
+body header > nav > ul {
 	padding: 0.25em;
 }
 
-header > nav > ul > li {
+body header > nav > ul > li {
 	width: calc( ( 100% / 3 ) - 3px);
 	display: inline-block;
 	margin: 5px 0;	
 }
 
-header > nav > ul > li > a, .btn {
+body header > nav > ul > li > a {
 	border: solid 1px #DDD;
-	background-color: #2196F3;
-	color: #FFF;
+	background-color: #009688;
+	color: #FFF !important;
 	text-align: center;
 	font-size: 1.4em;
 	padding: 0.5em;
 }
 
+body pre {
+	width: 100%;
+}
+
+body .demonstration {
+	margin-top: 5px ;
+	background-color: #FFF;
+	border-left: solid 1px #009688;
+}
+
+body .demonstration > p {
+	padding: 8px;
+}
+
+body .demonstration span {
+	color: #F00;
+}
+
+body main {
+	background-color: #F6F6F6;
+}
+
+body main > pre:not( :first-child ) {
+	border-top: solid 4px #009688;
+	margin-top: 5px;
+}
+
+.ln-demonstration {
+	border: solid 0.5px rgba( 0, 0, 255, 0.5);
+}
+
+.ln-mark {
+	border: dotted 2px rgba( 255, 0, 0, 1);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	margin-bottom: 14px;
+}
+
+.grid-test {
+	background-color: #FDFDFD;
+	margin-top: 5px;
+	padding: 14px 0;
+}
+
+.screen-grid-row {
+	max-height: 50vh;
+	overflow: auto;
+}
+
 body .btn {
-	position: fixed;
-	top: 40px;
-	height: 30px;
-	width: 200px;
-	z-index: 100;
+	padding: 14px;
 }

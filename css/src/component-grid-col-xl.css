@@ -1,4 +1,5 @@
-/* GRID COL-XL
+/*
+component-grid-col-xl.css
 These grids are built in the mobile first.
 Here contains 12 wide columns.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
@@ -19,7 +20,7 @@ body * [ class*="col-xl-" ] {
     vertical-align: top;
 }
 
-/* TVs, Screen HD and Screen Multimedia - Extra Large Devices (large desktops, 1200px and up) */
+/* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1200px and up) */
 @media ( min-width: 1200px ) {
     body .col-xl-1 {
         width: calc( ( 100% / 12 ) * 1 ); 

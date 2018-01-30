@@ -1,3 +1,5 @@
+/* component-shape-reset.css */
+
 body [data-shape] {
     bottom: 0;
     box-sizing: border-box;

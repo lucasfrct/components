@@ -1,27 +1,17 @@
-html, body, header, main, footer {
-    height: 100% !important;
-    min-height: 100% !important;
-    clear: both !important;
-    word-wrap: break-word !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    top: 0 !important;
-    left: 0 !important;
-    color: inherit;
+.align-top {
+
 }
 
-a, a:link, a:visited, a:hover, a:active {
-    cursor: pointer !important;
-    text-decoration: none !important;
-    color: inherit;
+.align-right {
+
 }
 
-.transition {
-    transition: all 0.3s ease-in-out !important;
-    -webkit-transition: all 0.3s ease-in-out !important;
-    -moz-transition: all 0.3s ease-in-out !important;
-    -ms-transition: all 0.3s ease-in-out !important;
-    -o-transition: all 0.3s ease-in-out !important;
+.align-bootom {
+
+}
+
+.align-left {
+    
 }
 
 .centerY-relative {
@@ -109,22 +99,4 @@ a, a:link, a:visited, a:hover, a:active {
 .bottom-align{
     position: absolute;
     bottom: 0;
-}
-
-.full-image {
-    background-color: #E8EAF6 !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-attachment: scroll !important;
-    background-clip: inherit !important;
-    background-origin: inherit !important;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -ms-background-size: cover !important;
-    -o-background-size: cover !important;
-}
-
-.line {
-    border: solid 1px #F00 !important;
 }

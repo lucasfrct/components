@@ -1,4 +1,5 @@
-/* COMPONENTS BTN
+/*
+component-btn.css
 	btn sm 47px
 	btn md 57px
 	btn lg 72px
@@ -14,11 +15,10 @@ TYPES BTNs
 
 STATES 
 	** normal
-	** foco (:focus)
-	** hover (:hover)
-	** pressionado (:active)
-	** inativo(:disabled)
-	** progresso
+	** foco ( :focus )
+	** hover ( :hover )
+	** pressionado ( :active )
+	** inativo ( :disabled )
 */
 
 body [data-btn] {

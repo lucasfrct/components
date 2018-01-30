@@ -1,0 +1,20 @@
+
+.full-image {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-clip: inherit;
+    background-origin: inherit;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    will-change: transform;
+}

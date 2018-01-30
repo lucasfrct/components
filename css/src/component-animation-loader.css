@@ -1,19 +1,19 @@
-/* COMPONENT ANIMATION LOADER */
+/* component-animation-loader.css */
 
 body [data-animation="loader"], 
 body [data-animation="loader"]::before, 
 body [data-animation="loader"]::after {
-	background-color: #FFF;
+	animation-iteration-count: infinite;
+	animation-name: spin;
+	animation-timing-function: linear;
+	background-color: transparent;
+	border-left-color: transparent;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	-ms-border-radius: 50%;
 	border-radius: 50%;
-	animation-iteration-count: infinite;
-	animation-name: spin;
-	animation-timing-function: linear;
-	background-color: transparent;
-	border-color: transparent;
+	border-right-color: transparent;
 	border-style: solid;
 	border-width: 5px;
 	display: inline-block;
@@ -21,48 +21,49 @@ body [data-animation="loader"]::after {
 	line-height: inherit;
 	height: 30px;
 	width: 30px;
-	border-left-color: transparent;
-	border-right-color: transparent;
 }
 
 body [data-animation="loader"]::before,
 body [data-animation="loader"]::after {
-	display: inline-block;
 	position: absolute;
 	content: "";
+	-webkit-box-shadow: 0 0 1px 1px #999;
+	-moz-box-shadow: 0 0 1px 1px #999;
+	-o-box-shadow: 0 0 1px 1px #999;
+	-ms-box-shadow: 0 0 1px 1px #999;
+	box-shadow: 0 0 1px 1px #999;
+	border-bottom-color: rgba( 255, 255, 255, 0.7);
+	border-top-color: rgba( 255, 255, 255, 0.7);
+	will-change: transform;
 }
 
 body [data-animation="loader"] {
 	animation-duration: 2s;
 	border-bottom-color: currentColor;
 	border-top-color: currentColor;
+	border-width: 10px;
 	-webkit-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
 	-moz-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
 	-o-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
 	-ms-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
 	box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
+	color: #424242;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	color: #00F;
-	border-width: 10px;
 }
 
 body [data-animation="loader"]::before {
 	animation-direction: reverse;
 	animation-duration: 1s;
-	border-bottom-color: rgba( 255, 255, 255, 0.9);
-	border-top-color: rgba( 255, 255, 255, 0.9);
 	height: 14px;
-	left: -6px;
-	top: -6px;
+	left: -7px;
+	top: -7px;
 	width: 14px;
 }
 
 body [data-animation="loader"]::after {
 	animation-duration: 1.5s;
-	border-bottom-color: rgba( 255, 255, 255, 0.5);
-	border-top-color: rgba( 255, 255, 255, 0.5);
 	height: 8px;
 	left: -4px;
 	top: -4px;

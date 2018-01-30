@@ -1,4 +1,4 @@
-/*Component Reset*/
+/*component-reset.css*/
 
 html {
     background-color: #F5F5F5;
@@ -29,25 +29,23 @@ html > body,
 html > body > header, 
 html > body > main, 
 html > body > footer { 
-    background-color: inherit !important;
-    border: none;
-    bottom: 0 !important;
-    box-sizing: border-box !important;
-    clear: both !important;
-    display: block !important;
-    left: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    right: 0 !important;
-    top: 0 !important;
-    word-break: inherit !important;
-    word-wrap:  inherit !important;
+    bottom: 0;
+    box-sizing: border-box;
+    clear: both;
+    display: block;
+    float: left;
+    left: 0;
+    margin: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    word-break: inherit;
+    word-wrap:  inherit;
 }
 
 html > body > header, 
 html > body > main, 
 html > body > footer {
-    color: inherit !important;
     font-size: inherit !important;
     line-height: inherit !important;
     text-align: inherit !important;
@@ -55,6 +53,15 @@ html > body > footer {
     min-height: 2px !important;
     min-width: 2px !important;
     vertical-align: inherit;
+}
+
+body > header, 
+body > main,
+body > footer {
+    color: inherit;
+    border: none;
+    background-color: inherit;
+    padding: 0;
 }
 
 body div, 
@@ -93,7 +100,14 @@ body aside {
     vertical-align: inherit;
 }
 
-body a {
+body a, 
+body a:link, 
+body a:visited, 
+body a:hover,
+body a:focus, 
+body a:active {
+    color: inherit;
+    cursor: pointer;
     text-decoration: none;
     width:auto;
 }
@@ -120,7 +134,17 @@ body ul li {
 }
 
 body ol li > a,
-body ul li > a {
+body ol li > a:link,
+body ol li > a:visited,
+body ol li > a:hover,
+body ol li > a:focus,
+body ol li > a:active,
+body ul li > a,
+body ul li > a:link,
+body ul li > a:visited,
+body ul li > a:hover,
+body ul li > a:focus,
+body ul li > a:active {
     width: 100%;
     padding: 0.5em;
 }
@@ -138,42 +162,53 @@ body table tr td {
     margin: 0;
     padding: 0;
     position: relative;
+
 }
 
 body table {
-    display: table;
-    border-color: #999;
+    background-color: #FEFEFE;
+    border-collapse: collapse;
+    border-color: currentColor;
+    border-spacing: 0;
     border-style: solid;
     border-width: 1px;
-    border-collapse: collapse;
-    border-spacing: 0;
-    background-color: #FEFEFE;
-    margin: 2px 7px;
+    border-bottom: none;
+    color: #212121;    
+    display: table;
+    margin: 2px;
+    min-height: 10px;
+    min-width: 20px;
 }
 
 body table thead,
 body table tbody,
 body table tfoot {
-    border-top-color: inherit;
+    border-color: inherit;
     border-width: inherit;
-    border-top-style: solid;
+    border-style: inherit;
+    border-spacing: inherit;
+    border-width: 1px;
 }
 
 body table tr {
     display: table-row;
     width: auto;
     height: auto;
-    border: none;
-    border-width: inherit;
-}
-
-body table tr:not( :first-child ) {
-    border-style: inherit;
-    border-top-color: inherit;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+    border-bottom-width: 1px;
 }
 
 body table tr:nth-child( 2n ) {
     background-color: #DFDFDF;
+}
+
+body table tr:hover {
+    -webkit-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -moz-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -o-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -ms-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
 }
 
 body table tr th,
@@ -186,7 +221,9 @@ body table tr td {
 
 body table tr th:not( :last-child ),
 body table tr td:not( :last-child ) {
-    border-right: solid 1px #999; 
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: inherit; 
 }
 
 /*RESET TEXTOS*/
@@ -200,13 +237,9 @@ body h6 {
     line-height: 1em;
     font-weight: normal;
     padding: 0.5em;
-    padding-left: 7px; 
-}
-
-body h1, 
-body h2, 
-body h3,
-body h4 {
+    padding-left: 7px;
+    display: block;
+    color: inherit;
 }
 
 body h1 {
@@ -233,16 +266,52 @@ body h6 {
     font-size: 1.6em;
 }
 
+body pre h1,
+body p h1 {
+    font-size: 2.43em;
+}
+
+body pre h2,
+body p h2 {
+    font-size: 2.15em;
+}
+
+body pre h3,
+body p h3 {
+    font-size: 1.86em;
+}
+
+body pre h4,
+body p h4 {
+    font-size: 1.54em;
+}
+
+body pre h5,
+body p h5 {
+    font-size: 1.29em;
+}
+
+body pre h6,
+body p h6 {
+    font-size: 1.15em;
+}
+
 body pre, 
 body p {
     background-color: #FDFDFD;
     color: #424242; /* #616161 */
     font-family: inherit;
     font-size: 1.4em;
+    word-break: keep-all;
+    word-wrap: break-word;
     font-weight: inherit;
-    line-height: 1em;
+    line-height: 140%;
     padding: 1em;
     text-align: left;
+}
+
+body pre p {
+    font-size: 1em;
 }
 
 body xmp {
@@ -253,6 +322,11 @@ body xmp {
     background-color: transparent;
     color: inherit;
     font-family: inherit;
+}
+
+body pre xmp,
+body p xmp {
+    font-size: 1em;
 }
 
 body div::after, 
@@ -279,6 +353,7 @@ body xmp::after {
     display:block;
 }
 
+:hove,
 :focus {
     outline: 0;
 }
@@ -304,7 +379,7 @@ body .background-color {
     background-color: #F5F5F5;
 }
 
-body .contrast-color {
+body .background-color-contrast {
     background-color: #757575;
 }
 

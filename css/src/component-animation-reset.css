@@ -1,4 +1,7 @@
-/*COMPONENT ANIMATION RESET | 30px x 30px */
+/*
+component-animation-reset.css
+natual size : 30px x 30px 
+*/
 
 body [data-animation] {
     bottom: 0;

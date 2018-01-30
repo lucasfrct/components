@@ -1,4 +1,4 @@
-/*Component Reset*/
+/*component-reset.css*/
 
 html {
     background-color: #F5F5F5;
@@ -29,25 +29,23 @@ html > body,
 html > body > header, 
 html > body > main, 
 html > body > footer { 
-    background-color: inherit !important;
-    border: none;
-    bottom: 0 !important;
-    box-sizing: border-box !important;
-    clear: both !important;
-    display: block !important;
-    left: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    right: 0 !important;
-    top: 0 !important;
-    word-break: inherit !important;
-    word-wrap:  inherit !important;
+    bottom: 0;
+    box-sizing: border-box;
+    clear: both;
+    display: block;
+    float: left;
+    left: 0;
+    margin: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    word-break: inherit;
+    word-wrap:  inherit;
 }
 
 html > body > header, 
 html > body > main, 
 html > body > footer {
-    color: inherit !important;
     font-size: inherit !important;
     line-height: inherit !important;
     text-align: inherit !important;
@@ -55,6 +53,15 @@ html > body > footer {
     min-height: 2px !important;
     min-width: 2px !important;
     vertical-align: inherit;
+}
+
+body > header, 
+body > main,
+body > footer {
+    color: inherit;
+    border: none;
+    background-color: inherit;
+    padding: 0;
 }
 
 body div, 
@@ -93,7 +100,14 @@ body aside {
     vertical-align: inherit;
 }
 
-body a {
+body a, 
+body a:link, 
+body a:visited, 
+body a:hover,
+body a:focus, 
+body a:active {
+    color: inherit;
+    cursor: pointer;
     text-decoration: none;
     width:auto;
 }
@@ -120,7 +134,17 @@ body ul li {
 }
 
 body ol li > a,
-body ul li > a {
+body ol li > a:link,
+body ol li > a:visited,
+body ol li > a:hover,
+body ol li > a:focus,
+body ol li > a:active,
+body ul li > a,
+body ul li > a:link,
+body ul li > a:visited,
+body ul li > a:hover,
+body ul li > a:focus,
+body ul li > a:active {
     width: 100%;
     padding: 0.5em;
 }
@@ -138,42 +162,53 @@ body table tr td {
     margin: 0;
     padding: 0;
     position: relative;
+
 }
 
 body table {
-    display: table;
-    border-color: #999;
+    background-color: #FEFEFE;
+    border-collapse: collapse;
+    border-color: currentColor;
+    border-spacing: 0;
     border-style: solid;
     border-width: 1px;
-    border-collapse: collapse;
-    border-spacing: 0;
-    background-color: #FEFEFE;
-    margin: 2px 7px;
+    border-bottom: none;
+    color: #212121;    
+    display: table;
+    margin: 2px;
+    min-height: 10px;
+    min-width: 20px;
 }
 
 body table thead,
 body table tbody,
 body table tfoot {
-    border-top-color: inherit;
+    border-color: inherit;
     border-width: inherit;
-    border-top-style: solid;
+    border-style: inherit;
+    border-spacing: inherit;
+    border-width: 1px;
 }
 
 body table tr {
     display: table-row;
     width: auto;
     height: auto;
-    border: none;
-    border-width: inherit;
-}
-
-body table tr:not( :first-child ) {
-    border-style: inherit;
-    border-top-color: inherit;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+    border-bottom-width: 1px;
 }
 
 body table tr:nth-child( 2n ) {
     background-color: #DFDFDF;
+}
+
+body table tr:hover {
+    -webkit-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -moz-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -o-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -ms-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
 }
 
 body table tr th,
@@ -186,7 +221,9 @@ body table tr td {
 
 body table tr th:not( :last-child ),
 body table tr td:not( :last-child ) {
-    border-right: solid 1px #999; 
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: inherit; 
 }
 
 /*RESET TEXTOS*/
@@ -200,13 +237,9 @@ body h6 {
     line-height: 1em;
     font-weight: normal;
     padding: 0.5em;
-    padding-left: 7px; 
-}
-
-body h1, 
-body h2, 
-body h3,
-body h4 {
+    padding-left: 7px;
+    display: block;
+    color: inherit;
 }
 
 body h1 {
@@ -233,16 +266,52 @@ body h6 {
     font-size: 1.6em;
 }
 
+body pre h1,
+body p h1 {
+    font-size: 2.43em;
+}
+
+body pre h2,
+body p h2 {
+    font-size: 2.15em;
+}
+
+body pre h3,
+body p h3 {
+    font-size: 1.86em;
+}
+
+body pre h4,
+body p h4 {
+    font-size: 1.54em;
+}
+
+body pre h5,
+body p h5 {
+    font-size: 1.29em;
+}
+
+body pre h6,
+body p h6 {
+    font-size: 1.15em;
+}
+
 body pre, 
 body p {
     background-color: #FDFDFD;
     color: #424242; /* #616161 */
     font-family: inherit;
     font-size: 1.4em;
+    word-break: keep-all;
+    word-wrap: break-word;
     font-weight: inherit;
-    line-height: 1em;
+    line-height: 140%;
     padding: 1em;
     text-align: left;
+}
+
+body pre p {
+    font-size: 1em;
 }
 
 body xmp {
@@ -253,6 +322,11 @@ body xmp {
     background-color: transparent;
     color: inherit;
     font-family: inherit;
+}
+
+body pre xmp,
+body p xmp {
+    font-size: 1em;
 }
 
 body div::after, 
@@ -279,6 +353,7 @@ body xmp::after {
     display:block;
 }
 
+:hove,
 :focus {
     outline: 0;
 }
@@ -304,7 +379,7 @@ body .background-color {
     background-color: #F5F5F5;
 }
 
-body .contrast-color {
+body .background-color-contrast {
     background-color: #757575;
 }
 
@@ -324,7 +399,7 @@ body .small-caps {
     font-variant: small-caps;
 }
 
-/*COMPONENT LINE*/
+/*component-line.css*/
 
 html .line,
 html * [ class*="line-" ] {
@@ -348,7 +423,8 @@ html .line-double {
     border-style: double !important;
 }
 
-/* GRID COL-XS
+/*
+component-grid-col-xs.css
 These grids are built in the mobile first.
 Here contains 12 wide columns.
 Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
@@ -369,7 +445,7 @@ body * [ class*="col-" ] {
     vertical-align: top;
 }
 
-/* Extra Phones - Small Devices (portrait phones, 320px - 575px) */
+/* Extra Small Phones - Small Devices (portrait phones, 320px - 575px) */
 @media ( min-width: 320px ) {
     body .col-xs-1 {
         width: calc( ( 100% / 12 ) * 1 ); 
@@ -516,7 +592,8 @@ body * [ class*="col-" ] {
     }
 }
 
-/* GRID COL-SM
+/*
+component-grid-col-sm.css
 These grids are built in the mobile first.
 Here contains 12 wide columns.
 Minimum screen = 576px x 540px for screen ( VGA - 720px x 480px )
@@ -684,7 +761,8 @@ body * [ class*="col-sm-" ] {
     }
 }
 
-/* GRID COL-MD
+/*
+component-grid-col-md.css
 These grids are built in the mobile first.
 Here contains 12 wide columns.
 Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
@@ -852,7 +930,8 @@ body * [ class*="col-md-" ] {
     }
 }
 
-/* GRID COL-LG
+/*
+component-grid-col-lg.css
 These grids are built in the mobile first.
 Here contains 12 wide columns.
 Minimum screen = 992px x 720px for screen ( SVGA - 800px x 600px )
@@ -1020,7 +1099,8 @@ body * [ class*="col-lg-" ] {
     }
 }
 
-/* GRID COL-XL
+/*
+component-grid-col-xl.css
 These grids are built in the mobile first.
 Here contains 12 wide columns.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
@@ -1041,7 +1121,7 @@ body * [ class*="col-xl-" ] {
     vertical-align: top;
 }
 
-/* TVs, Screen HD and Screen Multimedia - Extra Large Devices (large desktops, 1200px and up) */
+/* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1200px and up) */
 @media ( min-width: 1200px ) {
     body .col-xl-1 {
         width: calc( ( 100% / 12 ) * 1 ); 
@@ -1188,7 +1268,8 @@ body * [ class*="col-xl-" ] {
     }
 }
 
-/* GRID ROW-XS
+/* 
+component-grid-row-xs.css
 These grids are built in the mobile first.
 Here contains 24 wide rows.
 Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
@@ -1528,7 +1609,8 @@ body * [ class*="row-" ] {
     }
 }
 
-/* GRID ROW-SM
+/*
+component-grid-row-sm.css
 These grids are built in the mobile first.
 Here contains 24 wide rows.
 Minimum screen = 576px x 540px for screen ( VGA - 720px x 480px )
@@ -2208,7 +2290,8 @@ body * [ class*="row-md-" ] {
     }
 }
 
-/* GRID ROW-LG
+/*
+component-grid-row-lg.css
 These grids are built in the mobile first.
 Here contains 24 wide rows.
 Minimum screen = 992px x 720px for screen ( SVGA - 800px x 600px )
@@ -2548,7 +2631,8 @@ body * [ class*="row-lg-" ] {
     }
 }
 
-/* GRID ROW-XL
+/*
+component-grid-row-xl.css
 These grids are built in the mobile first.
 Here contains 24 wide rows.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
@@ -2569,7 +2653,7 @@ body * [ class*="row-xl-" ] {
     overflow: auto;
 }
 
-/* TVs and Multimedia - Extra Large Devices ( Tvs ) */
+/* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1050px and up) */
 @media ( min-height: 1050px ) {
     body .row-xl-fluid {
         height: auto !important;
@@ -2888,7 +2972,8 @@ body * [ class*="row-xl-" ] {
     }
 }
 
-/* COMPONENTS BTN
+/*
+component-btn.css
 	btn sm 47px
 	btn md 57px
 	btn lg 72px
@@ -2904,11 +2989,10 @@ TYPES BTNs
 
 STATES 
 	** normal
-	** foco (:focus)
-	** hover (:hover)
-	** pressionado (:active)
-	** inativo(:disabled)
-	** progresso
+	** foco ( :focus )
+	** hover ( :hover )
+	** pressionado ( :active )
+	** inativo ( :disabled )
 */
 
 body [data-btn] {
@@ -3168,6 +3252,8 @@ body [type="checkbox"][data-btn="switch"]:disabled::after {
 	background-color: #F6F6F6;
 }
 
+/* component-shape-reset.css */
+
 body [data-shape] {
     bottom: 0;
     box-sizing: border-box;
@@ -3187,7 +3273,7 @@ body [data-shape] {
     width: 16px; /* 16px x 16px */
 }
 
-/*COMPONENT SHAPE - BAR CODE- icon boleto*/
+/* component-shape-bar-code.css */
 
 body [data-shape="bar-code"],
 body [data-shape="bar-code"]::before,
@@ -3231,7 +3317,7 @@ body [data-shape="bar-code"]::after {
 	width: 1px; 
 }
 
-/*COMPONENT SHPAE LOCK */
+/* component-shape-lock.css */
 
 body [data-shape="lock"]:before,
 body [data-shape="lock"]:after {
@@ -3284,7 +3370,7 @@ body [data-shape="lock"]::after {
 	top: 2px;
 }
 
-/* COMPONENT SHAPE ARROWS*/
+/* component-shape-arrows.css */
 
 body [data-shape="arrow-top"], 
 body [data-shape="arrow-right"],
@@ -3346,7 +3432,7 @@ body [data-shape="arrow-left"]::before {
   left: -5px;
 }
 
-/* COMPONENT CREDIT-CARD */
+/* component-shape-credit-card.css */
 
 body [data-shape="credit-card"] {
 	border: solid 1px;
@@ -3376,8 +3462,7 @@ body [data-shape="credit-card"]::before {
 	left: -1px;
 }
 
-/*COMPONENT SHAPE CASH-OUT*/
-
+/* component-shape-cash-out.css */
 
 body [data-shape="cash-out"] {
 	border-top: solid 2px;
@@ -3412,7 +3497,10 @@ body [data-shape="cash-out"]::after {
 	transform: rotate(45deg);
 }
 
-/*COMPONENT ANIMATION RESET | 30px x 30px */
+/*
+component-animation-reset.css
+natual size : 30px x 30px 
+*/
 
 body [data-animation] {
     bottom: 0;
@@ -3435,22 +3523,93 @@ body [data-animation] {
     height: 30px;
 }
 
-/* COMPONENT ANIMATION LOADER */
+/* component-animation-preloader.css */
 
-body [data-animation="loader"], 
-body [data-animation="loader"]::before, 
-body [data-animation="loader"]::after {
+body [data-animation="preloader"], 
+body [data-animation="preloader"]::before, 
+body [data-animation="preloader"]::after {
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-name: preloader;
 	background-color: #FFF;
+	border: solid 0.5px;
+	border-color: #AAA;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	-ms-border-radius: 50%;
 	border-radius: 50%;
+	height: 12px;
+	-webkit-transition: background-color, border-color 0.1s ease-in-out;
+	-moz-transition: background-color, border-color 0.1s ease-in-out;
+	-o-transition: background-color, border-color 0.1s ease-in-out;
+	-ms-transition: background-color, border-color 0.1s ease-in-out;
+	transition: background-color, border-color 0.1s ease-in-out;
+	width: 12px;
+}
+
+body [data-animation="preloader"] {
+	animation-delay: 0.33s;
+	color: #424242;
+	display: block;
+	margin-bottom: 9px;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 9px;
+}
+
+body [data-animation="preloader"]::before, 
+body [data-animation="preloader"]::after {
+	color: inherit;
+	content: "";
+	display: inline-block;
+	height: 11px;
+	position: absolute;
+	width: 11px;
+}
+
+body [data-animation="preloader"]::before {
+	left: -19px;
+	top: -0.5px;
+}
+
+body [data-animation="preloader"]::after {
+	animation-delay: 0.66s;
+	left: 19px;
+	top: -0.5px;
+}
+
+@keyframes preloader {
+	0% { 
+		background-color: #FFF;
+		border-color: currentColor; 
+	}
+	90% { 
+		background-color: currentColor;
+		border-color: currentColor;
+	}
+	100% { 
+		background-color: #FFF; 
+		border-color: currentColor;
+	}
+}
+
+/* component-animation-loader.css */
+
+body [data-animation="loader"], 
+body [data-animation="loader"]::before, 
+body [data-animation="loader"]::after {
 	animation-iteration-count: infinite;
 	animation-name: spin;
 	animation-timing-function: linear;
 	background-color: transparent;
-	border-color: transparent;
+	border-left-color: transparent;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	border-right-color: transparent;
 	border-style: solid;
 	border-width: 5px;
 	display: inline-block;
@@ -3458,48 +3617,49 @@ body [data-animation="loader"]::after {
 	line-height: inherit;
 	height: 30px;
 	width: 30px;
-	border-left-color: transparent;
-	border-right-color: transparent;
 }
 
 body [data-animation="loader"]::before,
 body [data-animation="loader"]::after {
-	display: inline-block;
 	position: absolute;
 	content: "";
+	-webkit-box-shadow: 0 0 1px 1px #999;
+	-moz-box-shadow: 0 0 1px 1px #999;
+	-o-box-shadow: 0 0 1px 1px #999;
+	-ms-box-shadow: 0 0 1px 1px #999;
+	box-shadow: 0 0 1px 1px #999;
+	border-bottom-color: rgba( 255, 255, 255, 0.7);
+	border-top-color: rgba( 255, 255, 255, 0.7);
+	will-change: transform;
 }
 
 body [data-animation="loader"] {
 	animation-duration: 2s;
 	border-bottom-color: currentColor;
 	border-top-color: currentColor;
+	border-width: 10px;
 	-webkit-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
 	-moz-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
 	-o-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
 	-ms-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
 	box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
+	color: #424242;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	color: #00F;
-	border-width: 10px;
 }
 
 body [data-animation="loader"]::before {
 	animation-direction: reverse;
 	animation-duration: 1s;
-	border-bottom-color: rgba( 255, 255, 255, 0.9);
-	border-top-color: rgba( 255, 255, 255, 0.9);
 	height: 14px;
-	left: -6px;
-	top: -6px;
+	left: -7px;
+	top: -7px;
 	width: 14px;
 }
 
 body [data-animation="loader"]::after {
 	animation-duration: 1.5s;
-	border-bottom-color: rgba( 255, 255, 255, 0.5);
-	border-top-color: rgba( 255, 255, 255, 0.5);
 	height: 8px;
 	left: -4px;
 	top: -4px;

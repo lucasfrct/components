@@ -23,13 +23,14 @@ $componentsCss = array (
 	'src/component-shape-credit-card.css',
 	'src/component-shape-cash-out.css',
 	'src/component-animation-reset.css',
+	'src/component-animation-preloader.css',
 	'src/component-animation-loader.css',
 );
 
 Compile::list ( $componentsCss );
 Compile::join ( );
 if ( !Compile::write ( "all-components.css" ) ) {
-	Compile::report ( );
+	echo Compile::report ( );
 } else{
 	echo Compile::data ( );
 };
