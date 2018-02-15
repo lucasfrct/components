@@ -34,3 +34,27 @@ if ( !Compile::write ( "all-components.css" ) ) {
 } else{
 	echo Compile::data ( );
 };
+
+
+$componentsGrid = array (
+	'src/component-reset.css',
+	'src/component-line.css',
+	'src/component-grid-col-xs.css',
+	'src/component-grid-col-sm.css',
+	'src/component-grid-col-md.css',
+	'src/component-grid-col-lg.css',
+	'src/component-grid-col-xl.css',
+	'src/component-grid-row-xs.css',
+	'src/component-grid-row-sm.css',
+	'src/component-grid-row-md.css',
+	'src/component-grid-row-lg.css',
+	'src/component-grid-row-xl.css',
+);
+
+Compile::list ( $componentsGrid );
+Compile::join ( );
+if ( !Compile::write ( "components-grid.css" ) ) {
+	echo Compile::report ( );
+} else{
+	echo Compile::data ( );
+};
