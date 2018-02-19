@@ -5,21 +5,6 @@ Here contains 24 wide rows.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
 */
 
-body * [ class*="row-xl-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
-
 /* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1050px and up) */
 @media ( min-height: 1050px ) {
     body .row-xl-fluid {

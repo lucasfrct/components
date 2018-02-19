@@ -5,21 +5,6 @@ Here contains 24 wide rows.
 Minimum screen = 576px x 540px for screen ( VGA - 720px x 480px )
 */
 
-body * [ class*="row-sm-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
-
 /* Phones - Small Devices (Phones, 600px - 680px) */
 @media ( min-height: 540px ) {
     body .row-sm-fluid {

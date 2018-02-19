@@ -2,7 +2,7 @@
 
 html {
     background-color: #F5F5F5;
-    color: #212121;
+    color: #424242;
     font-family: Verdana, Arial, Sans-serif !important;
     font-size: 62.5% !important;
     font-weight: normal !important;
@@ -347,7 +347,8 @@ body address::after,
 body section::after, 
 body article::after, 
 body aside::after,
-body xmp::after {
+body xmp::after,
+body hr::after {
     content:"";
     clear:both;
     display:block;
@@ -363,24 +364,26 @@ body .clear {
     content: "";
 }
 
-body .color-text {
+body .text {
     color: #424242;
 }
 
-body .color-text-black {
+body .text-black {
     color: #212121;
 }
 
-body .color-text-white {
+body .text-white {
     color: #FAFAFA;
 }
 
-body .background-color {
+body .background-white {
     background-color: #F5F5F5;
+    color: #424242;
 }
 
-body .background-color-contrast {
+body .background-black {
     background-color: #757575;
+    color: #FAFAFA;
 }
 
 body .text-left {
@@ -397,6 +400,16 @@ body .text-right {
 
 body .small-caps {
     font-variant: small-caps;
+}
+
+body hr, body .hr {
+    display: block;
+    background-color: #FFF;
+    padding: 0;
+    font-size: 0;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 7.5px;
 }
 
 /*component-line.css*/
@@ -423,13 +436,6 @@ html .line-double {
     border-style: double !important;
 }
 
-/*
-component-grid-col-xs.css
-These grids are built in the mobile first.
-Here contains 12 wide columns.
-Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
-*/
-
 body * [ class*="col-" ] {
     border: none;
     bottom: 0;
@@ -444,6 +450,13 @@ body * [ class*="col-" ] {
     top: 0;
     vertical-align: top;
 }
+
+/*
+component-grid-col-xs.css
+These grids are built in the mobile first.
+Here contains 12 wide columns.
+Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
+*/
 
 /* Extra Small Phones - Small Devices (portrait phones, 320px - 575px) */
 @media ( min-width: 320px ) {
@@ -599,21 +612,6 @@ Here contains 12 wide columns.
 Minimum screen = 576px x 540px for screen ( VGA - 720px x 480px )
 */
 
-body * [ class*="col-sm-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    float: left;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-}
-
 /* Phones - Small Devices (landscape phones, 576px > 767px) */
 @media ( min-width: 576px ) {
     body .col-sm-1 {
@@ -767,21 +765,6 @@ These grids are built in the mobile first.
 Here contains 12 wide columns.
 Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
 */
-
-body * [ class*="col-md-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    float: left;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-}
 
 /* Tablets - Medium Devices (tablets, 768px > 991px) */
 @media ( min-width: 768px ) {
@@ -937,21 +920,6 @@ Here contains 12 wide columns.
 Minimum screen = 992px x 720px for screen ( SVGA - 800px x 600px )
 */
 
-body * [ class*="col-lg-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    float: left;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-}
-
 /* Desktop - Large Devices (desktops, 992px > 1199px) */
 @media ( min-width: 992px ) {
     body .col-lg-1 {
@@ -1106,21 +1074,6 @@ Here contains 12 wide columns.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
 */
 
-body * [ class*="col-xl-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    float: left;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-}
-
 /* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1200px and up) */
 @media ( min-width: 1200px ) {
     body .col-xl-1 {
@@ -1268,13 +1221,6 @@ body * [ class*="col-xl-" ] {
     }
 }
 
-/* 
-component-grid-row-xs.css
-These grids are built in the mobile first.
-Here contains 24 wide rows.
-Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
-*/
-
 body * [ class*="row-" ] {
     border: none;
     bottom: 0;
@@ -1282,13 +1228,19 @@ body * [ class*="row-" ] {
     display: inline-block;
     clear: none;
     left: 0;
-    margin: 0;
     padding: 0;
     right: 0;
     top: 0;
     vertical-align: top;
     overflow: auto;
 }
+
+/* 
+component-grid-row-xs.css
+These grids are built in the mobile first.
+Here contains 24 wide rows.
+Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
+*/
 
 /* Extra Phone - Extra Small Devices ( Small Phones, 480px - 599px) */
 @media ( min-height: 480px ) {
@@ -1616,21 +1568,6 @@ Here contains 24 wide rows.
 Minimum screen = 576px x 540px for screen ( VGA - 720px x 480px )
 */
 
-body * [ class*="row-sm-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
-
 /* Phones - Small Devices (Phones, 600px - 680px) */
 @media ( min-height: 540px ) {
     body .row-sm-fluid {
@@ -1955,21 +1892,6 @@ These grids are built in the mobile first.
 Here contains 24 wide rows.
 Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
 */
-
-body * [ class*="row-md-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
 
 /* Tablets - Middle Devices (Tablets, 680px > 767px) */
 @media ( min-height: 600px ) {
@@ -2297,21 +2219,6 @@ Here contains 24 wide rows.
 Minimum screen = 992px x 720px for screen ( SVGA - 800px x 600px )
 */
 
-body * [ class*="row-lg-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
-
 /* Desktops = Large Devices (Desktops, 768px > 900px) */
 @media ( min-height: 720px ) {
     body .row-lg-fluid {
@@ -2637,21 +2544,6 @@ These grids are built in the mobile first.
 Here contains 24 wide rows.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
 */
-
-body * [ class*="row-xl-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
 
 /* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1050px and up) */
 @media ( min-height: 1050px ) {
@@ -3687,7 +3579,7 @@ body [data-animation="loader"]::after {
 
 html {
     background-color: #F5F5F5;
-    color: #212121;
+    color: #424242;
     font-family: Verdana, Arial, Sans-serif !important;
     font-size: 62.5% !important;
     font-weight: normal !important;
@@ -4032,7 +3924,8 @@ body address::after,
 body section::after, 
 body article::after, 
 body aside::after,
-body xmp::after {
+body xmp::after,
+body hr::after {
     content:"";
     clear:both;
     display:block;
@@ -4048,24 +3941,26 @@ body .clear {
     content: "";
 }
 
-body .color-text {
+body .text {
     color: #424242;
 }
 
-body .color-text-black {
+body .text-black {
     color: #212121;
 }
 
-body .color-text-white {
+body .text-white {
     color: #FAFAFA;
 }
 
-body .background-color {
+body .background-white {
     background-color: #F5F5F5;
+    color: #424242;
 }
 
-body .background-color-contrast {
+body .background-black {
     background-color: #757575;
+    color: #FAFAFA;
 }
 
 body .text-left {
@@ -4082,6 +3977,16 @@ body .text-right {
 
 body .small-caps {
     font-variant: small-caps;
+}
+
+body hr, body .hr {
+    display: block;
+    background-color: #FFF;
+    padding: 0;
+    font-size: 0;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 7.5px;
 }
 
 /*component-line.css*/
@@ -4108,13 +4013,6 @@ html .line-double {
     border-style: double !important;
 }
 
-/*
-component-grid-col-xs.css
-These grids are built in the mobile first.
-Here contains 12 wide columns.
-Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
-*/
-
 body * [ class*="col-" ] {
     border: none;
     bottom: 0;
@@ -4129,6 +4027,13 @@ body * [ class*="col-" ] {
     top: 0;
     vertical-align: top;
 }
+
+/*
+component-grid-col-xs.css
+These grids are built in the mobile first.
+Here contains 12 wide columns.
+Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
+*/
 
 /* Extra Small Phones - Small Devices (portrait phones, 320px - 575px) */
 @media ( min-width: 320px ) {
@@ -4284,21 +4189,6 @@ Here contains 12 wide columns.
 Minimum screen = 576px x 540px for screen ( VGA - 720px x 480px )
 */
 
-body * [ class*="col-sm-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    float: left;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-}
-
 /* Phones - Small Devices (landscape phones, 576px > 767px) */
 @media ( min-width: 576px ) {
     body .col-sm-1 {
@@ -4452,21 +4342,6 @@ These grids are built in the mobile first.
 Here contains 12 wide columns.
 Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
 */
-
-body * [ class*="col-md-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    float: left;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-}
 
 /* Tablets - Medium Devices (tablets, 768px > 991px) */
 @media ( min-width: 768px ) {
@@ -4622,21 +4497,6 @@ Here contains 12 wide columns.
 Minimum screen = 992px x 720px for screen ( SVGA - 800px x 600px )
 */
 
-body * [ class*="col-lg-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    float: left;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-}
-
 /* Desktop - Large Devices (desktops, 992px > 1199px) */
 @media ( min-width: 992px ) {
     body .col-lg-1 {
@@ -4791,21 +4651,6 @@ Here contains 12 wide columns.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
 */
 
-body * [ class*="col-xl-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    float: left;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-}
-
 /* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1200px and up) */
 @media ( min-width: 1200px ) {
     body .col-xl-1 {
@@ -4953,13 +4798,6 @@ body * [ class*="col-xl-" ] {
     }
 }
 
-/* 
-component-grid-row-xs.css
-These grids are built in the mobile first.
-Here contains 24 wide rows.
-Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
-*/
-
 body * [ class*="row-" ] {
     border: none;
     bottom: 0;
@@ -4967,13 +4805,19 @@ body * [ class*="row-" ] {
     display: inline-block;
     clear: none;
     left: 0;
-    margin: 0;
     padding: 0;
     right: 0;
     top: 0;
     vertical-align: top;
     overflow: auto;
 }
+
+/* 
+component-grid-row-xs.css
+These grids are built in the mobile first.
+Here contains 24 wide rows.
+Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
+*/
 
 /* Extra Phone - Extra Small Devices ( Small Phones, 480px - 599px) */
 @media ( min-height: 480px ) {
@@ -5301,21 +5145,6 @@ Here contains 24 wide rows.
 Minimum screen = 576px x 540px for screen ( VGA - 720px x 480px )
 */
 
-body * [ class*="row-sm-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
-
 /* Phones - Small Devices (Phones, 600px - 680px) */
 @media ( min-height: 540px ) {
     body .row-sm-fluid {
@@ -5640,21 +5469,6 @@ These grids are built in the mobile first.
 Here contains 24 wide rows.
 Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
 */
-
-body * [ class*="row-md-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
 
 /* Tablets - Middle Devices (Tablets, 680px > 767px) */
 @media ( min-height: 600px ) {
@@ -5982,21 +5796,6 @@ Here contains 24 wide rows.
 Minimum screen = 992px x 720px for screen ( SVGA - 800px x 600px )
 */
 
-body * [ class*="row-lg-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
-
 /* Desktops = Large Devices (Desktops, 768px > 900px) */
 @media ( min-height: 720px ) {
     body .row-lg-fluid {
@@ -6322,21 +6121,6 @@ These grids are built in the mobile first.
 Here contains 24 wide rows.
 Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
 */
-
-body * [ class*="row-xl-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-    overflow: auto;
-}
 
 /* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1050px and up) */
 @media ( min-height: 1050px ) {

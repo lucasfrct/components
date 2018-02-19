@@ -5,21 +5,6 @@ Here contains 12 wide columns.
 Minimum screen = 992px x 720px for screen ( SVGA - 800px x 600px )
 */
 
-body * [ class*="col-lg-" ] {
-    border: none;
-    bottom: 0;
-    box-sizing: border-box !important;
-    display: inline-block;
-    clear: none;
-    float: left;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    vertical-align: top;
-}
-
 /* Desktop - Large Devices (desktops, 992px > 1199px) */
 @media ( min-width: 992px ) {
     body .col-lg-1 {
