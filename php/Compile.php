@@ -10,14 +10,20 @@ Complie::report ( );
 class Compile 
 {
 	private static $status = true;
-	private static $list;
+	private static $list = null;
 	private static $compile = "";
 	private static $source = "";
 	private static $write = "false";
 	private static $msg = "";
 
-	public static function list ( array $array = [] ): array 
-	{
+	public static function list ( array $array = [ ] ): array 
+	{	
+		self::$status = true;
+		self::$list = Array ( );
+		self::$compile = "";
+		self::$source = "";
+		self::$write = "false";
+		self::$msg = "";
 		return self::$list = $array;
 	}
 

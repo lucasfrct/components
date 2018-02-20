@@ -1,0 +1,624 @@
+/*component-reset.css*/
+
+html {
+    background-color: #F5F5F5;
+    color: #424242;
+    font-family: Verdana, Arial, Sans-serif !important;
+    font-size: 62.5% !important;
+    font-weight: normal !important;
+    line-height: 140% !important;
+    min-height: 100vh !important;
+    min-width: 100% !important;
+    text-align: left !important;
+    vertical-align: baseline !important;
+    word-break: keep-all !important;
+    word-wrap: break-word !important;
+}
+
+html > body {
+    font-family: inherit !important;
+    font-size: 1em !important;
+    font-weight: inherit !important;
+    min-height: calc( 100vh - 0.5px ) !important;
+    min-width: calc( 100% - 0.5px ) !important;
+    text-align: inherit !important;
+    vertical-align: inherit !important;
+}
+
+html > body,
+html > body > header, 
+html > body > main, 
+html > body > footer { 
+    bottom: 0;
+    box-sizing: border-box;
+    clear: both;
+    display: block;
+    float: left;
+    left: 0;
+    margin: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    word-break: inherit;
+    word-wrap:  inherit;
+}
+
+html > body > header, 
+html > body > main, 
+html > body > footer {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    text-align: inherit !important;
+    max-width: inherit !important;
+    min-height: 2px !important;
+    min-width: 2px !important;
+    vertical-align: inherit;
+}
+
+body > header, 
+body > main,
+body > footer {
+    color: inherit;
+    border: none;
+    background-color: inherit;
+    padding: 0;
+}
+
+body div, 
+body nav, 
+body menu, 
+body ul, 
+body ol, 
+body li,
+body table,
+body pre, 
+body p,
+body a,
+body address, 
+body section, 
+body article, 
+body aside {
+    border-color: inherit;
+    box-sizing: border-box !important;
+    bottom: 0;
+    color: inherit;
+    clear: both;
+    display: inline-block;
+    float: none;
+    font-size: inherit;
+    left: 0;
+    line-height: inherit;
+    margin: 0;
+    max-height: inherit;
+    max-width: inherit;
+    min-height: inherit;
+    min-width: inherit;
+    padding: 0;
+    position: relative;
+    text-align: inherit;
+    top: 0;
+    vertical-align: inherit;
+}
+
+body a, 
+body a:link, 
+body a:visited, 
+body a:hover,
+body a:focus, 
+body a:active {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    width:auto;
+}
+
+body div,
+body section {
+    width: 100%;
+}
+
+/* RESET LISTS */
+body nav,
+body menu,
+body ol, 
+body ul {
+    display: block;
+    list-style: none;
+}
+
+body ol li,
+body ul li {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.4em;
+}
+
+body ol li > a,
+body ol li > a:link,
+body ol li > a:visited,
+body ol li > a:hover,
+body ol li > a:focus,
+body ol li > a:active,
+body ul li > a,
+body ul li > a:link,
+body ul li > a:visited,
+body ul li > a:hover,
+body ul li > a:focus,
+body ul li > a:active {
+    width: 100%;
+    padding: 0.5em;
+}
+
+/*RESET TABLES*/
+
+body table,
+body table thead,
+body table tbody,
+body table tfoot,
+body table tr th,
+body table tr td {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+}
+
+body table {
+    background-color: #FEFEFE;
+    border-collapse: collapse;
+    border-color: currentColor;
+    border-spacing: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    color: #212121;    
+    display: table;
+    margin: 2px;
+    min-height: 10px;
+    min-width: 20px;
+}
+
+body table thead,
+body table tbody,
+body table tfoot {
+    border-color: inherit;
+    border-width: inherit;
+    border-style: inherit;
+    border-spacing: inherit;
+    border-width: 1px;
+}
+
+body table tr {
+    display: table-row;
+    width: auto;
+    height: auto;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+    border-bottom-width: 1px;
+}
+
+body table tr:nth-child( 2n ) {
+    background-color: #DFDFDF;
+}
+
+body table tr:hover {
+    -webkit-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -moz-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -o-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -ms-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+}
+
+body table tr th,
+body table tr td {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.4em;
+    padding: 0.5em;
+}
+
+body table tr th:not( :last-child ),
+body table tr td:not( :last-child ) {
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: inherit; 
+}
+
+/*RESET TEXTOS*/
+body h1, 
+body h2, 
+body h3, 
+body h4, 
+body h5, 
+body h6 {
+    margin: 0 !important;
+    line-height: 1em;
+    font-weight: normal;
+    padding: 0.5em;
+    padding-left: 7px;
+    display: block;
+    color: inherit;
+}
+
+body h1 {
+    font-size: 3.4em;
+}
+
+body h2 {
+    font-size: 3em;
+}
+
+body h3 {
+    font-size: 2.6em;
+}
+
+body h4 {
+    font-size: 2.2em;
+}
+
+body h5 {
+    font-size: 1.8em;
+}
+
+body h6 {
+    font-size: 1.6em;
+}
+
+body pre h1,
+body p h1 {
+    font-size: 2.43em;
+}
+
+body pre h2,
+body p h2 {
+    font-size: 2.15em;
+}
+
+body pre h3,
+body p h3 {
+    font-size: 1.86em;
+}
+
+body pre h4,
+body p h4 {
+    font-size: 1.54em;
+}
+
+body pre h5,
+body p h5 {
+    font-size: 1.29em;
+}
+
+body pre h6,
+body p h6 {
+    font-size: 1.15em;
+}
+
+body pre, 
+body p {
+    background-color: #FDFDFD;
+    color: #424242; /* #616161 */
+    font-family: inherit;
+    font-size: 1.4em;
+    word-break: keep-all;
+    word-wrap: break-word;
+    font-weight: inherit;
+    line-height: 140%;
+    padding: 1em;
+    text-align: left;
+}
+
+body pre p {
+    font-size: 1em;
+}
+
+body xmp {
+    display: inline-block;
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+}
+
+body pre xmp,
+body p xmp {
+    font-size: 1em;
+}
+
+body div::after, 
+body nav::after,
+body menu::after, 
+body ul::after, 
+body ol::after,  
+body li::after, 
+body table::after,
+body thead::after,
+body tbody::after,
+body tfoot::after, 
+body tr::after, 
+body pre::after, 
+body p::after,
+body a::after,
+body address::after, 
+body section::after, 
+body article::after, 
+body aside::after,
+body xmp::after,
+body hr::after {
+    content:"";
+    clear:both;
+    display:block;
+}
+
+:hove,
+:focus {
+    outline: 0;
+}
+
+body .clear {
+    clear: both !important;
+    content: "";
+}
+
+body .text {
+    color: #424242;
+}
+
+body .text-black {
+    color: #212121;
+}
+
+body .text-white {
+    color: #FAFAFA;
+}
+
+body .background-white {
+    background-color: #F5F5F5;
+    color: #424242;
+}
+
+body .background-black {
+    background-color: #757575;
+    color: #FAFAFA;
+}
+
+body .text-left {
+    text-align: left;
+}
+
+body .text-center {
+    text-align: center;
+}
+
+body .text-right {
+    text-align: right;
+}
+
+body .small-caps {
+    font-variant: small-caps;
+}
+
+body hr, body .hr {
+    display: block;
+    background-color: #FFF;
+    padding: 0;
+    font-size: 0;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 7.5px;
+}
+
+/*component-line.css*/
+
+html .line,
+html * [ class*="line-" ] {
+    border-color: rgba( 255, 0, 0, 0.3 ) !important;
+    border-width: 0.25px !important;
+}
+
+html .line {
+	border-style: solid !important;
+}
+
+html .line-dashed {
+    border-style: dashed !important;
+}
+
+html .line-dotted {
+    border-style: dotted !important;
+}
+
+html .line-double {
+    border-style: double !important;
+}
+
+/*
+component-animation-reset.css
+natual size : 30px x 30px 
+*/
+
+body [data-animation] {
+    bottom: 0;
+    box-sizing: border-box;
+    color: #212121;
+    display: inline-block;
+    font-size: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    will-change: transform;
+    height: 30px;
+}
+
+/* component-animation-preloader.css */
+
+body [data-animation="preloader"], 
+body [data-animation="preloader"]::before, 
+body [data-animation="preloader"]::after {
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-name: preloader;
+	background-color: #FFF;
+	border: solid 0.5px;
+	border-color: #AAA;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	height: 12px;
+	-webkit-transition: background-color, border-color 0.1s ease-in-out;
+	-moz-transition: background-color, border-color 0.1s ease-in-out;
+	-o-transition: background-color, border-color 0.1s ease-in-out;
+	-ms-transition: background-color, border-color 0.1s ease-in-out;
+	transition: background-color, border-color 0.1s ease-in-out;
+	width: 12px;
+}
+
+body [data-animation="preloader"] {
+	animation-delay: 0.33s;
+	color: #424242;
+	display: block;
+	margin-bottom: 9px;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 9px;
+}
+
+body [data-animation="preloader"]::before, 
+body [data-animation="preloader"]::after {
+	color: inherit;
+	content: "";
+	display: inline-block;
+	height: 11px;
+	position: absolute;
+	width: 11px;
+}
+
+body [data-animation="preloader"]::before {
+	left: -19px;
+	top: -0.5px;
+}
+
+body [data-animation="preloader"]::after {
+	animation-delay: 0.66s;
+	left: 19px;
+	top: -0.5px;
+}
+
+@keyframes preloader {
+	0% { 
+		background-color: #FFF;
+		border-color: currentColor; 
+	}
+	90% { 
+		background-color: currentColor;
+		border-color: currentColor;
+	}
+	100% { 
+		background-color: #FFF; 
+		border-color: currentColor;
+	}
+}
+
+/* component-animation-loader.css */
+
+body [data-animation="loader"], 
+body [data-animation="loader"]::before, 
+body [data-animation="loader"]::after {
+	animation-iteration-count: infinite;
+	animation-name: spin;
+	animation-timing-function: linear;
+	background-color: transparent;
+	border-left-color: transparent;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	border-right-color: transparent;
+	border-style: solid;
+	border-width: 5px;
+	display: inline-block;
+	font-size: inherit;
+	line-height: inherit;
+	height: 30px;
+	width: 30px;
+}
+
+body [data-animation="loader"]::before,
+body [data-animation="loader"]::after {
+	position: absolute;
+	content: "";
+	-webkit-box-shadow: 0 0 1px 1px #999;
+	-moz-box-shadow: 0 0 1px 1px #999;
+	-o-box-shadow: 0 0 1px 1px #999;
+	-ms-box-shadow: 0 0 1px 1px #999;
+	box-shadow: 0 0 1px 1px #999;
+	border-bottom-color: rgba( 255, 255, 255, 0.7);
+	border-top-color: rgba( 255, 255, 255, 0.7);
+	will-change: transform;
+}
+
+body [data-animation="loader"] {
+	animation-duration: 2s;
+	border-bottom-color: currentColor;
+	border-top-color: currentColor;
+	border-width: 10px;
+	-webkit-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
+	-moz-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
+	-o-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
+	-ms-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
+	box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
+	color: #424242;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body [data-animation="loader"]::before {
+	animation-direction: reverse;
+	animation-duration: 1s;
+	height: 14px;
+	left: -7px;
+	top: -7px;
+	width: 14px;
+}
+
+body [data-animation="loader"]::after {
+	animation-duration: 1.5s;
+	height: 8px;
+	left: -4px;
+	top: -4px;
+	width: 8px;
+}
+
+@keyframes spin {
+	0% { 
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg); 
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+

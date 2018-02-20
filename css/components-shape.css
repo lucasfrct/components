@@ -1,0 +1,735 @@
+/*component-reset.css*/
+
+html {
+    background-color: #F5F5F5;
+    color: #424242;
+    font-family: Verdana, Arial, Sans-serif !important;
+    font-size: 62.5% !important;
+    font-weight: normal !important;
+    line-height: 140% !important;
+    min-height: 100vh !important;
+    min-width: 100% !important;
+    text-align: left !important;
+    vertical-align: baseline !important;
+    word-break: keep-all !important;
+    word-wrap: break-word !important;
+}
+
+html > body {
+    font-family: inherit !important;
+    font-size: 1em !important;
+    font-weight: inherit !important;
+    min-height: calc( 100vh - 0.5px ) !important;
+    min-width: calc( 100% - 0.5px ) !important;
+    text-align: inherit !important;
+    vertical-align: inherit !important;
+}
+
+html > body,
+html > body > header, 
+html > body > main, 
+html > body > footer { 
+    bottom: 0;
+    box-sizing: border-box;
+    clear: both;
+    display: block;
+    float: left;
+    left: 0;
+    margin: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    word-break: inherit;
+    word-wrap:  inherit;
+}
+
+html > body > header, 
+html > body > main, 
+html > body > footer {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    text-align: inherit !important;
+    max-width: inherit !important;
+    min-height: 2px !important;
+    min-width: 2px !important;
+    vertical-align: inherit;
+}
+
+body > header, 
+body > main,
+body > footer {
+    color: inherit;
+    border: none;
+    background-color: inherit;
+    padding: 0;
+}
+
+body div, 
+body nav, 
+body menu, 
+body ul, 
+body ol, 
+body li,
+body table,
+body pre, 
+body p,
+body a,
+body address, 
+body section, 
+body article, 
+body aside {
+    border-color: inherit;
+    box-sizing: border-box !important;
+    bottom: 0;
+    color: inherit;
+    clear: both;
+    display: inline-block;
+    float: none;
+    font-size: inherit;
+    left: 0;
+    line-height: inherit;
+    margin: 0;
+    max-height: inherit;
+    max-width: inherit;
+    min-height: inherit;
+    min-width: inherit;
+    padding: 0;
+    position: relative;
+    text-align: inherit;
+    top: 0;
+    vertical-align: inherit;
+}
+
+body a, 
+body a:link, 
+body a:visited, 
+body a:hover,
+body a:focus, 
+body a:active {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    width:auto;
+}
+
+body div,
+body section {
+    width: 100%;
+}
+
+/* RESET LISTS */
+body nav,
+body menu,
+body ol, 
+body ul {
+    display: block;
+    list-style: none;
+}
+
+body ol li,
+body ul li {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.4em;
+}
+
+body ol li > a,
+body ol li > a:link,
+body ol li > a:visited,
+body ol li > a:hover,
+body ol li > a:focus,
+body ol li > a:active,
+body ul li > a,
+body ul li > a:link,
+body ul li > a:visited,
+body ul li > a:hover,
+body ul li > a:focus,
+body ul li > a:active {
+    width: 100%;
+    padding: 0.5em;
+}
+
+/*RESET TABLES*/
+
+body table,
+body table thead,
+body table tbody,
+body table tfoot,
+body table tr th,
+body table tr td {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+}
+
+body table {
+    background-color: #FEFEFE;
+    border-collapse: collapse;
+    border-color: currentColor;
+    border-spacing: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    color: #212121;    
+    display: table;
+    margin: 2px;
+    min-height: 10px;
+    min-width: 20px;
+}
+
+body table thead,
+body table tbody,
+body table tfoot {
+    border-color: inherit;
+    border-width: inherit;
+    border-style: inherit;
+    border-spacing: inherit;
+    border-width: 1px;
+}
+
+body table tr {
+    display: table-row;
+    width: auto;
+    height: auto;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+    border-bottom-width: 1px;
+}
+
+body table tr:nth-child( 2n ) {
+    background-color: #DFDFDF;
+}
+
+body table tr:hover {
+    -webkit-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -moz-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -o-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -ms-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+}
+
+body table tr th,
+body table tr td {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.4em;
+    padding: 0.5em;
+}
+
+body table tr th:not( :last-child ),
+body table tr td:not( :last-child ) {
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: inherit; 
+}
+
+/*RESET TEXTOS*/
+body h1, 
+body h2, 
+body h3, 
+body h4, 
+body h5, 
+body h6 {
+    margin: 0 !important;
+    line-height: 1em;
+    font-weight: normal;
+    padding: 0.5em;
+    padding-left: 7px;
+    display: block;
+    color: inherit;
+}
+
+body h1 {
+    font-size: 3.4em;
+}
+
+body h2 {
+    font-size: 3em;
+}
+
+body h3 {
+    font-size: 2.6em;
+}
+
+body h4 {
+    font-size: 2.2em;
+}
+
+body h5 {
+    font-size: 1.8em;
+}
+
+body h6 {
+    font-size: 1.6em;
+}
+
+body pre h1,
+body p h1 {
+    font-size: 2.43em;
+}
+
+body pre h2,
+body p h2 {
+    font-size: 2.15em;
+}
+
+body pre h3,
+body p h3 {
+    font-size: 1.86em;
+}
+
+body pre h4,
+body p h4 {
+    font-size: 1.54em;
+}
+
+body pre h5,
+body p h5 {
+    font-size: 1.29em;
+}
+
+body pre h6,
+body p h6 {
+    font-size: 1.15em;
+}
+
+body pre, 
+body p {
+    background-color: #FDFDFD;
+    color: #424242; /* #616161 */
+    font-family: inherit;
+    font-size: 1.4em;
+    word-break: keep-all;
+    word-wrap: break-word;
+    font-weight: inherit;
+    line-height: 140%;
+    padding: 1em;
+    text-align: left;
+}
+
+body pre p {
+    font-size: 1em;
+}
+
+body xmp {
+    display: inline-block;
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+}
+
+body pre xmp,
+body p xmp {
+    font-size: 1em;
+}
+
+body div::after, 
+body nav::after,
+body menu::after, 
+body ul::after, 
+body ol::after,  
+body li::after, 
+body table::after,
+body thead::after,
+body tbody::after,
+body tfoot::after, 
+body tr::after, 
+body pre::after, 
+body p::after,
+body a::after,
+body address::after, 
+body section::after, 
+body article::after, 
+body aside::after,
+body xmp::after,
+body hr::after {
+    content:"";
+    clear:both;
+    display:block;
+}
+
+:hove,
+:focus {
+    outline: 0;
+}
+
+body .clear {
+    clear: both !important;
+    content: "";
+}
+
+body .text {
+    color: #424242;
+}
+
+body .text-black {
+    color: #212121;
+}
+
+body .text-white {
+    color: #FAFAFA;
+}
+
+body .background-white {
+    background-color: #F5F5F5;
+    color: #424242;
+}
+
+body .background-black {
+    background-color: #757575;
+    color: #FAFAFA;
+}
+
+body .text-left {
+    text-align: left;
+}
+
+body .text-center {
+    text-align: center;
+}
+
+body .text-right {
+    text-align: right;
+}
+
+body .small-caps {
+    font-variant: small-caps;
+}
+
+body hr, body .hr {
+    display: block;
+    background-color: #FFF;
+    padding: 0;
+    font-size: 0;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 7.5px;
+}
+
+/*component-line.css*/
+
+html .line,
+html * [ class*="line-" ] {
+    border-color: rgba( 255, 0, 0, 0.3 ) !important;
+    border-width: 0.25px !important;
+}
+
+html .line {
+	border-style: solid !important;
+}
+
+html .line-dashed {
+    border-style: dashed !important;
+}
+
+html .line-dotted {
+    border-style: dotted !important;
+}
+
+html .line-double {
+    border-style: double !important;
+}
+
+/* component-shape-reset.css */
+
+body [data-shape] {
+    bottom: 0;
+    box-sizing: border-box;
+    color: #212121;
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    left: 0;
+    margin: 0;
+    margin-bottom: -3px;
+    margin-left: 1px;
+    margin-right: 6px;
+    padding: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 16px; /* 16px x 16px */
+}
+
+/* component-shape-bar-code.css */
+
+body [data-shape="bar-code"],
+body [data-shape="bar-code"]::before,
+body [data-shape="bar-code"]::after {
+	border-bottom: transparent;
+	border-left-style: solid;
+	border-top: transparent;
+	border-right-style: solid;
+}
+
+body [data-shape="bar-code"]::before,
+body [data-shape="bar-code"]::after {
+	border-left-color: inherit;
+	border-right-color: inherit;
+	content: "";
+	display: inherit;
+	height: inherit;
+	position: absolute;
+}
+
+body [data-shape="bar-code"] {
+	border-left-width: 3px;
+	border-left-color:  currentColor;
+	border-right-width: 2px;
+	border-right-color: currentColor;
+	width: 16px;
+	position: relative;
+}
+
+body [data-shape="bar-code"]::before {
+	border-left-width: 1px;
+	border-right-width: 1px;
+	left: 1px;
+	width: 7px;
+}
+
+body [data-shape="bar-code"]::after {
+	border-left-width: 3px;
+	border-right-width: 1px;
+	left: 3px;
+	width: 1px; 
+}
+
+/* component-shape-lock.css */
+
+body [data-shape="lock"]:before,
+body [data-shape="lock"]:after {
+	border-color: inherit;
+	border-style: inherit;
+	border-width: inherit;
+	content: "";
+	display: inherit;
+	position: absolute;
+}
+
+body [data-shape="lock"] {
+	border-color: currentColor;
+	border-style: solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	border-width: 1px;
+	height: 10.5px;
+	margin-left: 2px;
+	margin-top: 7px;
+	width: 14px;
+}
+
+body [data-shape="lock"]::before {
+	border-bottom: transparent;
+	border-left: transparent;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	height: 9px;
+	left: 1px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top: -7px;
+	width: 9px;
+}
+
+body [data-shape="lock"]::after {
+	width: 0;
+	height: 3px;
+	left: 5px;
+	top: 2px;
+}
+
+/* component-shape-arrows.css */
+
+body [data-shape="arrow-top"], 
+body [data-shape="arrow-right"],
+body [data-shape="arrow-bottom"], 
+body [data-shape="arrow-left"] {
+	position: relative;
+	border-color: currentColor;
+  font-size: 1em;
+  width: auto;
+  height: 16px;
+  margin-bottom: 0;
+}
+
+body [data-shape="arrow-top"]::before, 
+body [data-shape="arrow-right"]::before,
+body [data-shape="arrow-bottom"]::before, 
+body [data-shape="arrow-left"]::before {
+  content: "";
+  display: inherit;
+  width: 0; 
+  height: 0; 
+  font-size: 0;
+  line-height: 0;  
+  padding: 0;
+  position: relative;
+  border-width: 8px;
+  border-style: solid;
+  border-color: inherit;
+  margin-right: 4px;
+}
+
+body [data-shape="arrow-top"]::before {
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  top: -2px;
+}
+
+body [data-shape="arrow-right"]::before {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  top: 1px;
+  left: 5px;
+}
+
+body [data-shape="arrow-bottom"]::before {
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  top: 7px;
+}
+
+body [data-shape="arrow-left"]::before {
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	top: 1px;
+  left: -5px;
+}
+
+/* component-shape-credit-card.css */
+
+body [data-shape="credit-card"] {
+	border: solid 1px;
+	border-color: currentColor;
+	position: relative;
+	height: 14px;
+	margin-top: 2px;
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	-o-border-radius: 3px; 
+	-ms-border-radius: 3px; 
+	border-radius: 3px;
+	width: 18px;
+	margin-right: 3px;
+}
+
+body [data-shape="credit-card"]::before {
+	content: "";
+	position: absolute;
+	display: inherit;
+	border-top: solid 3px;
+	width: inherit;
+	border-right: transparent;
+	border-bottom: transparent;
+	border-left: transparent;
+	top: 3px;
+	left: -1px;
+}
+
+/* component-shape-cash-out.css */
+
+body [data-shape="cash-out"] {
+	border-top: solid 2px;
+	border-color: currentColor;
+}
+
+body [data-shape="cash-out"]::before,
+body [data-shape="cash-out"]::after {
+	content: "";
+	display: inherit;
+	position: absolute;
+}
+
+body [data-shape="cash-out"]::before {
+	border-left: solid 2px;
+	height: 8px;
+	left: 7px;
+	top: 1px;
+}
+
+body [data-shape="cash-out"]::after {
+	width: 6px;
+	height: 6px;
+	left: 4px;
+	top: 4px;
+	border-right: solid 2px;
+	border-bottom: solid 2px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+body [ data-shape="backspace" ], 
+body [ data-shape="backspace" ]::before,
+body [ data-shape="backspace" ]::after {
+	display: block;
+	left: 0;
+	top: 0;
+	border-color: currentColor;
+	border-width: 1px;
+	border-style: solid;
+}
+
+body [ data-shape="backspace" ]::before,
+body [ data-shape="backspace" ]::after {
+	position: absolute;
+	color: currentColor;
+	content: "";
+	top: 0;
+	left: 0;
+}
+
+body [ data-shape="backspace" ] {
+	position: relative;
+	width: 14px;
+	height: 14px;
+	border-left: transparent;
+	color: inherit;
+	left: 14px;
+}
+
+body [ data-shape="backspace" ]::before {
+	content: "\d7";
+	font-size: 18px;
+	line-height: 0;
+	top: 5px;
+	left: -1px;
+	border: none;
+}
+
+body [ data-shape="backspace" ]::after {
+	width: 9px;
+	height: 9px;
+	top: 1px;
+	left: -5px;
+	border-top: none;
+	border-right: none;
+	-webkit-transform: rotate( 45deg );
+	-moz-transform: rotate( 45deg );
+	-ms-transform: rotate( 45deg );
+	-o-transform: rotate( 45deg );
+	transform: rotate( 45deg );
+}
+

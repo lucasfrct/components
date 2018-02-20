@@ -1,0 +1,1223 @@
+/*component-reset.css*/
+
+html {
+    background-color: #F5F5F5;
+    color: #424242;
+    font-family: Verdana, Arial, Sans-serif !important;
+    font-size: 62.5% !important;
+    font-weight: normal !important;
+    line-height: 140% !important;
+    min-height: 100vh !important;
+    min-width: 100% !important;
+    text-align: left !important;
+    vertical-align: baseline !important;
+    word-break: keep-all !important;
+    word-wrap: break-word !important;
+}
+
+html > body {
+    font-family: inherit !important;
+    font-size: 1em !important;
+    font-weight: inherit !important;
+    min-height: calc( 100vh - 0.5px ) !important;
+    min-width: calc( 100% - 0.5px ) !important;
+    text-align: inherit !important;
+    vertical-align: inherit !important;
+}
+
+html > body,
+html > body > header, 
+html > body > main, 
+html > body > footer { 
+    bottom: 0;
+    box-sizing: border-box;
+    clear: both;
+    display: block;
+    float: left;
+    left: 0;
+    margin: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    word-break: inherit;
+    word-wrap:  inherit;
+}
+
+html > body > header, 
+html > body > main, 
+html > body > footer {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    text-align: inherit !important;
+    max-width: inherit !important;
+    min-height: 2px !important;
+    min-width: 2px !important;
+    vertical-align: inherit;
+}
+
+body > header, 
+body > main,
+body > footer {
+    color: inherit;
+    border: none;
+    background-color: inherit;
+    padding: 0;
+}
+
+body div, 
+body nav, 
+body menu, 
+body ul, 
+body ol, 
+body li,
+body table,
+body pre, 
+body p,
+body a,
+body address, 
+body section, 
+body article, 
+body aside {
+    border-color: inherit;
+    box-sizing: border-box !important;
+    bottom: 0;
+    color: inherit;
+    clear: both;
+    display: inline-block;
+    float: none;
+    font-size: inherit;
+    left: 0;
+    line-height: inherit;
+    margin: 0;
+    max-height: inherit;
+    max-width: inherit;
+    min-height: inherit;
+    min-width: inherit;
+    padding: 0;
+    position: relative;
+    text-align: inherit;
+    top: 0;
+    vertical-align: inherit;
+}
+
+body a, 
+body a:link, 
+body a:visited, 
+body a:hover,
+body a:focus, 
+body a:active {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    width:auto;
+}
+
+body div,
+body section {
+    width: 100%;
+}
+
+/* RESET LISTS */
+body nav,
+body menu,
+body ol, 
+body ul {
+    display: block;
+    list-style: none;
+}
+
+body ol li,
+body ul li {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.4em;
+}
+
+body ol li > a,
+body ol li > a:link,
+body ol li > a:visited,
+body ol li > a:hover,
+body ol li > a:focus,
+body ol li > a:active,
+body ul li > a,
+body ul li > a:link,
+body ul li > a:visited,
+body ul li > a:hover,
+body ul li > a:focus,
+body ul li > a:active {
+    width: 100%;
+    padding: 0.5em;
+}
+
+/*RESET TABLES*/
+
+body table,
+body table thead,
+body table tbody,
+body table tfoot,
+body table tr th,
+body table tr td {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+}
+
+body table {
+    background-color: #FEFEFE;
+    border-collapse: collapse;
+    border-color: currentColor;
+    border-spacing: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    color: #212121;    
+    display: table;
+    margin: 2px;
+    min-height: 10px;
+    min-width: 20px;
+}
+
+body table thead,
+body table tbody,
+body table tfoot {
+    border-color: inherit;
+    border-width: inherit;
+    border-style: inherit;
+    border-spacing: inherit;
+    border-width: 1px;
+}
+
+body table tr {
+    display: table-row;
+    width: auto;
+    height: auto;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+    border-bottom-width: 1px;
+}
+
+body table tr:nth-child( 2n ) {
+    background-color: #DFDFDF;
+}
+
+body table tr:hover {
+    -webkit-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -moz-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -o-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    -ms-box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+    box-shadow: 0 0 3px 0.5px currentColor inset, 0 0 3px 4px #FFF inset;
+}
+
+body table tr th,
+body table tr td {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.4em;
+    padding: 0.5em;
+}
+
+body table tr th:not( :last-child ),
+body table tr td:not( :last-child ) {
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: inherit; 
+}
+
+/*RESET TEXTOS*/
+body h1, 
+body h2, 
+body h3, 
+body h4, 
+body h5, 
+body h6 {
+    margin: 0 !important;
+    line-height: 1em;
+    font-weight: normal;
+    padding: 0.5em;
+    padding-left: 7px;
+    display: block;
+    color: inherit;
+}
+
+body h1 {
+    font-size: 3.4em;
+}
+
+body h2 {
+    font-size: 3em;
+}
+
+body h3 {
+    font-size: 2.6em;
+}
+
+body h4 {
+    font-size: 2.2em;
+}
+
+body h5 {
+    font-size: 1.8em;
+}
+
+body h6 {
+    font-size: 1.6em;
+}
+
+body pre h1,
+body p h1 {
+    font-size: 2.43em;
+}
+
+body pre h2,
+body p h2 {
+    font-size: 2.15em;
+}
+
+body pre h3,
+body p h3 {
+    font-size: 1.86em;
+}
+
+body pre h4,
+body p h4 {
+    font-size: 1.54em;
+}
+
+body pre h5,
+body p h5 {
+    font-size: 1.29em;
+}
+
+body pre h6,
+body p h6 {
+    font-size: 1.15em;
+}
+
+body pre, 
+body p {
+    background-color: #FDFDFD;
+    color: #424242; /* #616161 */
+    font-family: inherit;
+    font-size: 1.4em;
+    word-break: keep-all;
+    word-wrap: break-word;
+    font-weight: inherit;
+    line-height: 140%;
+    padding: 1em;
+    text-align: left;
+}
+
+body pre p {
+    font-size: 1em;
+}
+
+body xmp {
+    display: inline-block;
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+}
+
+body pre xmp,
+body p xmp {
+    font-size: 1em;
+}
+
+body div::after, 
+body nav::after,
+body menu::after, 
+body ul::after, 
+body ol::after,  
+body li::after, 
+body table::after,
+body thead::after,
+body tbody::after,
+body tfoot::after, 
+body tr::after, 
+body pre::after, 
+body p::after,
+body a::after,
+body address::after, 
+body section::after, 
+body article::after, 
+body aside::after,
+body xmp::after,
+body hr::after {
+    content:"";
+    clear:both;
+    display:block;
+}
+
+:hove,
+:focus {
+    outline: 0;
+}
+
+body .clear {
+    clear: both !important;
+    content: "";
+}
+
+body .text {
+    color: #424242;
+}
+
+body .text-black {
+    color: #212121;
+}
+
+body .text-white {
+    color: #FAFAFA;
+}
+
+body .background-white {
+    background-color: #F5F5F5;
+    color: #424242;
+}
+
+body .background-black {
+    background-color: #757575;
+    color: #FAFAFA;
+}
+
+body .text-left {
+    text-align: left;
+}
+
+body .text-center {
+    text-align: center;
+}
+
+body .text-right {
+    text-align: right;
+}
+
+body .small-caps {
+    font-variant: small-caps;
+}
+
+body hr, body .hr {
+    display: block;
+    background-color: #FFF;
+    padding: 0;
+    font-size: 0;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 7.5px;
+}
+
+/*component-line.css*/
+
+html .line,
+html * [ class*="line-" ] {
+    border-color: rgba( 255, 0, 0, 0.3 ) !important;
+    border-width: 0.25px !important;
+}
+
+html .line {
+	border-style: solid !important;
+}
+
+html .line-dashed {
+    border-style: dashed !important;
+}
+
+html .line-dotted {
+    border-style: dotted !important;
+}
+
+html .line-double {
+    border-style: double !important;
+}
+
+body * [ class*="col-" ] {
+    border: none;
+    bottom: 0;
+    box-sizing: border-box !important;
+    display: inline-block;
+    clear: none;
+    float: left;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    vertical-align: top;
+}
+
+/*
+component-grid-col-xs.css
+These grids are built in the mobile first.
+Here contains 12 wide columns.
+Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
+*/
+
+/* Extra Small Phones - Small Devices (portrait phones, 320px - 575px) */
+@media ( min-width: 320px ) {
+    body .col-xs-1 {
+        width: calc( ( 100% / 12 ) * 1 ); 
+    }
+
+    body .col-xs-2 {
+        width: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-xs-3 {
+        width: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-xs-4 {
+        width: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-xs-5 {
+        width: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-xs-6 {
+        width: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-xs-7 {
+        width: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-xs-8 {
+        width: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-xs-9 {
+        width: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-xs-10 {
+        width: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-xs-11 {
+        width: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-xs-12 {
+        width: 100%;
+    }
+
+    body .col-xs-offset-1 {
+    	margin-left: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-xs-offset-2 {
+        margin-left: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-xs-offset-3 {
+        margin-left: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-xs-offset-4 {
+        margin-left: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-xs-offset-5 {
+        margin-left: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-xs-offset-6 {
+        margin-left: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-xs-offset-7 {
+        margin-left: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-xs-offset-8 {
+        margin-left: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-xs-offset-9 {
+        margin-left: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-xs-offset-10 {
+        margin-left: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-xs-offset-11 {
+        margin-left: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-xs-offset-12 {
+        margin-left: 100%;
+    }
+
+    body .col-xs-pull-1 {
+        margin-right: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-xs-pull-2 {
+        margin-right: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-xs-pull-3 {
+        margin-right: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-xs-pull-4 {
+        margin-right: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-xs-pull-5 {
+        margin-right: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-xs-pull-6 {
+        margin-right: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-xs-pull-7 {
+        margin-right: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-xs-pull-8 {
+        margin-right: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-xs-pull-9 {
+        margin-right: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-xs-pull-10 {
+        margin-right: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-xs-pull-11 {
+        margin-right: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-xs-pull-12 {
+        margin-right: 100%;
+    }
+}
+
+/*
+component-grid-col-sm.css
+These grids are built in the mobile first.
+Here contains 12 wide columns.
+Minimum screen = 576px x 540px for screen ( VGA - 720px x 480px )
+*/
+
+/* Phones - Small Devices (landscape phones, 576px > 767px) */
+@media ( min-width: 576px ) {
+    body .col-sm-1 {
+        width: calc( ( 100% / 12 ) * 1 ); 
+    }
+
+    body .col-sm-2 {
+        width: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-sm-3 {
+        width: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-sm-4 {
+        width: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-sm-5 {
+        width: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-sm-6 {
+        width: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-sm-7 {
+        width: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-sm-8 {
+        width: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-sm-9 {
+        width: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-sm-10 {
+        width: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-sm-11 {
+        width: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-sm-12 {
+        width: 100%;
+    }
+
+    body .col-sm-offset-1 {
+    	margin-left: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-sm-offset-2 {
+        margin-left: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-sm-offset-3 {
+        margin-left: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-sm-offset-4 {
+        margin-left: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-sm-offset-5 {
+        margin-left: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-sm-offset-6 {
+        margin-left: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-sm-offset-7 {
+        margin-left: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-sm-offset-8 {
+        margin-left: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-sm-offset-9 {
+        margin-left: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-sm-offset-10 {
+        margin-left: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-sm-offset-11 {
+        margin-left: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-sm-offset-12 {
+        margin-left: 100%;
+    }
+
+     body .col-sm-pull-1 {
+        margin-right: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-sm-pull-2 {
+        margin-right: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-sm-pull-3 {
+        margin-right: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-sm-pull-4 {
+        margin-right: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-sm-pull-5 {
+        margin-right: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-sm-pull-6 {
+        margin-right: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-sm-pull-7 {
+        margin-right: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-sm-pull-8 {
+        margin-right: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-sm-pull-9 {
+        margin-right: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-sm-pull-10 {
+        margin-right: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-sm-pull-11 {
+        margin-right: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-sm-pull-12 {
+        margin-right: 100%;
+    }
+}
+
+/*
+component-grid-col-md.css
+These grids are built in the mobile first.
+Here contains 12 wide columns.
+Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
+*/
+
+/* Tablets - Medium Devices (tablets, 768px > 991px) */
+@media ( min-width: 768px ) {
+    body .col-md-1 {
+        width: calc( ( 100% / 12 ) * 1 ); 
+    }
+
+    body .col-md-2 {
+        width: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-md-3 {
+        width: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-md-4 {
+        width: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-md-5 {
+        width: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-md-6 {
+        width: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-md-7 {
+        width: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-md-8 {
+        width: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-md-9 {
+        width: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-md-10 {
+        width: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-md-11 {
+        width: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-md-12 {
+        width: 100%;
+    }
+
+    body .col-md-offset-1 {
+    	margin-left: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-md-offset-2 {
+        margin-left: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-md-offset-3 {
+        margin-left: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-md-offset-4 {
+        margin-left: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-md-offset-5 {
+        margin-left: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-md-offset-6 {
+        margin-left: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-md-offset-7 {
+        margin-left: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-md-offset-8 {
+        margin-left: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-md-offset-9 {
+        margin-left: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-md-offset-10 {
+        margin-left: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-md-offset-11 {
+        margin-left: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-md-offset-12 {
+        margin-left: 100%;
+    }
+
+    body .col-md-pull-1 {
+        margin-right: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-md-pull-2 {
+        margin-right: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-md-pull-3 {
+        margin-right: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-md-pull-4 {
+        margin-right: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-md-pull-5 {
+        margin-right: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-md-pull-6 {
+        margin-right: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-md-pull-7 {
+        margin-right: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-md-pull-8 {
+        margin-right: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-md-pull-9 {
+        margin-right: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-md-pull-10 {
+        margin-right: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-md-pull-11 {
+        margin-right: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-md-pull-12 {
+        margin-right: 100%;
+    }
+}
+
+/*
+component-grid-col-lg.css
+These grids are built in the mobile first.
+Here contains 12 wide columns.
+Minimum screen = 992px x 720px for screen ( SVGA - 800px x 600px )
+*/
+
+/* Desktop - Large Devices (desktops, 992px > 1199px) */
+@media ( min-width: 992px ) {
+    body .col-lg-1 {
+        width: calc( ( 100% / 12 ) * 1 ); 
+    }
+
+    body .col-lg-2 {
+        width: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-lg-3 {
+        width: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-lg-4 {
+        width: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-lg-5 {
+        width: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-lg-6 {
+        width: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-lg-7 {
+        width: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-lg-8 {
+        width: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-lg-9 {
+        width: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-lg-10 {
+        width: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-lg-11 {
+        width: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-lg-12 {
+        width: 100%;
+    }
+
+    body .col-lg-offset-1 {
+        margin-left: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-lg-offset-2 {
+        margin-left: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-lg-offset-3 {
+        margin-left: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-lg-offset-4 {
+        margin-left: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-lg-offset-5 {
+        margin-left: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-lg-offset-6 {
+        margin-left: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-lg-offset-7 {
+        margin-left: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-lg-offset-8 {
+        margin-left: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-lg-offset-9 {
+        margin-left: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-lg-offset-10 {
+        margin-left: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-lg-offset-11 {
+        margin-right: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-lg-offset-12 {
+        margin-right: 100%;
+    }
+
+     body .col-lg-pull-1 {
+        margin-right: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-lg-pull-2 {
+        margin-right: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-lg-pull-3 {
+        margin-right: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-lg-pull-4 {
+        margin-right: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-lg-pull-5 {
+        margin-right: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-lg-pull-6 {
+        margin-right: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-lg-pull-7 {
+        margin-right: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-lg-pull-8 {
+        margin-right: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-lg-pull-9 {
+        margin-right: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-lg-pull-10 {
+        margin-right: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-lg-pull-11 {
+        margin-right: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-lg-pull-12 {
+        margin-right: 100%;
+    }
+}
+
+/*
+component-grid-col-xl.css
+These grids are built in the mobile first.
+Here contains 12 wide columns.
+Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
+*/
+
+/* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1200px and up) */
+@media ( min-width: 1200px ) {
+    body .col-xl-1 {
+        width: calc( ( 100% / 12 ) * 1 ); 
+    }
+
+    body .col-xl-2 {
+        width: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-xl-3 {
+        width: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-xl-4 {
+        width: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-xl-5 {
+        width: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-xl-6 {
+        width: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-xl-7 {
+        width: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-xl-8 {
+        width: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-xl-9 {
+        width: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-xl-10 {
+        width: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-xl-11 {
+        width: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-xl-12 {
+        width: 100%;
+    }
+
+    body .col-xl-offset-1 {
+    	margin-left: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-xl-offset-2 {
+        margin-left: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-xl-offset-3 {
+        margin-left: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-xl-offset-4 {
+        margin-left: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-xl-offset-5 {
+        margin-left: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-xl-offset-6 {
+        margin-left: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-xl-offset-7 {
+        margin-left: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-xl-offset-8 {
+        margin-left: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-xl-offset-9 {
+        margin-left: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-xl-offset-10 {
+        margin-left: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-xl-offset-11 {
+        margin-left: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-xl-offset-12 {
+        margin-left: 100%;
+    }
+
+    body .col-xl-pull-1 {
+        margin-right: calc( ( 100% / 12 ) * 1);
+    }
+
+    body .col-xl-pull-2 {
+        margin-right: calc( ( 100% / 12 ) * 2 );
+    }
+
+    body .col-xl-pull-3 {
+        margin-right: calc( ( 100% / 12 ) * 3 );
+    }
+
+    body .col-xl-pull-4 {
+        margin-right: calc( ( 100% / 12 ) * 4 );
+    }
+
+    body .col-xl-pull-5 {
+        margin-right: calc( ( 100% / 12 ) * 5 );
+    }
+
+    body .col-xl-pull-6 {
+        margin-right: calc( ( 100% / 12 ) * 6 );
+    }
+
+    body .col-xl-pull-7 {
+        margin-right: calc( ( 100% / 12 ) * 7 );
+    }
+
+    body .col-xl-pull-8 {
+        margin-right: calc( ( 100% / 12 ) * 8 );
+    }
+
+    body .col-xl-pull-9 {
+        margin-right: calc( ( 100% / 12 ) * 9 );
+    }
+
+    body .col-xl-pull-10 {
+        margin-right: calc( ( 100% / 12 ) * 10 );
+    }
+
+    body .col-xl-pull-11 {
+        margin-right: calc( ( 100% / 12 ) * 11 );
+    }
+
+    body .col-xl-pull-12 {
+        margin-right: 100%;
+    }
+}
+
