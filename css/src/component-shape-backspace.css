@@ -1,0 +1,51 @@
+body [ data-shape="backspace" ], 
+body [ data-shape="backspace" ]::before,
+body [ data-shape="backspace" ]::after {
+	display: block;
+	left: 0;
+	top: 0;
+	border-color: currentColor;
+	border-width: 1px;
+	border-style: solid;
+}
+
+body [ data-shape="backspace" ]::before,
+body [ data-shape="backspace" ]::after {
+	position: absolute;
+	color: currentColor;
+	content: "";
+	top: 0;
+	left: 0;
+}
+
+body [ data-shape="backspace" ] {
+	position: relative;
+	width: 14px;
+	height: 14px;
+	border-left: transparent;
+	color: inherit;
+	left: 14px;
+}
+
+body [ data-shape="backspace" ]::before {
+	content: "\d7";
+	font-size: 18px;
+	line-height: 0;
+	top: 5px;
+	left: -1px;
+	border: none;
+}
+
+body [ data-shape="backspace" ]::after {
+	width: 9px;
+	height: 9px;
+	top: 1px;
+	left: -5px;
+	border-top: none;
+	border-right: none;
+	-webkit-transform: rotate( 45deg );
+	-moz-transform: rotate( 45deg );
+	-ms-transform: rotate( 45deg );
+	-o-transform: rotate( 45deg );
+	transform: rotate( 45deg );
+}

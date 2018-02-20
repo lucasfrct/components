@@ -24,6 +24,7 @@ $componentsCss = array (
 	'src/component-shape-arrows.css',
 	'src/component-shape-credit-card.css',
 	'src/component-shape-cash-out.css',
+	'src/component-shape-backspace.css',
 	'src/component-animation-reset.css',
 	'src/component-animation-preloader.css',
 	'src/component-animation-loader.css',
