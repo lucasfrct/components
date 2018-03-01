@@ -1,90 +1,60 @@
+$Date = null;
+
 ( function ( ) {
 	"use strict";
 
-//	DATE IN FORMAT 
-var _date = function ($format){
-    var $date = new Date();
-    var $d = Number($date.getDate());
-    var $m = Number($date.getMonth()+1);
-    var $Y = Number($date.getFullYear());
-	var $y = Number(String($Y).substring(2));
-    $d = String(($d < 10) ? "0"+$d : $d);
-	$m = String(($m < 10) ? "0"+$m : $m);
-	$Y = String(($d < 10) ? "0"+$Y : $Y);
-	$y = String(($y < 10) ? "0"+$y : $y);
-	
-	var $resolve = '';
-	switch($format){
-		case 'Y-m-d': $resolve = String($Y+"-"+$m+"-"+$d); break;
-		case 'Y/m/d': $resolve = String($Y+"/"+$m+"/"+$d); break;
-		case 'd-m-Y': $resolve = String($d+"-"+$m+"-"+$Y); break;
-		case 'd/m/Y': $resolve = String($d+"/"+$m+"/"+$Y); break;
-		case 'd-m-y': $resolve = String($d+"-"+$m+"-"+$y); break;
-		case 'd/m/y': $resolve = String($d+"/"+$m+"/"+$y); break;
-		case 'd-m': $resolve = String($d+"-"+$m); break;
-		case 'd/m': $resolve = String($d+"/"+$m); break;
-		case 'm-Y': $resolve = String($m+"-"+$Y); break;
-		case 'm/Y': $resolve = String($m+"/"+$Y); break;
-		case 'm-y': $resolve = String($m+"-"+$y); break;
-		case 'm/y': $resolve = String($m+"/"+$y); break;
-		case 'd': $resolve = Number($d); break;
-		case 'm': $resolve = Number($m); break;
-		case 'Y': $resolve = Number($Y); break;
-		case 'y': $resolve = Number($y); break;
-		case 'sum': $resolve = Number(Math.floor(Math.floor($Y * 12) * 30))+Math.floor(Number($m) * 30)+Number($d); break;
-		default : $resolve = String($Y+"-"+$m+"-"+$d); 
+	// yyyy-mm-dd hh:mn:ss:ms | yy/mm/dd | hh:mn:ss | ms | dd/mm/yyyy
+	var $d = { 
+		Year: null, 
+		year: null, 
+		month: null, 
+		day: null, 
+		hour: null, 
+		minute: null, 
+		second: null, 
+		milissecond: null 
 	};
 
-    return $resolve;
-}
+	$Date = __date;
 
-//	HOUR IN FORMAT
-var _hour = function($format){
-	var $date = new Date();
-	var $h = $date.getHours();
-	var $m = $date.getMinutes();
-	var $s = $date.getSeconds();
-	var $ms = $date.getMilliseconds();
-	
-	$h = String(($h < 10) ? "0"+$h : $h);
-	$m = String(($m < 10) ? "0"+$m : $m);
-	$s = String(($s < 10) ? "0"+$s : $s);
-	$ms = ($ms < 10) ? "0"+$ms : $ms;
-	$ms = ($ms < 100) ? "0"+$ms : $ms;
-	
-	var $resolve = '';
-	switch($format){
-		case 'h' : $resolve = Number($h); break;
-		case 'm' : $resolve = Number($m); break;
-		case 's' : $resolve = Number($s); break;
-		case 'ms' : $resolve = Number($ms); break;
-		case 'h:m' : $resolve = String($h+":"+$m); break;
-		case 'm:s' : $resolve = String($m+":"+$s); break;
-		case 's:ms' : $resolve = String($s+":"+$ms); break;
-		case 'sum' : $resolve = Math.floor(Math.floor(Number($h) * 60) * 60)+Number(Math.floor($m * 60))+Number($s)+Number('0.'+$ms); break;
-		default : $resolve = String($h+":"+$m+":"+$s);
+	 function __date ( $format = null ) {
+		
+	    var $date = new Date ( );
+		var $resolve = null;
+	    
+	    $d.Year = Number ( $date.getFullYear ( ) );
+		$d.year = Number ( String ( $d.Year ).substring ( 2 ) );
+	    $d.month = String ( ( '00' + ( $date.getMonth ( ) + 1 ) ).slice ( -2 ) );
+	    $d.day = String ( ( '00' + $date.getDate ( ) ).slice ( -2 ) );
+	    $d.hour = String ( ( '00' + $date.getHours ( ) ).slice ( -2 ) );
+		$d.minute = String ( ( '00' + $date.getMinutes ( ) ).slice ( -2 ) );
+		$d.second = String ( ( '00' + $date.getSeconds ( ) ).slice ( -2 ) );
+		$d.milissecond = String ( ( '00' + $date.getMilliseconds ( ) ).slice ( -3 ) );
+
+		if ( $format == null || $format == "" ) {
+			$resolve = $d;
+		} else if ( $format.toLowerCase ( ).replace ( "-", "" ) == "datetime" ) {
+			$resolve = __replaceDate ( "yyyy-mm-dd hh:mn:ss" );
+
+		} else {
+			$resolve = __replaceDate ( $format );
+		};
+
+	    return $resolve;
 	};
-	
-	return $resolve;
-};
 
-/* TRANSFORM STRING DATE IN OBJECT DATE*/
-var dateParse = function(dt){
-	var dArray = dt.split('/');
-	var d = dArray[0];
-	var m = dArray[1];
-	var Y = dArray[2];
-	return String(Y+'-'+m+'-'+d);
-};
-
-/* TRANSFORM OBJECT DATE IN STRING DATE*/
-var dateView = function(dt){
-	var dArray = dt.split('-');
-	var Y = dArray[0];
-	var m = dArray[1];
-	var d = dArray[2];
-	return String(d+'/'+m+'/'+Y);
-};
-
+	function __replaceDate ( $format = "yyyy/mm/dd" ) {
+		return $format
+			.toLowerCase ( )
+			.replace ( "yyyy", $d.Year )
+			.replace ( 'yy', $d.year )
+			.replace ( 'mm', $d.month )
+			.replace ( 'dd', $d.day )
+			.replace ( 'hh', $d.hour )
+			.replace ( 'mn', $d.minute )
+			.replace ( 'ss', $d.second )
+			.replace ( 'ms', $d.milissecond )
+			.trim ( );
+	};
 
 } ) ( );
