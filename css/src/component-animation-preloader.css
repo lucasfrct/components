@@ -6,41 +6,43 @@ body [data-animation="preloader"]::after {
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
 	animation-name: preloader;
-	background-color: #FFF;
-	border: solid 0.5px;
-	border-color: #AAA;
+	background-color: currentColor;
+	border: none;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	-ms-border-radius: 50%;
 	border-radius: 50%;
+	box-sizing: border-box;
+	font-size: 0;
 	height: 12px;
+	line-height: 0;
 	-webkit-transition: background-color, border-color 0.1s ease-in-out;
 	-moz-transition: background-color, border-color 0.1s ease-in-out;
 	-o-transition: background-color, border-color 0.1s ease-in-out;
 	-ms-transition: background-color, border-color 0.1s ease-in-out;
 	transition: background-color, border-color 0.1s ease-in-out;
+	vertical-align: top;
 	width: 12px;
 }
 
 body [data-animation="preloader"] {
 	animation-delay: 0.33s;
 	color: #424242;
-	display: block;
-	margin-bottom: 9px;
+	display: block !important;
+	margin-bottom: 7px;
 	margin-left: auto;
 	margin-right: auto; 
-	margin-top: 9px;
+	margin-top: 7px;
 }
 
 body [data-animation="preloader"]::before, 
 body [data-animation="preloader"]::after {
-	color: inherit;
+	color: currentColor;
 	content: "";
-	display: inline-block;
-	height: 11px;
+	display: inline-block !important;
 	position: absolute;
-	width: 11px;
+	float: left;
 }
 
 body [data-animation="preloader"]::before {
@@ -57,14 +59,11 @@ body [data-animation="preloader"]::after {
 @keyframes preloader {
 	0% { 
 		background-color: #FFF;
-		border-color: currentColor; 
 	}
 	90% { 
 		background-color: currentColor;
-		border-color: currentColor;
 	}
 	100% { 
 		background-color: #FFF; 
-		border-color: currentColor;
 	}
 }

@@ -42,6 +42,7 @@ $componentsShape = array (
 $componentsAnimation = array ( 
 	'src/component-animation-reset.css',
 	'src/component-animation-preloader.css',
+	'src/component-animation-bar-preloader.css',
 	'src/component-animation-loader.css',
 );
 

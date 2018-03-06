@@ -1,0 +1,39 @@
+/* component-animation-bar-preloader.css */
+
+body [data-animation="bar-preloader"] {
+	display: block;
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	float: left;
+	background-color: currentColor;
+	animation-name: bar-preloader;
+	animation-duration: 4s;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+}
+
+@keyframes bar-preloader {
+	0% {
+		width: 0%;
+		opacity: 1;
+	}
+
+	60% {
+		width: 50%;
+	}
+
+	70% {
+		width: 80%;
+	}
+
+	100% {
+		width: 100%;
+		opacity: 1;
+	}
+}

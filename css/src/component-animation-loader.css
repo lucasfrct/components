@@ -15,11 +15,13 @@ body [data-animation="loader"]::after {
 	border-radius: 50%;
 	border-right-color: transparent;
 	border-style: solid;
-	border-width: 5px;
+	border-width: 5px !important;
+	box-sizing: border-box;
 	display: inline-block;
-	font-size: inherit;
-	line-height: inherit;
+	font-size: 0;
+	line-height: 0;
 	height: 30px;
+	vertical-align: top;
 	width: 30px;
 }
 
@@ -27,28 +29,29 @@ body [data-animation="loader"]::before,
 body [data-animation="loader"]::after {
 	position: absolute;
 	content: "";
-	-webkit-box-shadow: 0 0 1px 1px #999;
-	-moz-box-shadow: 0 0 1px 1px #999;
-	-o-box-shadow: 0 0 1px 1px #999;
-	-ms-box-shadow: 0 0 1px 1px #999;
-	box-shadow: 0 0 1px 1px #999;
+	-webkit-box-shadow: 0 0 1px 1px currentColor;
+	-moz-box-shadow: 0 0 1px 1px currentColor;
+	-o-box-shadow: 0 0 1px 1px currentColor;
+	-ms-box-shadow: 0 0 1px 1px currentColor;
+	box-shadow: 0 0 1px 1px currentColor;
 	border-bottom-color: rgba( 255, 255, 255, 0.7);
 	border-top-color: rgba( 255, 255, 255, 0.7);
 	will-change: transform;
+	float: left;
 }
 
 body [data-animation="loader"] {
 	animation-duration: 2s;
 	border-bottom-color: currentColor;
 	border-top-color: currentColor;
-	border-width: 10px;
-	-webkit-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
-	-moz-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
-	-o-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
-	-ms-box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
-	box-shadow: 0 0 2px 1px #212121, 0 0 2px 1px #FFF inset;
+	border-width: 10px !important;
+	-webkit-box-shadow: 0 0 2px 1px currentColor, 0 0 2px 1px #FFF inset;
+	-moz-box-shadow: 0 0 2px 1px currentColor, 0 0 2px 1px #FFF inset;
+	-o-box-shadow: 0 0 2px 1px currentColor, 0 0 2px 1px #FFF inset;
+	-ms-box-shadow: 0 0 2px 1px currentColor, 0 0 2px 1px #FFF inset;
+	box-shadow: 0 0 2px 1px currentColor, 0 0 2px 1px #FFF inset;
 	color: #424242;
-	display: block;
+	display: block !important;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -56,18 +59,18 @@ body [data-animation="loader"] {
 body [data-animation="loader"]::before {
 	animation-direction: reverse;
 	animation-duration: 1s;
-	height: 14px;
+	height: 24px;
 	left: -7px;
 	top: -7px;
-	width: 14px;
+	width: 24px;
 }
 
 body [data-animation="loader"]::after {
 	animation-duration: 1.5s;
-	height: 8px;
-	left: -4px;
-	top: -4px;
-	width: 8px;
+	height: 16px;
+	left: -3px;
+	top: -3px;
+	width: 16px;
 }
 
 @keyframes spin {
