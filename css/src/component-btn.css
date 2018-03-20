@@ -23,9 +23,9 @@ STATES
 
 body [data-btn] {
 	background-color: #EEEEEE;
-	border: solid 0.5px #BDBDBD;
+	border: solid 0.5px currentColor;
 	bottom: 0;
-	color: #212121;
+	color: #767676;
 	font-size: 1.4em;
 	cursor: pointer;
 	display: inline-block;
@@ -43,6 +43,7 @@ body [data-btn] {
 	-o-transform-origin: center center;
 	-ms-transform-origin: center center;
 	transform-origin: center center;
+	vertical-align: top;
 }
 
 body [data-btn]:not( :disabled ):hover,
@@ -276,4 +277,22 @@ body [type="checkbox"][data-btn="switch"]:not( :disabled ):checked::after {
 
 body [type="checkbox"][data-btn="switch"]:disabled::after {
 	background-color: #F6F6F6;
+}
+
+body [data-btn="close"] {
+	color: #F00;
+	font-size: 28px;
+	line-height: 1em;
+	padding: 0em;
+}
+
+body [data-btn="close"]::before {
+	color: inherit;
+	content: "\d7";
+	font-size: inherit;
+	line-height: inherit;
+	position: relative;
+	text-align: center;
+	top: 1px;
+	padding: 0;
 }

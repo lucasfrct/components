@@ -168,6 +168,23 @@
 			<p>Demonstração do RESET de uma <span>H6</span>. A linha vermelha pontilhada é o ambiente onde a h6 é inserida, e a linha Azul solida é o contorno da h6.</p>
 			<div class="ln-mark"><h6 class="ln-demonstration"><xmp><h6></h6></xmp></h6></div>
 		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de um <span>circulo</span>. A linha vermelha pontilhada é o ambiente onde o circulo é inserido, e a linha Azul solida é o contorno do círculo.</p>
+			<div class="ln-mark">
+				<span class="ln-demonstration radius" style="width: 30px; height: 30px; display: inline-block;"></span><br>
+				<xmp><span class="radius"></span></xmp>
+				<xmp><span class="circle"></span></xmp>
+			</div>
+		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de uma <span>Borda aredondada</span>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads. O número sequente ao termo "radius" representa px (pixels).</p>
+			<div class="ln-mark">
+				<span class="ln-demonstration radius-4" style="width: 30px; height: 30px; display: inline-block;"></span><br>
+				<xmp><span class="radius-4"></span></xmp><br>
+				<span class="ln-demonstration radius-8" style="width: 30px; height: 30px; display: inline-block;"></span><br>
+				<xmp><span class="radius-8"></span></xmp>
+			</div>
+		</section>
 		<p><b>Grid Col</b><br>Aqui estão exemplos das grids funcionando, levando em consideração que só terá a grid .col-xs-* sendo testada.</p>
 		<section class="grid-test">
 			<div class="line-dashed col-xs-1 clear">.col-xs-1</div>
@@ -334,6 +351,12 @@
 			<p><xmp><input type="checkbox" data-btn="switch"></xmp></p><br>
 			<input type="checkbox" name="" data-btn="switch">
 			<input type="checkbox" name="" data-btn="switch" disabled>
+		</section>
+		<section class="demonstration btn col-xs-12 col-lg-4">
+			<h5>Button Close</h5>
+			<p><xmp><button data-btn="close"></button></xmp></p><br>
+			<button data-btn="close"></button>
+			<button data-btn="close" disabled ></button>
 		</section>
 		<p><b>Shapes</b><br>Aqui estão exemplos de formas feitas totalmente em css. Todas as formas são configurads pelo atributo [data-shape].</p>
 		<section class="demonstration btn col-xs-12 col-lg-6">
