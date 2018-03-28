@@ -30,6 +30,8 @@ body .demonstration {
 	margin-top: 5px ;
 	background-color: #FFF;
 	border-left: solid 1px #009688;
+	left: 0;
+	vertical-align: top;
 }
 
 body .demonstration > p {
@@ -81,6 +83,7 @@ body main > p > b:first-child {
 body .btn {
 	padding: 14px;
 }
+
 body pre {
 	display: block;
 }
