@@ -4,7 +4,7 @@ Here contains 24 wide rows.
 Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
 */
 
-/* Tablets - Middle Devices (Tablets, 680px > 767px) */
+/* Tablets - Middle Devices (Tablets, 600px > 719px) */
 @media ( min-height: 600px ) {
     body .row-md-fluid {
         height: auto !important;

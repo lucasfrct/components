@@ -5,6 +5,7 @@ header ( "Content-type: text/css" );
 $componentsReset = array (
 	'src/component-reset.css',
 	'src/component-line.css',
+	'src/component-window.css',
 );
 
 $componentsCol = array (

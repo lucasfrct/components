@@ -5,7 +5,7 @@ Here contains 24 wide rows.
 Minimum screen = 576px x 540px for screen ( VGA - 720px x 480px )
 */
 
-/* Phones - Small Devices (Phones, 600px - 680px) */
+/* Phones - Small Devices (Phones, 540px - 599px) */
 @media ( min-height: 540px ) {
     body .row-sm-fluid {
         height: auto !important;

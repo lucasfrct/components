@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<link rel="stylesheet" type="text/css" href="css/compile-css.php">
+	<link rel="stylesheet" type="text/css" href="asserts/assert.css">
+	<script type="text/javascript" src="js/components.js"></script>
+	<script type="text/javascript" src="js/array.js"></script>
+	<title>Components CSS</title>
+	
+	<style type="text/css">
+		.visible {
+			background: #00F;
+		}
+
+		.hidden {
+			background: #0F0;
+		}
+	</style>
+
+</head>
+<body>
+	<header>
+		<div class="col-xs-12 col-lg-4">
+			<h3>Components CSS</h3>
+		</div>
+		<nav class="col-xs-12 col-lg-8">
+			<ul class="">
+				<li><a href="css.html">CSS</a></li>
+				<li><a href="js.html">JS</a></li>
+				<li><a href="php.html">PHP</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<button onclick="toggleClass ( '.visible' ); ">Visible</button>
+			<button onclick="toggleClass ( '.hidden' ); ">Hidden</button>
+			<button onclick="toggleClass ( '.alert' ); ">Alert</button>
+			<button onclick="toggleClass ( '.modal' ); ">Modal</button>
+		</section>
+		<div>
+
+		<section class="modal">
+			<button class="close" onclick="toggleClass ( '.modal' ); ">Modal</button>
+			<div class="dialog">
+				caixa de dialogo!
+				<button class="close" onclick="toggleClass ( '.modal' ); ">Modal</button>
+			</div>
+		</section>
+		
+		<section class="window active line-dashed visible row-xs-12">
+			<h1>Visible</h1>
+		</section>
+
+		<section class="window line-dashed hidden row-xs-6">
+			<h1>Hidden</h1>
+		</section>
+
+		<section class="alert">	
+			<button class="close" onclick="toggleClass ( '.alert' ); ">Close</button>
+			<div class="dialog">Caixa de Diálogo</div>
+		</section>
+
+		
+		</div>
+	</main>
+</body>
+</html>

@@ -6,7 +6,7 @@ Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
 */
 
 /* Extra Small Phones - Small Devices (portrait phones, 320px - 575px) */
-@media ( min-width: 320px ) {
+@media ( min-width: 32px ) {
     body .col-xs-1 {
         width: calc( ( 100% / 12 ) * 1 ); 
     }
