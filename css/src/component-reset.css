@@ -331,6 +331,10 @@ body p xmp {
     font-size: 1em;
 }
 
+body button {
+    cursor: pointer;
+}
+
 body div::after, 
 body nav::after,
 body menu::after, 

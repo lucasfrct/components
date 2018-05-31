@@ -331,6 +331,10 @@ body p xmp {
     font-size: 1em;
 }
 
+body button {
+    cursor: pointer;
+}
+
 body div::after, 
 body nav::after,
 body menu::after, 
@@ -482,17 +486,17 @@ body .window {
 
 body .window {
 	opacity: 0;
-	-webkit-transform: scale( 0.01, 0.01 );
-	-moz-transform: scale( 0.01, 0.01 );
-	-ms-transform: scale( 0.01, 0.01 );
-	-o-transform: scale( 0.01, 0.01 );
-	transform: scale( 0.01, 0.01 );
-	-webkit-transition: transform 0.3s ease-in-out, opacity 0.4s linear 0.05s, z-index 0.6s ease-out;
-	-moz-transition: transform 0.3s ease-in-out, opacity 0.4s linear 0.05s, z-index 0.6s ease-out;
-	-ms-transition: transform 0.3s ease-in-out, opacity 0.4s linear 0.50s, z-index 0.6s ease-out;
-	-o-transition: transform 0.3s ease-in-out, opacity 0.4s linear 0.05s, z-index 0.6s ease-out;
-	transition: transform 0.3s ease-in-out, opacity 0.4s linear 0.05s, z-index 0.6s ease-out;
-	will-change: transform, opacity, transition;
+	-webkit-transform: scale( 0.001, 0.001 );
+	-moz-transform: scale( 0.001, 0.001 );
+	-ms-transform: scale( 0.001, 0.001 );
+	-o-transform: scale( 0.001, 0.001 );
+	transform: scale( 0.001, 0.001 );
+	-webkit-transition: opacity 0.3s linear, transform 0.3s ease-in-out, z-index 0.01s linear 0.31s;
+	-moz-transition: opacity 0.3s linear, transform 0.3s ease-in-out, z-index 0.001s linear 0.31s;
+	-ms-transition: opacity 0.3s linear, transform 0.3s ease-in-out, z-index 0.001s linear 0.31s;
+	-o-transition: opacity 0.3s linear, transform 0.3s ease-in-out, z-index 0.001s linear 0.31s;
+	transition: opacity 0.3s linear, transform 0.3s ease-in-out, z-index 0.001s linear 0.31s;
+	will-change: opacity, transform, z-index, transition;
 	z-index: 0;
 }
 
@@ -503,7 +507,12 @@ body .active {
 	-ms-transform: scale( 1, 1 );
 	-o-transform: scale( 1, 1 );
 	transform: scale( 1, 1 );
-	will-change: transform, opacity, transition;
+	-webkit-transition: opacity 0.2s linear, transform 0.3s ease-in-out, z-index 0.001s linear;
+	-moz-transition: opacity 0.2s linear, transform 0.3s ease-in-out, z-index 0.001s linear;
+	-ms-transition: opacity 0.2s linear, transform 0.3s ease-in-out, z-index 0.001s linear;
+	-o-transition: opacity 0.2s linear, transform 0.3s ease-in-out, z-index 0.001s linear;
+	transition: opacity 0.2s linear, transform 0.3s ease-in-out, z-index 0.01s linear;
+	will-change: opacity, transform, z-index, transition;
 	z-index: 1;
 }
 
@@ -524,50 +533,76 @@ body .modal {
 	z-index: -1 !important;
 }
 
-body .modal,
-body .alert {
+body .alert,
+body .modal {
 	opacity: 0;
+	position: fixed;
 	-webkit-transform: translate( 0, -100vh );
 	-moz-transform: translate( 0, -100vh );
 	-ms-transform: translate( 0, -100vh );
 	-o-transform: translate( 0, -100vh );
 	transform: translate( 0, -100vh );
-	-webkit-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-	-moz-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-	-ms-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-	-o-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-	transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-	will-change: opacity, transform, transition;
+	-webkit-transition: opacity 0.1s ease-in-out 0.3s, transform 0.3s ease-in-out, z-index 0.01s linear 0.4s;
+	-moz-transition: opacity 0.1s ease-in-out 0.3s, transform 0.3s ease-in-out, z-index 0.01s linear 0.4s;
+	-ms-transition: opacity 0.1s ease-in-out 0.3s, transform 0.3s ease-in-out, z-index 0.01s linear 0.4s;
+	-o-transition: opacity 0.1s ease-in-out 0.3s, transform 0.3s ease-in-out, z-index 0.01s linear 0.4s;
+	transition: opacity 0.1s ease-in-out 0.3s, transform 0.3s ease-in-out, z-index 0.01s linear 0.4s;
+	will-change: opacity, transform, z-index, transition;
+	z-index: -1 !important;
 }
 
-body .modal.active,
-body .alert.active {
+body .alert.active,
+body .modal.active {
 	opacity: 1;
-	-webkit-transform: translate( 0, 0 );
-	-moz-transform: translate( 0, 0 );
-	-ms-transform: translate( 0, 0 );
-	-o-transform: translate( 0, 0 );
-	transform: translate( 0, 0 );
-	will-change: transform, opacity, transition;
+	-webkit-transform: translate( 0, 0 ) !important;
+	-moz-transform: translate( 0, 0 ) !important;
+	-ms-transform: translate( 0, 0 ) !important;
+	-o-transform: translate( 0, 0 ) !important;
+	transform: translate( 0, 0 ) !important;
+	-webkit-transition: opacity 0.05s ease-in-out, transform 0.3s ease-in-out 0.01s, z-index 0.01s linear;
+	-moz-transition: opacity 0.05s ease-in-out, transform 0.3s ease-in-out 0.01s, z-index 0.01s linear;
+	-ms-transition: opacity 0.05s ease-in-out, transform 0.3s ease-in-out 0.01s, z-index 0.01s linear;
+	-o-transition: opacity 0.05s ease-in-out, transform 0.3s ease-in-out 0.01s, z-index 0.01s linear;
+	transition: opacity 0.05s ease-in-out, transform 0.3s ease-in-out 0.01s, z-index 0.01s linear;
+	will-change: opacity, transform, z-index, transition;
 	z-index: 1000000000 !important;
 }
 
-body .modal .close, 
-body .alert .close {
+body .alert .close,
+body .modal .close {
 	cursor: pointer;
-	float: right;
-	right: 0;
+	float: right !important;
+	right: 0 !important;
+	margin-left: calc( 100% - 32px );
 	top: 0;
 	z-index: inherit;
 }
 
-body .modal > .close {
-	position: fixed;
+body .alert > .close,
+body .modal > * .close {
+	position: absolute !important;
 }
 
-body .modal > * .close, 
-body .alert > .close  {
-	position: absolute;
+body .alert {
+	background-color: rgba( 255, 0, 0, 0.9 );
+	border: solid 1px #F00;
+	color: #FFF;
+	height: 40vh;
+	min-height: 240px;
+	min-width: 240px;
+	width: 100vw;
+}
+
+body .alert.active {
+	z-index: 100000 !important;
+}
+
+body .alert > .dialog {
+	background-color: transparent;
+}
+
+body .modal > .close {
+	position: fixed;
 }
 
 body .dialog {
@@ -579,26 +614,6 @@ body .dialog {
 	width: 90%;
 	z-index: 1;
 }
-
-body .alert {
-	background-color: #F00;
-	height: 40vh;
-	min-height: 240px;
-	min-width: 240px;
-	opacity: 0;
-	position: fixed;
-	width: 100vw;
-	z-index: -1 !important;
-}
-
-body .alert.active {
-	z-index: 100000 !important;
-}
-
-body .alert > .dialog {
-	background-color: transparent;
-}
-
 
 /*col-sm devices*/
 @media ( min-width: 576px ) {
@@ -621,7 +636,6 @@ body .alert > .dialog {
 		width: 80%;
 	}
 }
-
 
 /*col-lg devices*/
 @media ( min-width: 992px ) {
@@ -3113,7 +3127,7 @@ body [data-btn] {
 	-ms-border-radius: 4px;
 	border-radius: 4px;
 	bottom: 0;
-	color: #767676;
+	color: #424242;
 	font-size: 14px; /*standart 14px*/
 	cursor: pointer;
 	display: inline-block;
@@ -3397,6 +3411,8 @@ body [data-btn="close"] {
 	color: #F00;
 	font-size: 28px;
 	padding: 0;
+	height: 28px;
+	width: 28px;
 }
 
 body [data-btn="close"]::before {
@@ -3736,6 +3752,127 @@ body [data-shape="calendar-flip"]::before {
 	top: -8px;
 	left: 2px;
 }
+
+/*component-shape-sandwich*/
+
+body [data-shape="sandwich"]::before, 
+body [data-shape="sandwich"]::after,
+body [data-shape="sandwich"] {
+	background-color: currentColor;
+	cursor: pointer;
+	left: 0;
+}
+
+
+body [data-shape="sandwich"] {
+	height: 4px;
+	width: 24px;
+	margin: 8px 2px;
+}
+
+body [data-shape="sandwich"]::before, 
+body [data-shape="sandwich"]::after {
+	content: "";
+	display: block;
+	height: inherit;
+	position: relative;
+	-webkit-transform: rotate( 0deg );
+	-moz-transform: rotate( 0deg );
+	-ms-transform: rotate( 0deg );
+	-o-transform: rotate( 0deg );
+	transform: rotate( 0deg );
+	-webkit-transform-origin: 14% 50%;
+	-moz-transform-origin: 14% 50%;
+	-ms-transform-origin: 14% 50%;
+	-o-transform-origin: 14% 50%;
+	transform-origin: 14% 50%;
+	-webkit-transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-moz-transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-ms-transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-o-transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	width: inherit;
+	will-change: background-color, transform, transform-origin, trasition;
+}
+
+body [data-shape="sandwich"]::before { 
+	top: -6px;
+} 
+
+body [data-shape="sandwich"]::after {
+	top: 2px;
+}
+
+body [data-shape="sandwich"].active {
+	background-color: transparent;
+}
+
+body [data-shape="sandwich"].active::before {
+	-webkit-transform: rotate( 45deg );
+	-moz-transform: rotate( 45deg );
+	-ms-transform: rotate( 45deg );
+	-o-transform: rotate( 45deg );
+	transform: rotate( 45deg );
+	left: 2px;
+}
+
+body [data-shape="sandwich"].active::after {
+	-webkit-transform: rotate( -45deg );
+	-moz-transform: rotate( -45deg );
+	-ms-transform: rotate( -45deg );
+	-o-transform: rotate( -45deg );
+	transform: rotate( -45deg );
+	left: 2px;
+}
+
+/*component-piccker.css*/
+
+body [data-shape="picker"] {
+	color: #000;
+	display: block;
+	font-size: 14px;
+	border: solid 1px currentColor;
+	width: calc( 100% - 2px );
+	min-height: 300px;
+
+}
+
+body [data-shape="picker"] [data-shape="picker-header"] {
+	font-size: 14px;
+	border-bottom: solid 1px #959595;
+	background-color: #FFF;
+	height: 48px;
+	min-height: 48px;
+	width: 100%;
+	margin: 0;
+}
+
+body [data-shape="picker"] [data-shape="picker-header"] [data-shape="sandwich"] {
+	margin-left: 7px; 
+}
+
+body [data-shape="picker"] [data-shape="picker-header"] [data-shape="mouth"] {
+	font-size: 14px;
+	width: 70%;
+}
+
+/* header menu*/
+
+/* header menu day */
+
+/*header menu month*/
+
+/* header month */
+
+/* header day */
+
+/* Week collum D, S, T. Q, Q, S, S*/
+
+/* fab button Add */
+
+/* menu fab up */
+
+/* munu fab down */
 
 /*
 component-animation-reset.css

@@ -39,6 +39,8 @@ $componentsShape = array (
 	'src/component-shape-cash-out.css',
 	'src/component-shape-backspace.css',
 	'src/component-shape-calendar-flip.css',
+	'src/component-shape-sandwich.css',
+	'src/component-shape-picker.css',
 );
 
 $componentsAnimation = array ( 
