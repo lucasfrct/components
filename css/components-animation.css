@@ -4,7 +4,7 @@ html {
     background-color: #F5F5F5;
     color: #424242;
     font-family: Verdana, Arial, Sans-serif !important;
-    font-size: 62.5% !important;
+    font-size: 12pt;
     font-weight: normal !important;
     line-height: 140% !important;
     min-height: 100vh !important;
@@ -130,9 +130,10 @@ body ul {
 body ol li,
 body ul li {
     display: inline-block;
-    font-size: 1.4em;
+    font-size: 1em;
     min-height: initial;
     width: 100%;
+    white-space: normal;
 }
 
 body ol li > a,
@@ -148,11 +149,11 @@ body ul li > a:hover,
 body ul li > a:focus,
 body ul li > a:active {
     width: 100%;
-    padding: 0.5em;
+    padding: 0.3em;
+    white-space: normal;
 }
 
 /*RESET TABLES*/
-
 body table,
 body table thead,
 body table tbody,
@@ -217,8 +218,9 @@ body table tr th,
 body table tr td {
     display: table-cell;
     vertical-align: middle;
-    font-size: 1.4em;
-    padding: 0.5em;
+    font-size: 1em;
+    padding: 0.4em;
+    white-space: normal;
 }
 
 body table tr th:not( :last-child ),
@@ -234,68 +236,65 @@ body h2,
 body h3, 
 body h4, 
 body h5, 
-body h6 {
+body h6,
+body h7,
+body h8,
+body .h1,
+body .h2,
+body .h3,
+body .h4,
+body .h5,
+body .h6,
+body .h7,
+body .h8 {
     margin: 0 !important;
-    line-height: 1em;
+    line-height: 1.4em;
     font-weight: normal;
-    padding: 0.5em;
+    padding: 0.3em;
     padding-left: 7px;
     display: block;
     color: inherit;
+    white-space: normal;
 }
 
-body h1 {
-    font-size: 3.4em;
-}
-
-body h2 {
-    font-size: 3em;
-}
-
-body h3 {
+body h1,
+body .h1 {
     font-size: 2.6em;
 }
 
-body h4 {
+body h2,
+body .h2 {
     font-size: 2.2em;
 }
 
-body h5 {
+body h3,
+body .h3 {
     font-size: 1.8em;
 }
 
-body h6 {
-    font-size: 1.6em;
+body h4,
+body .h4 {
+    font-size: 1.5em;
 }
 
-body pre h1,
-body p h1 {
-    font-size: 2.43em;
+body h5,
+body .h5 {
+    font-size: 1.2em;
 }
 
-body pre h2,
-body p h2 {
-    font-size: 2.15em;
+body h6,
+body .h6 {
+    font-size: 1.1em;
 }
 
-body pre h3,
-body p h3 {
-    font-size: 1.86em;
+body h7,
+body .h7 {
+    font-size: 0.9em;
 }
 
-body pre h4,
-body p h4 {
-    font-size: 1.54em;
-}
-
-body pre h5,
-body p h5 {
-    font-size: 1.29em;
-}
-
-body pre h6,
-body p h6 {
-    font-size: 1.15em;
+body h8,
+body .h8 {
+    font-size: 0.8em;
 }
 
 body pre, 
@@ -303,32 +302,25 @@ body p {
     background-color: #FDFDFD;
     color: #424242; /* #616161 */
     font-family: inherit;
-    font-size: 1.4em;
+    font-size: 1em;
     word-break: keep-all;
     word-wrap: break-word;
     font-weight: inherit;
     line-height: 140%;
-    padding: 1em;
+    padding: 0.6em;
     text-align: left;
-}
-
-body pre p {
-    font-size: 1em;
+    white-space: normal;
 }
 
 body xmp {
     display: inline-block;
-    font-size: 1.4em;
+    font-size: 1em;
     margin: 0;
     padding: 0;
     background-color: transparent;
     color: inherit;
     font-family: inherit;
-}
-
-body pre xmp,
-body p xmp {
-    font-size: 1em;
+    white-space: normal;
 }
 
 body button {
@@ -420,6 +412,7 @@ body hr, body .hr {
 
 body .radius,
 body .circle {
+    display: inline-block;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -450,6 +443,21 @@ body .radius-8 {
     -o-border-radius: 8px;
     border-radius: 8px;
 }
+
+body input,
+body textarea,
+body select {
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 0;
+    font-size: 1em;
+    display: inline-block;
+    outline: 0;
+    padding: 0.6em;
+    width: calc( 100% - 1px );
+    white-space: normal;
+}
+
 
 /*component-line.css*/
 

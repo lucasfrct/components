@@ -150,4 +150,12 @@ Minimum screen = 1200px X 1050px for screen ( Full HD - 1920px - 1080px )
     body .col-xl-pull-12 {
         margin-right: 100%;
     }
+
+    body .col-xl-hidden {
+        display: none;
+    }
+
+    body .col-xl-visible {
+        display: inline-block;
+    }
 }

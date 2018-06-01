@@ -150,4 +150,12 @@ Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
     body .col-xs-pull-12 {
         margin-right: 100%;
     }
+
+    body .col-xs-hidden {
+        display: none;
+    }
+
+    body .col-xs-visible {
+        display: inline-block;
+    }
 }

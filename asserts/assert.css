@@ -4,13 +4,13 @@ body header {
 }
 
 body header > nav > ul {
-	padding: 0.25em;
+	padding: 7px 3.5px;
 }
 
 body header > nav > ul > li {
-	width: calc( ( 100% / 3 ) - 3px);
+	width: calc( ( 100% / 3 ) - 4px );
 	display: inline-block;
-	margin: 5px 0;	
+	margin: 5px 0;
 }
 
 body header > nav > ul > li > a {
@@ -18,72 +18,54 @@ body header > nav > ul > li > a {
 	background-color: #009688;
 	color: #FFF !important;
 	text-align: center;
-	font-size: 1.4em;
-	padding: 0.5em;
-}
-
-body p {
-	width: 100%;
-}
-
-body .demonstration {
-	margin-top: 5px ;
-	background-color: #FFF;
-	border-left: solid 1px #009688;
-	left: 0;
-	vertical-align: top;
-}
-
-body .demonstration > p {
-	padding: 8px;
-}
-
-
-body .demonstration span:not( [data-shape] ):not( [data-animation]) {
-	color: #F00;
 }
 
 body main {
 	background-color: #F6F6F6;
 }
 
-body main > p:not( :first-child ) {
-	border-top: solid 4px #009688;
-	margin-top: 5px;
+body .demonstration {
+	background-color: #FFF;
+	border-top: solid 0.1px #CCC;
+	border-left: solid 1px #009688;
+	left: 0;
+	margin: 5px 0 1px 0;
+	vertical-align: top;
 }
 
-body main > p > b:first-child {
-	font-size: 1.8em;
+body .demonstration em {
+	color: #F00;
 }
 
-.ln-demonstration {
-	border: solid 0.5px rgba( 0, 0, 255, 0.5);
+body .demonstration xmp {
 }
 
-.ln-mark {
+body .enviroment {
 	border: dotted 2px rgba( 255, 0, 0, 1);
 	display: block;
+	margin-bottom: 14px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 90%;
-	margin-bottom: 14px;
 }
 
-.grid-test {
+body .wrap {
+	border: solid 0.5px rgba( 0, 0, 255, 0.5);
+}
+
+body .grid-test {
 	background-color: #FDFDFD;
 	margin-top: 5px;
 	padding: 14px 0;
 }
 
-.screen-grid-row {
+body .screen-grid-row {
 	max-height: 50vh;
 	overflow: auto;
 }
 
-body .btn {
-	padding: 14px;
+body .btn-padding {
+	padding: 7px;
 }
 
-body pre {
-	display: block;
-}
+
