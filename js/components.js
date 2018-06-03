@@ -1,3 +1,26 @@
 function toggleClass ( $class ) {
-	document.querySelector( $class ).classList.toggle ( "active" );
+	document.querySelectorAll( $class ).classList.toggle ( "active" );
 };
+
+function requestScreen (  ) {
+
+    var $element = document.documentElement;
+    
+    if ( $element.requestFullscreen ) {
+        $element.requestFullscreen ( );
+
+    } else if ( $element.mozRequestFullScreen ) {
+        $element.mozRequestFullScreen ( );
+
+    } else if ( $element.webkitRequestFullscreen ) {
+        $element.webkitRequestFullscreen ( );
+
+    } else if ( $element.msRequestFullscreen ) {
+        $element.msRequestFullscreen ( );
+    };
+};
+
+
+
+
+

@@ -24,7 +24,7 @@ $Date = null;
 
 	$Date = __date;
 
-	function __date ( $format = undefined, $setMonths = undefined, $setWeek = undefined ) {
+	function __date ( $format = undefined, $setMonths = undefined, $setWeek = undefined, $set = undefined ) {
 		var $resolve = null;
 		var $date = { };
 
@@ -39,7 +39,7 @@ $Date = null;
 			&& - 1 === $format.indexOf ( "mn")
 			&& - 1 === $format.indexOf ( "ss")
 			&& - 1 === $format.indexOf ( "ms")
-			&& - 1 === $format.indexOf ( "datetime")
+			&& - 1 === $format.indexOf ( "datetime" )
 		) {
 			
 			$resolve = newDate ( parseDate ( $format ) );
@@ -47,10 +47,16 @@ $Date = null;
 		} else if ( "boolean" === typeof $format && true === $format  && "string" === typeof $setMonths ) {
 			
 			var $date =  parseDate ( $setMonths );
-			$Week = ( "object" === typeof $setWeek && $setWeek$setWeek.length > 0 ) ? $setWeek : $Week;
 			$months = ( "object" === typeof $setMonths && $setMonths.length > 0 ) ? $setMonths : $months;
+			$Week = ( "object" === typeof $setWeek && $setWeek$setWeek.length > 0 ) ? $setWeek : $Week;
 			
 			$resolve = parsedateToObj ( newDate ( $date ), $months, $week, $Week );
+		}  else if ( "boolean" === typeof $format && true === $format  && "object" === typeof $setMonths ) {
+			
+			$months = ( "object" === typeof $setWeek && $setWeek.length > 0 ) ? $setWeek : $months;
+			$Week = ( "object" === typeof $set && $set.length > 0 ) ? $set : $Week;
+			
+			$resolve = parsedateToObj ( newDate ( $setMonths ), $months, $week, $Week );
 		} else if ( "boolean" === typeof $format && true === $format ) {
 			
 			$Week = ( "object" === typeof $setWeek && $setWeek$setWeek.length > 0 ) ? $setWeek : $Week;
@@ -135,7 +141,7 @@ var $date = { };
 // $Date ( ) =  param undefinided = new date origin
 // $Date ( "2018-01-02" ) = param string = new Date ( param ) new date orgin;
 // $Date ( true ) = param boolean = date object
-// $Date ( true, "2018-01-01" );
+// $Date ( true, "2018-01-01" ) | return { Year:"", month: "", day:"" };
 // $Date ( "datetime" );
 // $Date ( "yyyy/mm/dd" ) = param string = date fromat in string
 
