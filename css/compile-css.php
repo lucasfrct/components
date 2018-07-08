@@ -47,6 +47,7 @@ $componentsAnimation = array (
 	'src/component-animation-reset.css',
 	'src/component-animation-preloader.css',
 	'src/component-animation-loader.css',
+	'src/component-animation-line-load.css',
 );
 
 

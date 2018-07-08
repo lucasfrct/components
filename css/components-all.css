@@ -435,10 +435,12 @@ body .radius-2 {
 
 body .radius-4,
 body form,
-body form fieldset, 
-body form input,
-body form select,
-body form textarea {
+body legend,
+body fieldset, 
+body input,
+body select,
+body textarea
+body form button {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
@@ -454,63 +456,102 @@ body .radius-8 {
     border-radius: 8px;
 }
 
+body form {
+    color: #424242;
+    border: solid 1px #AAA;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: auto;
+    width: calc( 100% - 28px );
+}
+
 body form,
-body fieldset,
-body legend {
+body legend,
+body fieldset {
     background-color: #F2F2F2;
-}
-
-body fieldset,
-body form legend {
-    background: transparent;
-}
-
-body form legend,
-body form fieldset {
-    margin: 7px 14px;
-}
-
-body form legend {
     font-weight: 500;
-    font-size: 1.2em;
+    margin: 7px 14px;
+    min-width: 292px;
+    padding: 14px;
     text-align: center;
+    white-space: normal;
 }
 
+body label,
 body input,
 body select,
 body textarea,
 body form button {
+    color: #424242;
     border: solid 1px #CCC;
     font-size: 1em;
-    margin: 0;
-    padding: 2px 7px;
+    margin: 3px 7px;
+    min-width: 240px;
+    outline-color: #1E88E5;
+    padding: 7px 14px;
     position: relative;
     width: auto;
     background-color: #FFFFFF;
     white-space: normal;
+    line-height: 1.4em;
 }
 
+body label {
+    display: inline-block;
+    min-width: 220px;
+    width: calc( 100% - 44px );
+    text-align: left;
+}
+
+body form fieldset,
+body form legend {
+    background: transparent;
+    color: #767676;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: auto;
+    padding: 0;
+    text-align: left;  
+}
+
+body form legend {
+    font-size: 1.2em;
+}
+
+body form label,
 body form input,
 body form select,
 body form textarea,
 body form button {
-    margin: 7px 14px;
-    width: calc( 100% - 28px );
+    color: inherit;
+    font-size: 1.2em;
+    margin-top: 7px;
+    padding: 7px 14px;
+    position: relative;
+    width: calc( 100% - 14px );
 }
 
-body form fieldset input,
-body form fieldset select,
-body form fieldset textarea,
-body form fieldset button {
-    margin: 7px 0;
-    width: 100%;
+body form label {
+    width: calc( 100% - 44px );
+}
+
+body form [data-type="checkbox"],
+body form [data-type="radio"] {
+    background-color: transparent;
+    border: none;
 }
 
 body form [type="checkbox"],
 body form [type="radio"] {
-    width: auto;
-    margin: 7px 7px 7px 14px;
-    top: 1px;
+    float: left;
+    display: inline-block;
+    left: 0;
+    margin: 7px 7px 0px -3px;
+    min-width: 21px;
+    padding: 0;
+    text-align: left;
+    width: 21px;
 }
 
 /*component-line.css*/
@@ -4163,6 +4204,65 @@ body [data-animation="loader"]::after {
 		-o-transform: rotate(360deg);
 		-ms-transform: rotate(360deg);
 		transform: rotate(360deg);
+	}
+}
+
+body [data-animation="line-load"],
+body [data-animation="line-load"]::before,
+body [data-animation="line-load"]::after {
+	height: 5px;
+	display: inline-block;
+}
+
+body [data-animation="line-load"] {
+	background-color: #80DEEA;
+	color: #00838F;
+	margin: 3px 7px;
+	overflow: hidden;
+	width: calc( 100% - 14px );
+}
+
+body [data-animation="line-load"]::before,
+body [data-animation="line-load"]::after {
+	animation: lineLoad 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out
+	background-color: transparent;
+	border-left: solid 7px currentColor;
+	content: "";
+	display: inherit;
+	height: inherit;
+	left: -7px;
+	position: absolute;
+	width: 100%;
+}
+
+ body [data-animation="line-load"]::after {
+ 	animation-delay: 0.5s;
+ 	animation-duration: 0.9s;
+ }
+
+ @keyframes lineLoad {
+	0% {
+		transform: translateX( 0% );
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	80% {
+		transform: translateX( 100% );
+		opacity: 0
+	}
+
+	99% {
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX( 0% );
+		opacity: 1;
 	}
 }
 

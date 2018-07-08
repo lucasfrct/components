@@ -329,82 +329,134 @@
 		<section class="demonstration col-xs-12 col-lg-12">
 			<p>Demonstração do RESET de um <em>form</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
 			<div class="enviroment">
-				<form class="wrap">form</form>
+				<form>form</form>
 			</div>
 			<xmp><form>form</form></xmp>
 		</section>
 		<section class="demonstration col-xs-12 col-lg-12">
 			<p>Demonstração do RESET de um <em>legend</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
 			<div class="enviroment">
-				<form class="wrap"><legend>Título</legend></form>
+				<legend>legend</legend>
 			</div>
-			<xmp><form><legend>Título</legend></form></xmp>
+			<xmp><legend class="wrap">legend</legend></xmp>
 		</section>
 		<section class="demonstration col-xs-12 col-lg-12">
 			<p>Demonstração do RESET de um <em>fieldset</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
 			<div class="enviroment">
-				<form class="wrap"><fieldset>text</fieldset></form>
+				<fieldset>fieldset</fieldset>
 			</div>
-			<xmp><form><fieldset>text</fieldset></form></xmp>
+			<xmp><fieldset class="wrap">fieldset</fieldset></xmp>
+		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de um <em>label</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<div class="enviroment">
+				<label>Label</label>
+			</div>
+			<xmp><label>Label</label></xmp>
 		</section>
 		<section class="demonstration col-xs-12 col-lg-12">
 			<p>Demonstração do RESET de um <em>input</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
 			<div class="enviroment">
-				<form class="wrap"><input type="" name="" value="abcdefgh"></form>
+				<input placeholder="input" />
 			</div>
-			<xmp><form><input type="" name=""></form></xmp>
+			<xmp><input class="wrap" placeholder="input" /></xmp>
 		</section>
 		<section class="demonstration col-xs-12 col-lg-12">
 			<p>Demonstração do RESET de um <em>select</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
 			<div class="enviroment">
+				<select><option>select 1</option><option disabled>select 2</option><option>select 3</option></select>
+			</div>
+			<xmp><select><option>select 1</option><option disabled>select 2</option><option>select 3</option></select></xmp>
+		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de um <em>textarea</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<div class="enviroment">
+				<textarea placeholder="textarea"></textarea>
+			</div>
+			<xmp><textarea placeholder="textarea"></textarea></xmp>
+		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de um form com <em>legend</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<div class="enviroment">
+				<form class="wrap"><legend>form + legend</legend></form>
+			</div>
+			<xmp><form><legend>form + legend</legend></form></xmp>
+		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de um form com<em>fieldset</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<div class="enviroment">
+				<form><fieldset>form + fieldset</fieldset></form>
+			</div>
+			<xmp><form class="wrap"><fieldset>form + fieldset</fieldset></form></xmp>
+		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de um form com<em>label</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<div class="enviroment">
+				<form><label>label</label></form>
+			</div>
+			<xmp><form class="wrap"><label>label</label></form></xmp>
+		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de um form com <em>input</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<div class="enviroment">
+				<form><input value="form + input" placeholder="form + input"></form>
+			</div>
+			<xmp><form class="wrap"><input value="form + input" placeholder="form + input"></form></xmp>
+		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de um form com <em>select</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<div class="enviroment">
 				<form class="wrap">
 					<select>
 						<optgroup label="Group1">
-							<option value="option1">option 1</option>
-							<option value="option2" selected>option 2</option>
+							<option value="option1" selected >form + select 1</option>
 						</optgroup>
 						<optgroup label="Group2">
-							<option value="option3">option 3</option>
-							<option value="option4" disabled>option 4</option>
-							<option value="option5">option 5</option>
+							<option value="option2" disabled>form + select 2</option>
+							<option value="option3">form + select 3</option>
 						</optgroup>
 					</select>
 				</form>
 			</div>
-			<xmp><form class="wrap">
+			<xmp><form>
 					<select>
 						<optgroup label="Group1">
-							<option value="option1">option 1</option>
-							<option value="option2" selected>option 2</option>
+							<option value="option1" selected >form + select 1</option>
 						</optgroup>
 						<optgroup label="Group2">
-							<option value="option3">option 3</option>
-							<option value="option4" disabled>option 4</option>
-							<option value="option5">option 5</option>
+							<option value="option2" disabled>form + select 2</option>
+							<option value="option3">form + select 3</option>
 						</optgroup>
 					</select>
 				</form></xmp>
 		</section>
 		<section class="demonstration col-xs-12 col-lg-12">
-			<p>Demonstração do RESET de um <em>textarea</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<p>Demonstração do RESET de um form com <em>textarea</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
 			<div class="enviroment">
-				<form class="wrap"><textarea placeholder="textarea">textarea</textarea></form>
+				<form class="wrap"><textarea placeholder="form + textarea">form + textarea</textarea></form>
 			</div>
-			<xmp><form><textarea placeholder="textarea">textarea</textarea></form></xmp>
+			<xmp><form><textarea placeholder="form + textarea">form + textarea</textarea></form></form></xmp>
 		</section>
 		<section class="demonstration col-xs-12 col-lg-12">
-			<p>Demonstração do RESET de um <em>input checkbox</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<p>Demonstração do RESET de um form com <em>input checkbox</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
 			<div class="enviroment">
-				<form class="wrap"><input type="checkbox" name=""><label>check</label></form>
+				<form class="wrap"><label data-type="checkbox"><input type="checkbox" name="">check</label></form>
 			</div>
-			<xmp><form><input type="checkbox" name=""><label>check</label></form></xmp>
+			<xmp><form><label data-type="checkbox"><input type="checkbox" name="">check</label></form></xmp>
 		</section>
 		<section class="demonstration col-xs-12 col-lg-12">
-			<p>Demonstração do RESET de um <em>input radio</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<p>Demonstração do RESET de um form com <em>input radio</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
 			<div class="enviroment">
-				<form class="wrap"><label><input type="radio" name="">radio</label></form>
+				<form class="wrap"><label data-type="radio"><input type="radio" name="">radio</label></form>
 			</div>
-			<xmp><form><input type="radio" name=""><label>radio</label></form></xmp>
+			<xmp><form><label data-type="radio"><input type="radio" name="">radio</label></form></form></xmp>
+		</section>
+		<section class="demonstration col-xs-12 col-lg-12">
+			<p>Demonstração do RESET de um form com <em>button</em>. A linha vermelha pontilhada é o ambiente onde o quadrado é inserido, e a linha Azul solida é o contorno com as bordas arredondads.</p>
+			<div class="enviroment">
+				<form class="wrap"><button>Button</button></form>
+			</div>
+			<xmp><form><label data-type="radio"><input type="radio" name="">radio</label></form></form></xmp>
 		</section>
 
 		<p><b>Buttons</b><br>Aqui estão exemplos de botões funcionando. Todos os botões são comfigurados pelo atributo [data-btn].<br>Ex.: [data-btn="cta"].</p>
@@ -536,6 +588,11 @@
 			<h5>Loader</h5>
 			<p><xmp><span data-animation="loader"></span></xmp></p><br>
 			<span data-animation="loader"></span>
+		</section>
+		<section class="demonstration btn col-xs-12 col-lg-6">
+			<h5>Line-load</h5>
+			<p><xmp><span data-animation="line-load"></span></xmp></p><br>
+			<span data-animation="line-load"></span>
 		</section>
 	</main>
 </body>
