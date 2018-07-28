@@ -532,6 +532,10 @@ body form button {
     width: calc( 100% - 14px );
 }
 
+body button:disabled {
+    color: #A0A0A0;
+}
+
 body form label {
     width: calc( 100% - 44px );
 }
@@ -552,4 +556,7 @@ body form [type="radio"] {
     padding: 0;
     text-align: left;
     width: 21px;
+}
+body button:disabled {
+    color: #A0A0A0;
 }

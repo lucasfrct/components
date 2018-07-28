@@ -532,6 +532,10 @@ body form button {
     width: calc( 100% - 14px );
 }
 
+body button:disabled {
+    color: #A0A0A0;
+}
+
 body form label {
     width: calc( 100% - 44px );
 }
@@ -553,6 +557,10 @@ body form [type="radio"] {
     text-align: left;
     width: 21px;
 }
+body button:disabled {
+    color: #A0A0A0;
+}
+
 
 /*component-line.css*/
 
@@ -3330,10 +3338,12 @@ body [type="checkbox"][data-btn="switch"]:active {
 	box-shadow: none !important;
 }
 
+body button:disabled,
 body [data-btn]:disabled,
 body [data-btn="progress"]:disabled::after,
 body [data-btn="fab"]:disabled::after {
 	color: #A0A0A0;
+	cursor: not-allowed;
 }
 
 body [data-btn="progress"]::after,
@@ -3548,6 +3558,7 @@ body [type="checkbox"][data-btn="switch"]:not( :disabled ):checked::after {
 
 body [type="checkbox"][data-btn="switch"]:disabled::after {
 	background-color: #F6F6F6;
+	cursor: not-allowed;
 }
 
 body [data-btn="close"] {
