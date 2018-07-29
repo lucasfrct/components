@@ -439,6 +439,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "css/src/component-btn.css",
+			"settings":
+			{
+				"buffer_size": 7681,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -776,8 +785,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "css/src/component-btn.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7681,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7376,
+								7376
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS3/CSS3.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 624.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
