@@ -5,7 +5,7 @@ body [ data-shape="backspace" ]::after {
 	left: 0;
 	top: 0;
 	border-color: currentColor;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
 }
 
@@ -19,27 +19,30 @@ body [ data-shape="backspace" ]::after {
 }
 
 body [ data-shape="backspace" ] {
-	position: relative;
-	width: 14px;
-	height: 14px;
 	border-left: transparent;
 	color: inherit;
+	font-weight: 900;
+	height: 14px;
 	left: 14px;
+	position: relative;
+	text-align: center;
+	width: 14px;
 }
 
 body [ data-shape="backspace" ]::before {
-	content: "\d7";
-	font-size: 18px;
-	line-height: 0;
-	top: 5px;
-	left: -1px;
 	border: none;
+	content: "\d7";
+	font-size: 12px;
+	left: 0px;
+	line-height: 12px;
+	top: 0px;
+	text-align: center;
 }
 
 body [ data-shape="backspace" ]::after {
-	width: 9px;
-	height: 9px;
-	top: 1px;
+	width: 8px;
+	height: 8px;
+	top: 0px;
 	left: -5px;
 	border-top: none;
 	border-right: none;

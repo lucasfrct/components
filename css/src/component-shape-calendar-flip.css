@@ -1,0 +1,29 @@
+/* component-shape-calendar-flip.css */
+
+
+body [data-shape="calendar-flip"] {
+	border: solid 2px currentColor;
+	border-top-width: 5px;
+	color: #767676;
+	display: inline-block;
+	font-size: 12px;
+	height: 24px;
+	line-height: 12px;
+	margin: 3px 7px 2px 7px;
+	padding: 2px 2px;
+	text-align: center;
+	top: 0px;
+	width: 24px;
+}
+
+body [data-shape="calendar-flip"]::before {
+	border-left: solid 4px currentColor;
+	border-right: solid 4px currentColor;
+	content: "";
+	display: block;
+	height: 4px;
+	left: 2px;
+	position: absolute;
+	top: -8px;
+	width: 9px;
+}

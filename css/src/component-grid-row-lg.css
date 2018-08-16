@@ -5,7 +5,7 @@ Here contains 24 wide rows.
 Minimum screen = 992px x 720px for screen ( SVGA - 800px x 600px )
 */
 
-/* Desktops = Large Devices (Desktops, 768px > 900px) */
+/* Desktops = Large Devices (Desktops, 720px > 1049px) */
 @media ( min-height: 720px ) {
     body .row-lg-fluid {
         height: auto !important;

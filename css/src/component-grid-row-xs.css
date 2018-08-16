@@ -5,130 +5,130 @@ Here contains 24 wide rows.
 Minimum screen = 320px x 480px for screen ( VGA - 720px x 480px )
 */
 
-/* Extra Phone - Extra Small Devices ( Small Phones, 480px - 599px) */
-@media ( min-height: 480px ) {
+/* Extra Phone - Extra Small Devices ( Small Phones, 480px - 540px) */
+@media ( min-height: 48px ) {
     body .row-xs-fluid {
         height: auto !important;
     }
 
     body .row-xs-1 {
         height: calc( 100vh / 24 );
-        min-height: calc( 100vh / 24 );
+        min-height: calc( 480px / 24 );
     }
 
     body .row-xs-2 {
         height: calc( ( 100vh / 24 ) * 2 );
-        min-height: calc( ( 100vh / 24 ) * 2 );
+        min-height: calc( ( 480px / 24 ) * 2 );
     }
 
     body .row-xs-3 {
         height: calc( ( 100vh / 24 ) * 3 );
-        min-height: calc( (100vh / 24 ) * 3 );
+        min-height: calc( (480px / 24 ) * 3 );
     }
 
     body .row-xs-4 {
         height: calc( ( 100vh / 24 ) * 4 );
-        min-height: calc( ( 100vh / 24 ) * 4 );
+        min-height: calc( ( 480px / 24 ) * 4 );
     }
 
     body .row-xs-5 {
         height: calc( ( 100vh / 24 ) * 5 );
-        min-height: calc( ( 100vh / 24 ) * 5 );
+        min-height: calc( ( 480px / 24 ) * 5 );
     }
 
     body .row-xs-6 {
         height: calc( ( 100vh / 24 ) * 6 );
-        min-height: calc( ( 100vh / 24 ) * 6 );
+        min-height: calc( ( 480px / 24 ) * 6 );
     }
 
     body .row-xs-7 {
         height: calc( ( 100vh / 24 ) * 7 );
-        min-height: calc( ( 100vh / 24 ) * 7 );
+        min-height: calc( ( 480px / 24 ) * 7 );
     }
 
     body .row-xs-8 {
         height: calc( ( 100vh / 24 ) * 8 );
-        min-height: calc( ( 100vh / 24 ) * 8 );
+        min-height: calc( ( 480px / 24 ) * 8 );
     }
 
     body .row-xs-9 {
         height: calc( ( 100vh / 24 ) * 9 );    
-        min-height: calc( ( 100vh / 24 ) * 9 );
+        min-height: calc( ( 480px / 24 ) * 9 );
     }
 
     body .row-xs-10 {
         height: calc( ( 100vh / 24 ) * 10 );
-        min-height: calc( ( 100vh / 24 ) * 10 );
+        min-height: calc( ( 480px / 24 ) * 10 );
     }
 
     body .row-xs-11 {
         height: calc( ( 100vh / 24 ) * 11 );
-        min-height: calc( ( 100vh / 24 ) * 11 );
+        min-height: calc( ( 480px / 24 ) * 11 );
     }
 
     body .row-xs-12 {
         height: calc( ( 100vh / 24 ) * 12 );
-        min-height: calc( ( 100vh / 24 ) * 12 );
+        min-height: calc( ( 480px / 24 ) * 12 );
     }
 
     body .row-xs-13 {
         height: calc( ( 100vh / 24 ) * 13 );
-        min-height: calc( ( 100vh / 24 ) * 13 );
+        min-height: calc( ( 480px / 24 ) * 13 );
     }
 
     body .row-xs-14 {
         height: calc( ( 100vh / 24 ) * 14 );
-        min-height: calc( ( 100vh / 24 ) * 14 );
+        min-height: calc( ( 480px / 24 ) * 14 );
     }
 
     body .row-xs-15 {
         height: calc( ( 100vh / 24 ) * 15 );
-        min-height: calc( ( 100vh / 24 ) * 15 );
+        min-height: calc( ( 480px / 24 ) * 15 );
     }
 
     body .row-xs-16 {
         height: calc( ( 100vh / 24 ) * 16 );
-        min-height: calc( ( 100vh / 24 ) * 16 );
+        min-height: calc( ( 480px / 24 ) * 16 );
     }
 
     body .row-xs-17 {
         height: calc( ( 100vh / 24 ) * 17 );
-        min-height: calc( ( 100vh / 24 ) * 17 );
+        min-height: calc( ( 480px / 24 ) * 17 );
     }
 
     body .row-xs-18 {
         height: calc( ( 100vh / 24 ) * 18 );
-        min-height: calc( ( 100vh / 24 ) * 18 );
+        min-height: calc( ( 480px / 24 ) * 18 );
     }
 
     body .row-xs-19 {
         height: calc( ( 100vh / 24 ) * 19 );
-        min-height: calc( ( 100vh / 24 ) * 19 );
+        min-height: calc( ( 480px / 24 ) * 19 );
     }
 
     body .row-xs-20 {
         height: calc( ( 100vh / 24 ) * 20 );
-        min-height: calc( ( 100vh / 24 ) * 20 );
+        min-height: calc( ( 480px / 24 ) * 20 );
     }
 
     body .row-xs-21 {
         height: calc( ( 100vh / 24 ) * 21 );
-        min-height: calc( ( 100vh / 24 ) * 21 );
+        min-height: calc( ( 480px / 24 ) * 21 );
     }
 
     body .row-xs-22 {
         height: calc( ( 100vh / 24 ) * 22 );
-        min-height: calc( ( 100vh / 24 ) * 22 );
+        min-height: calc( ( 480px / 24 ) * 22 );
     }
 
     body .row-xs-23 {
         height: calc( ( 100vh / 24 ) * 23 );
-        min-height: calc( ( 100vh / 24 ) * 23 );
+        min-height: calc( ( 480px / 24 ) * 23 );
     }
 
     body .row-xs-24 {
         height: calc( 100vh - 0.2px );
-        min-height: calc( 480px - 0.2px );
+        min-height: calc( 480pxpx - 0.2px );
     }
 
     body .row-xs-offset-1 {

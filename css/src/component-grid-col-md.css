@@ -150,4 +150,12 @@ Minimum screen = 768px x 600px for screen ( SVGA - 800px x 600px )
     body .col-md-pull-12 {
         margin-right: 100%;
     }
+
+    body .col-md-hidden {
+        display: none;
+    }
+
+    body .col-md-visible {
+        display: inline-block;
+    }
 }

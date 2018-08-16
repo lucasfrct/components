@@ -5,6 +5,7 @@ header ( "Content-type: text/css" );
 $componentsReset = array (
 	'src/component-reset.css',
 	'src/component-line.css',
+	'src/component-window.css',
 );
 
 $componentsCol = array (
@@ -37,6 +38,9 @@ $componentsShape = array (
 	'src/component-shape-credit-card.css',
 	'src/component-shape-cash-out.css',
 	'src/component-shape-backspace.css',
+	'src/component-shape-calendar-flip.css',
+	'src/component-shape-sandwich.css',
+	'src/component-shape-picker.css',
 );
 
 $componentsAnimation = array ( 
@@ -44,6 +48,7 @@ $componentsAnimation = array (
 	'src/component-animation-preloader.css',
 	'src/component-animation-bar-preloader.css',
 	'src/component-animation-loader.css',
+	'src/component-animation-line-load.css',
 );
 
 
