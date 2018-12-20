@@ -1179,6 +1179,64 @@ body [data-shape="sandwich"].active::after {
 	left: 2px;
 }
 
+/*component-shape-sandwich*/
+
+body [data-shape="more"]::before, 
+body [data-shape="more"]::after,
+body [data-shape="more"] {
+    background-color: currentColor;
+    cursor: pointer;
+    left: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+body [data-shape="more"] {
+    height: 7px;
+    width: 7px;
+    margin: 12px 10px;
+}
+
+body [data-shape="more"]::before, 
+body [data-shape="more"]::after {
+    content: "";
+    display: block;
+    height: inherit;
+    position: relative;
+    -webkit-transition: transform 0.2s ease-in-out, all 0.2s ease-in-out;
+    -moz-transition: transform 0.2s ease-in-out, all 0.2s ease-in-out;
+    -ms-transition: transform 0.2s ease-in-out, all 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out, all 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, all 0.2s ease-in-out;
+    width: inherit;
+    will-change: background-color, transform, transform-origin, trasition;
+}
+
+body [data-shape="more"]::before { 
+    top: -9px;
+} 
+
+body [data-shape="more"]::after {
+    top: 2px;
+}
+
+body [data-shape="more"].active {
+}
+
+body [data-shape="more"].active::before {
+    top: 0px;
+    background-color: transparent;
+}
+
+body [data-shape="more"].active::after {
+    top: -7px;
+    background-color: transparent;
+}
+
 /*component-piccker.css*/
 
 body [data-shape="picker"] {

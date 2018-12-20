@@ -40,6 +40,7 @@ $componentsShape = array (
 	'src/component-shape-backspace.css',
 	'src/component-shape-calendar-flip.css',
 	'src/component-shape-sandwich.css',
+	'src/component-shape-more.css',
 	'src/component-shape-picker.css',
 );
 
@@ -50,7 +51,6 @@ $componentsAnimation = array (
 	'src/component-animation-loader.css',
 	'src/component-animation-line-load.css',
 );
-
 
 $componentsAll = array_merge ( 
 	$componentsReset, 
@@ -68,8 +68,6 @@ if ( !Compile::write ( "components-all.css" ) ) {
 } else{
 	echo Compile::data ( );
 };
-
-
 
 Compile::list ( array_merge ( $componentsReset, $componentsCol, $componentsRow ) );
 Compile::join ( );

@@ -1,0 +1,105 @@
+/* Extra Small Phones - Small Devices (portrait phones, 320px - 575px) */
+@media ( min-width: 32px ) {
+
+    body * [ column-xs ] {
+        clear: none;
+        vertical-align: top;
+    }
+
+    body * [ column-xs*="01-" ] {
+        grid-column-start: 1;
+    }
+
+    body * [ column-xs*="02-" ] {
+        grid-column-start: 2;
+    }
+
+    body * [ column-xs*="03-" ] {
+        grid-column-start: 3;
+    }
+
+    body * [ column-xs*="04-" ] {
+        grid-column-start: 4;
+    }
+
+    body * [ column-xs*="05-" ] {
+        grid-column-start: 5;
+    }
+
+    body * [ column-xs*="06-" ] {
+        grid-column-start: 6;
+    }
+
+    body * [ column-xs*="07-" ] {
+        grid-column-start: 7;
+    }
+
+    body * [ column-xs*="08-" ] {
+        grid-column-start: 8;
+    }
+
+    body * [ column-xs*="09-" ] {
+        grid-column-start: 9;
+    }
+
+    body * [ column-xs*="10-" ] {
+        grid-column-start: 10;
+    }
+
+    body * [ column-xs*="11-" ] {
+        grid-column-start: 11;
+    }
+
+    body * [ column-xs*="12-" ] {
+        grid-column-start: 12;
+    }
+
+
+    body * [ column-xs*="-01" ] {
+        grid-column-end: 2;
+    }
+
+    body * [ column-xs*="-02" ] {
+        grid-column-end: 3;
+    }
+
+    body * [ column-xs*="-03" ] {
+        grid-column-end: 4;
+    }
+
+    body * [ column-xs*="-04" ] {
+        grid-column-end: 5;
+    }
+
+    body * [ column-xs*="-05" ] {
+        grid-column-end: 6;
+    }
+
+    body * [ column-xs*="-06" ] {
+        grid-column-end: 7;
+    }
+
+    body * [ column-xs*="-07" ] {
+        grid-column-end: 8;
+    }
+
+    body * [ column-xs*="-08" ] {
+        grid-column-end: 9;
+    }
+
+    body * [ column-xs*="-09" ] {
+        grid-column-end: 10;
+    }
+
+    body * [ column-xs*="-10" ] {
+        grid-column-end: 11;
+    }
+
+    body * [ column-xs*="-11" ] {
+        grid-column-end: 12;
+    }
+
+    body * [ column-xs*="-12" ] {
+        grid-column-end: 13;
+    }
+}
