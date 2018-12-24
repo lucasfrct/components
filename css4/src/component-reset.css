@@ -12,7 +12,6 @@ html body > * {
     white-space: normal;
 }
 
-
 /*GRid Layout*/
 header,
 main,
@@ -21,4 +20,13 @@ footer {
     box-sizing: border-box !important;
     margin: 0;
     padding: 0;
+}
+
+main {
+    height: auto;
+    display: grid;
+    grid-row: 1fr;
+}
+
+body [ document ] {
 }
