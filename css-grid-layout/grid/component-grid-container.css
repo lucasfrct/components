@@ -1,0 +1,30 @@
+html [ container ] {
+    align-items: center;
+    display: webkit-grid;
+    display: moz-grid;
+    display: ms-grid;
+    display: o-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+html [ container ]::before,
+html [ container ]::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+html [ container ], 
+html [ container ]  > * {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    word-break: keep-all;
+    word-wrap: break-word;
+    white-space: normal;
+}

@@ -1,0 +1,30 @@
+/* Desktop - Large Devices (desktops, 992px > 1199px) */
+@media ( min-width: 992px ) {
+    html * [ lg ] { clear: auto; }
+
+    html * [ lg*="01-" ] { grid-column-start: 1; }
+    html * [ lg*="02-" ] { grid-column-start: 2; }
+    html * [ lg*="03-" ] { grid-column-start: 3; }
+    html * [ lg*="04-" ] { grid-column-start: 4; }
+    html * [ lg*="05-" ] { grid-column-start: 5; }
+    html * [ lg*="06-" ] { grid-column-start: 6; }
+    html * [ lg*="07-" ] { grid-column-start: 7; }
+    html * [ lg*="08-" ] { grid-column-start: 8; }
+    html * [ lg*="09-" ] { grid-column-start: 9; }
+    html * [ lg*="10-" ] { grid-column-start: 10; }
+    html * [ lg*="11-" ] { grid-column-start: 11; }
+    html * [ lg*="12-" ] { grid-column-start: 12; }
+
+    html * [ lg*="-01" ] { grid-column-end: 2; }
+    html * [ lg*="-02" ] { grid-column-end: 3; }
+    html * [ lg*="-03" ] { grid-column-end: 4; }
+    html * [ lg*="-04" ] { grid-column-end: 5; }
+    html * [ lg*="-05" ] { grid-column-end: 6; }
+    html * [ lg*="-06" ] { grid-column-end: 7; }
+    html * [ lg*="-07" ] { grid-column-end: 8; }
+    html * [ lg*="-08" ] { grid-column-end: 9; }
+    html * [ lg*="-09" ] { grid-column-end: 10; }
+    html * [ lg*="-10" ] { grid-column-end: 11; }
+    html * [ lg*="-11" ] { grid-column-end: 12; }
+    html * [ lg*="-12" ] { grid-column-end: 13; }   
+}

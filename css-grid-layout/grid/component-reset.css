@@ -1,0 +1,18 @@
+html body,
+html body > *,
+header,
+main,
+footer {
+    font-family: Verdana, Arial, Sans-serif;   
+}
+
+/*GRid Layout*/
+html header,
+html main,
+html footer {
+    display: webkit-grid;
+    display: moz-grid;
+    display: ms-grid;
+    display: o-grid;
+    display: grid;
+}

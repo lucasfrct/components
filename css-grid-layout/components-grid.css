@@ -1,0 +1,205 @@
+html body,
+html body > *,
+header,
+main,
+footer {
+    font-family: Verdana, Arial, Sans-serif;   
+}
+
+/*GRid Layout*/
+html header,
+html main,
+html footer {
+    display: webkit-grid;
+    display: moz-grid;
+    display: ms-grid;
+    display: o-grid;
+    display: grid;
+}
+
+html [ container ] {
+    align-items: center;
+    display: webkit-grid;
+    display: moz-grid;
+    display: ms-grid;
+    display: o-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+html [ container ]::before,
+html [ container ]::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+html [ container ], 
+html [ container ]  > * {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    word-break: keep-all;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* Extra Small Phones - Small Devices (portrait phones, 320px - 575px) */
+@media ( min-width: 32px ) {
+    html * [ xs ] { clear: auto; }
+
+    html * [ xs*="01-" ] { grid-column-start: 1; }
+    html * [ xs*="02-" ] { grid-column-start: 2; }
+    html * [ xs*="03-" ] { grid-column-start: 3; }
+    html * [ xs*="04-" ] { grid-column-start: 4; }
+    html * [ xs*="05-" ] { grid-column-start: 5; }
+    html * [ xs*="06-" ] { grid-column-start: 6; }
+    html * [ xs*="07-" ] { grid-column-start: 7; }
+    html * [ xs*="08-" ] { grid-column-start: 8; }
+    html * [ xs*="09-" ] { grid-column-start: 9; }
+    html * [ xs*="10-" ] { grid-column-start: 10; }
+    html * [ xs*="11-" ] { grid-column-start: 11; }
+    html * [ xs*="12-" ] { grid-column-start: 12; }
+
+    html * [ xs*="-01" ] { grid-column-end: 2; }
+    html * [ xs*="-02" ] { grid-column-end: 3; }
+    html * [ xs*="-03" ] { grid-column-end: 4; }
+    html * [ xs*="-04" ] { grid-column-end: 5; }
+    html * [ xs*="-05" ] { grid-column-end: 6; }
+    html * [ xs*="-06" ] { grid-column-end: 7; }
+    html * [ xs*="-07" ] { grid-column-end: 8; }
+    html * [ xs*="-08" ] { grid-column-end: 9; }
+    html * [ xs*="-09" ] { grid-column-end: 10; }
+    html * [ xs*="-10" ] { grid-column-end: 11; }
+    html * [ xs*="-11" ] { grid-column-end: 12; }
+    html * [ xs*="-12" ] { grid-column-end: 13; }
+}
+
+/* Phones - Small Devices (landscape phones, 576px > 767px) */
+@media ( min-width: 576px ) {
+    html * [ sm ] { clear: auto; }
+
+    html * [ sm*="01-" ] { grid-column-start: 1; }
+    html * [ sm*="02-" ] { grid-column-start: 2; }
+    html * [ sm*="03-" ] { grid-column-start: 3; }
+    html * [ sm*="04-" ] { grid-column-start: 4; }
+    html * [ sm*="05-" ] { grid-column-start: 5; }
+    html * [ sm*="06-" ] { grid-column-start: 6; }
+    html * [ sm*="07-" ] { grid-column-start: 7; }
+    html * [ sm*="08-" ] { grid-column-start: 8; }
+    html * [ sm*="09-" ] { grid-column-start: 9; }
+    html * [ sm*="10-" ] { grid-column-start: 10; }
+    html * [ sm*="11-" ] { grid-column-start: 11; }
+    html * [ sm*="12-" ] { grid-column-start: 12; }
+
+    html * [ sm*="-01" ] { grid-column-end: 2; }
+    html * [ sm*="-02" ] { grid-column-end: 3; }
+    html * [ sm*="-03" ] { grid-column-end: 4; }
+    html * [ sm*="-04" ] { grid-column-end: 5; }
+    html * [ sm*="-05" ] { grid-column-end: 6; }
+    html * [ sm*="-06" ] { grid-column-end: 7; }
+    html * [ sm*="-07" ] { grid-column-end: 8; }
+    html * [ sm*="-08" ] { grid-column-end: 9; }
+    html * [ sm*="-09" ] { grid-column-end: 10; }
+    html * [ sm*="-10" ] { grid-column-end: 11; }
+    html * [ sm*="-11" ] { grid-column-end: 12; }
+    html * [ sm*="-12" ] { grid-column-end: 13; }
+}
+
+/* Tablets - Medium Devices (tablets, 768px > 991px) */
+@media ( min-width: 768px ) {
+    html * [ md ] { clear: auto; }
+
+    html * [ md*="01-" ] { grid-column-start: 1; }
+    html * [ md*="02-" ] { grid-column-start: 2; }
+    html * [ md*="03-" ] { grid-column-start: 3; }
+    html * [ md*="04-" ] { grid-column-start: 4; }
+    html * [ md*="05-" ] { grid-column-start: 5; }
+    html * [ md*="06-" ] { grid-column-start: 6; }
+    html * [ md*="07-" ] { grid-column-start: 7; }
+    html * [ md*="08-" ] { grid-column-start: 8; }
+    html * [ md*="09-" ] { grid-column-start: 9; }
+    html * [ md*="10-" ] { grid-column-start: 10; }
+    html * [ md*="11-" ] { grid-column-start: 11; }
+    html * [ md*="12-" ] { grid-column-start: 12; }
+
+    html * [ md*="-01" ] { grid-column-end: 2; }
+    html * [ md*="-02" ] { grid-column-end: 3; }
+    html * [ md*="-03" ] { grid-column-end: 4; }
+    html * [ md*="-04" ] { grid-column-end: 5; }
+    html * [ md*="-05" ] { grid-column-end: 6; }
+    html * [ md*="-06" ] { grid-column-end: 7; }
+    html * [ md*="-07" ] { grid-column-end: 8; }
+    html * [ md*="-08" ] { grid-column-end: 9; }
+    html * [ md*="-09" ] { grid-column-end: 10; }
+    html * [ md*="-10" ] { grid-column-end: 11; }
+    html * [ md*="-11" ] { grid-column-end: 12; }
+    html * [ md*="-12" ] { grid-column-end: 13; }
+}
+
+/* Desktop - Large Devices (desktops, 992px > 1199px) */
+@media ( min-width: 992px ) {
+    html * [ lg ] { clear: auto; }
+
+    html * [ lg*="01-" ] { grid-column-start: 1; }
+    html * [ lg*="02-" ] { grid-column-start: 2; }
+    html * [ lg*="03-" ] { grid-column-start: 3; }
+    html * [ lg*="04-" ] { grid-column-start: 4; }
+    html * [ lg*="05-" ] { grid-column-start: 5; }
+    html * [ lg*="06-" ] { grid-column-start: 6; }
+    html * [ lg*="07-" ] { grid-column-start: 7; }
+    html * [ lg*="08-" ] { grid-column-start: 8; }
+    html * [ lg*="09-" ] { grid-column-start: 9; }
+    html * [ lg*="10-" ] { grid-column-start: 10; }
+    html * [ lg*="11-" ] { grid-column-start: 11; }
+    html * [ lg*="12-" ] { grid-column-start: 12; }
+
+    html * [ lg*="-01" ] { grid-column-end: 2; }
+    html * [ lg*="-02" ] { grid-column-end: 3; }
+    html * [ lg*="-03" ] { grid-column-end: 4; }
+    html * [ lg*="-04" ] { grid-column-end: 5; }
+    html * [ lg*="-05" ] { grid-column-end: 6; }
+    html * [ lg*="-06" ] { grid-column-end: 7; }
+    html * [ lg*="-07" ] { grid-column-end: 8; }
+    html * [ lg*="-08" ] { grid-column-end: 9; }
+    html * [ lg*="-09" ] { grid-column-end: 10; }
+    html * [ lg*="-10" ] { grid-column-end: 11; }
+    html * [ lg*="-11" ] { grid-column-end: 12; }
+    html * [ lg*="-12" ] { grid-column-end: 13; }   
+}
+
+/* TVs, Screen UHD and Screen Multimedia - Extra Large Devices (large desktops, 1200px and up) */
+@media ( min-width: 1200px ) {
+    html * [ xl ] { clear: auto; }
+
+    html * [ xl*="01-" ] { grid-column-start: 1; }
+    html * [ xl*="02-" ] { grid-column-start: 2; }
+    html * [ xl*="03-" ] { grid-column-start: 3; }
+    html * [ xl*="04-" ] { grid-column-start: 4; }
+    html * [ xl*="05-" ] { grid-column-start: 5; }
+    html * [ xl*="06-" ] { grid-column-start: 6; }
+    html * [ xl*="07-" ] { grid-column-start: 7; }
+    html * [ xl*="08-" ] { grid-column-start: 8; }
+    html * [ xl*="09-" ] { grid-column-start: 9; }
+    html * [ xl*="10-" ] { grid-column-start: 10; }
+    html * [ xl*="11-" ] { grid-column-start: 11; }
+    html * [ xl*="12-" ] { grid-column-start: 12; }
+
+    html * [ xl*="-01" ] { grid-column-end: 2; }
+    html * [ xl*="-02" ] { grid-column-end: 3; }
+    html * [ xl*="-03" ] { grid-column-end: 4; }
+    html * [ xl*="-04" ] { grid-column-end: 5; }
+    html * [ xl*="-05" ] { grid-column-end: 6; }
+    html * [ xl*="-06" ] { grid-column-end: 7; }
+    html * [ xl*="-07" ] { grid-column-end: 8; }
+    html * [ xl*="-08" ] { grid-column-end: 9; }
+    html * [ xl*="-09" ] { grid-column-end: 10; }
+    html * [ xl*="-10" ] { grid-column-end: 11; }
+    html * [ xl*="-11" ] { grid-column-end: 12; }
+    html * [ xl*="-12" ] { grid-column-end: 13; }
+}
+

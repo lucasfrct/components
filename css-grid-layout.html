@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" type="text/css" href="css-grid-layout/compile-grid-css.php">
+    <title>CSS Grid layout</title>
+    <style type="text/css">
+        header,
+        main,
+        footer {
+            border: solid 1px #F00;
+            min-height: 80px;
+            min-width: 5px;
+        }
+    </style>
+</head>
+<body container>
+   <header xs="01-12" sm="01-12" md="01-04" lg="01-12" xl="01-06"></header>
+   <main   xs="01-12" sm="01-06" md="05-08" lg="01-12" xl="07-12"></main>
+   <footer xs="01-12" sm="07-12" md="09-12" lg="01-12" xl="03-09"></footer>
+</body>
+</html>
