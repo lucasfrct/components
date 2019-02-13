@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+html,
+body,
+body > * {
+    font-family: Verdana, Arial, Sans-serif;
+    font-size: 16px;  
+    scroll-behavior: smooth;
+    clear: both;
+}
+
+body,
+header,
+main,
+footer {
+    display: webkit-grid;
+    display: moz-grid;
+    display: ms-grid;
+    display: o-grid;
+    display: grid;
+    page-break-after: always;
+    margin: 0;
+    padding: 0;
+}

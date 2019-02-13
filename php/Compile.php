@@ -56,12 +56,15 @@ class Compile
 		return self::$compile;
 	}
 
-	public static function write ( string $source = "" ): bool
+	public static function write ( string $source = "", $fn = null ): bool
 	{
 		$write = false;
 		self::$source = $source;
 
 		if ( !empty ( self::$compile ) && self::$status === true ) {
+			
+			self::$compile = ( null != $fn ) ? $fn ( self::$compile ) : self::$compile;
+
 			$file = fopen ( $source, 'w' );
 			fwrite ( $file, self::$compile ); 
 			$write = fclose ( $file );

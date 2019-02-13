@@ -1,20 +1,19 @@
-//	DISCOVER STRING IN ARRAY AND RETURN A ARRAY WITCH INDEX
-
-// DETECTA SE UMA STRING ESTÁ PRESENTE NA ARRAY
-Array.prototype.detect = function ( $string = "" ) {
-	var $return = [ ];
-	this.find ( function ( $item, $index ) { 
-		if ( String ( $item ) == String ( $string ) ) { 
-			$return.push ( $index ); 
-		}; 
-	} );
-	return $return;
+// detecta uma string na array e return o índice
+Array.prototype.detect = function ( $str = "" ) {
+	return this.indexOf ( $str );
 };
 
-// REMOVE UM ITEM NA ARRAY COM BASE NO ÍNDICE
-Array.prototype.retire = function ( $index = 0 ){
- 	return this.splice ( Number ( $index ), 1 );
+// remove um item da array com base no ídice
+Array.prototype.retire = function ( $item = 0 ){
+	return this.splice ( 0, 1 );
 };
+
+
+var $car = Array ( "fusca", "gol", "palio", "fusion" );
+console.log ( $car.detect ( "palio" ) );
+
+/*
+
 
 // REMOVE TODOS OS ITENS VAZIOS DE UMA ARRAY
 Array.prototype.cleaner = function ( $string = "" ) {
@@ -26,3 +25,4 @@ Array.prototype.cleaner = function ( $string = "" ) {
 	    };
  	} );
 };
+*/
