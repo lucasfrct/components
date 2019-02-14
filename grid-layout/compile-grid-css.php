@@ -1,6 +1,5 @@
 <?php 
 include_once ( "../php/Compile.php" );
-include_once ( "../php/Minify.php" );
 
 header ( "Content-type: text/css" );
 
@@ -14,7 +13,9 @@ $grid = array (
 	'grid/grid-xl.css',
 );
 
-Compile::list ( $grid );
-Compile::join ( );
-Compile::write ( "grid.min.css", 'Minify' );
-#echo Compile::data ( );
+$compile = new Compile;
+$compile->getList ( $grid );
+$compile->joinFiles ( );
+$compile->minify ( );
+$compile->writeFile ( "grid.min.css" );
+$compile->content ( );

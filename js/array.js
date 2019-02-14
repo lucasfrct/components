@@ -3,26 +3,25 @@ Array.prototype.detect = function ( $str = "" ) {
 	return this.indexOf ( $str );
 };
 
-// remove um item da array com base no ídice
+// remove um item da array com base no ídice ou na string
 Array.prototype.retire = function ( $item = 0 ){
-	return this.splice ( 0, 1 );
+	if ( typeof $item == "string" ) {
+		this.splice ( this.indexOf ( $item ), 1 );
+	} else if ( typeof $item == "number" ) {
+		this.splice ( $item, 1 );
+	};
+	return this;
 };
 
-
-var $car = Array ( "fusca", "gol", "palio", "fusion" );
-console.log ( $car.detect ( "palio" ) );
-
-/*
-
-
-// REMOVE TODOS OS ITENS VAZIOS DE UMA ARRAY
-Array.prototype.cleaner = function ( $string = "" ) {
-	var $sel = ( $string ) ? String ( $string ) : null;
-  	
-  	return this.filter ( function ( $item, $index ) {
-	    if ( $item == $sel ) {         
-	      	this.splice ( $index, 1 ); 
-	    };
+Array.prototype.clean = function ( $string = "" ) {
+  	let $this = this;
+  	$this.forEach ( function ( $item, $index ) {
+  		if ( null == $item ) {
+  			$this.splice ( $index, 1 );
+  		};
+  		if ( undefined == $item ) {
+  			$this.splice ( $index, 1 );
+  		};
  	} );
+ 	return $this;
 };
-*/

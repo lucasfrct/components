@@ -1,88 +1,67 @@
 <?php
 #Compile.php
-/*
-Compile::list ( array );
-Complie::join ( );
-Compile::write ( string file );
-Complie::report ( );
-*/
-
 class Compile 
 {
-	private static $status = true;
-	private static $list = null;
-	private static $compile = "";
-	private static $source = "";
-	private static $write = "false";
-	private static $msg = "";
+	private $listing = Array ( );
+	private $content = "";
+	private $compiledFile = "";
+	private $status = false;
 
-	public static function list ( array $array = [ ] ): array 
+	/* obtém uma array com a listagem dos arquivos*/
+	public function getList ( array $listing = [ ] ): array 
 	{	
-		self::$status = true;
-		self::$list = Array ( );
-		self::$compile = "";
-		self::$source = "";
-		self::$write = "false";
-		self::$msg = "";
-		return self::$list = $array;
+		return $this->listing = $listing;
 	}
 
-	private static function read ( string $file = "" ): string 
+	/* juntas todos os arquivos armazenados na array*/
+	public function joinFiles ( ): string 
 	{
-
-		$read = "";
-
-		if ( file_exists ( $file ) && self::$status === true ) {
-			$read = file_get_contents ( $file );
-		} else {
-			self::$status = false;
-			self::$msg = self::$msg."<br>| file inexists! (".$file.")";
+		foreach ( $this->listing as $index => $filename ) {
+			$this->compiledFile .= $this->readFile ( $filename )."\r\n";
 		};
 
-		return $read;
+		return $this->compiledFile;
 	}
 
-	public static function join ( ): string 
+	/* retorna o conteudo compilado */
+	public function content ( ): string 
 	{
-		foreach ( self::$list as $key => $value ) {
-			self::$compile = self::$compile.self::read ( $value )."\n\n";
+		return $this->compiledFile;
+	}
+
+	/* lê o conteúdo do arquivo */
+	public function readFile ( string $file = "" ): string 
+	{
+		if ( file_exists ( $file ) ) {
+			$this->content = file_get_contents ( $file );
 		};
 
-		return self::$compile;
+		return $this->content;
 	}
 
-	public static function data ( ): string 
+	/* escreve o conteúdo compilado em um arquivo  */
+	public function writeFile ( string $filename = "" ): bool
 	{
-		return self::$compile;
+		if ( !empty ( $this->compiledFile ) && !empty ( $filename ) ) {
+			$this->status = file_put_contents ( $filename, $this->compiledFile );		
+		};
+		return $this->status;
 	}
 
-	public static function write ( string $source = "", $fn = null ): bool
+	/* minifica os arquivos */
+	public function minify ( ): string
 	{
-		$write = false;
-		self::$source = $source;
-
-		if ( !empty ( self::$compile ) && self::$status === true ) {
-			
-			self::$compile = ( null != $fn ) ? $fn ( self::$compile ) : self::$compile;
-
-			$file = fopen ( $source, 'w' );
-			fwrite ( $file, self::$compile ); 
-			$write = fclose ( $file );
-		} else {
-			self::$msg = self::$msg."<br> | No possible write! (".$source.")";
+		preg_match_all ( '/(\/\*)(.|\s)+?(\*\/)/', $this->compiledFile, $matches );
+		foreach ( $matches [ 0 ] as $bloco ) {
+			$this->compiledFile = str_replace ( $bloco, '', $this->compiledFile );
 		};
 
-		( $write == true ) ? self::$write = "true" : self::$write = "false";
-		return $write;
-	}
+		$this->compiledFile = str_replace ( ' ',    '', $this->compiledFile );
+		$this->compiledFile = str_replace ( "\r\n", '', $this->compiledFile );
+		$this->compiledFile = str_replace ( "\r",   '', $this->compiledFile );
+		$this->compiledFile = str_replace ( "\n",   '', $this->compiledFile );
+		$this->compiledFile = str_replace ( ' ',    '', $this->compiledFile );
 
-	public static function report ( ) {
-		echo "<b>Status:</b> "; 
-		echo ( self::$status === true ) ? "true" : "false";
-		echo "<br>";
-		echo "<b>List:</b> ".json_encode ( self::$list );
-		echo "<br> <b>Join:</b>";
-		echo "<br> <b>Write:</b> ".self::$write." |  ".self::$source;
-		echo '<br><h4 style="color:#F00">'.self::$msg.'</h4>';
+		return $this->compiledFile;
 	}
 }
