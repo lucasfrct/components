@@ -47,17 +47,17 @@ class Connect
 	{
 		if ( null == $this->connection ) {
 			$this->connection = @new PDO ( 
-				"mysql:dbname=".$this->database.";host:".self::HOST."", 
-				self::USERNAME, 
-				self::PASSWORD 
+				"mysql:host:".self::HOST."", self::USERNAME, self::PASSWORD 
 			);
-			# habilita o o error de exceção
-			$this->connection->setAttribute ( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-			# configura o Charset para UTF-8
-			$this->connection->exec("set names utf8");
-
-			return $this->connection;	
 		};
+		# selectiona um banco de dados
+		$this->connection->exec ( "use {$this->database}" );
+		# configura o Charset para UTF-8
+		$this->connection->exec ("set names utf8");
+		# habilita o o error de exceção
+		$this->connection->setAttribute ( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+
+		return $this->connection;
 	}
 
 	# inicia um acesso  ao bacno de dados
@@ -68,14 +68,29 @@ class Connect
 		return $stmt; 
 	}
 
-	public function insert ( string $table = "", string $fields = "*", string $values = "" ): bool
+	# obtém a string de fields e modela para uma array de fields
+	public function getFields ( string $fields = ""  ): array
+	{
+		$fields = explode ( ",", $fields );
+		$fields = array_map ( function ( $item  ) {
+			return trim ( $item );
+		}, $fields );
+		return $fields;
+	}
+
+	# obtém a string de fields e modela para uma array de params
+	public function getParams ( string $fields = ""  ): array
 	{
 		$params = explode ( ",", $fields );
 		$params = array_map ( function ( $item  ) {
-			return  ":".trim( $item );
+			return  ":".trim ( $item );
 		}, $params );
-		$paramsStr = implode ( ", ", $params );
-		
+		return $params;
+	}
+
+	# obtém uma array de params e uma string de values e modela para uma array de data
+	public function getData ( array $params = Array ( ), string $values = "" ): array
+	{
 		preg_match_all ( '/\'([^\']*)\'/', $values, $result );
 		$values  = $result [ 1 ];
 
@@ -83,31 +98,58 @@ class Connect
 		foreach ( $params as $key => $field ) {
 			$data = array_merge ( $data, array ( $field => $values [ $key ] ) );
 		};
+		return $data;
+	}
+
+	# obtém as arays de params e fields e modela para uma cosulta Update 
+	public function getConsult ( array $params = Array ( ), array $fields = Array ( ) ): string
+	{
+		$consult = "";
+		foreach ( $fields as $key => $field ) {
+			$consult .= ", ".$field." = ".$params [ $key ];
+		};
+		return substr ( $consult, 2 );
+	}
+
+	# insere conteúdo no banco de dados
+	public function insert ( string $table = "", string $fields = "*", string $values = "" ): bool
+	{
+		$params = $this->getParams ( $fields );
+		$paramsStr = implode ( ", ", $params );
+		$data = $this->getData ( $params, $values );
 
 		$sql = "INSERT INTO {$table} ({$fields}) VALUES({$paramsStr})";
 		$insert = $this->query ( $sql, $data );
 		return  ( $insert->rowCount ( ) > 0 ) ? TRUE : FALSE;
 	}
 
+	# selectiona conteúdo no banco de dados
 	public function select ( string  $table = "", string $fields = "", string $condition = "" ): array
 	{
-		#$sql = "SELECT {$fields} FROM {$table } WHERE {$condition}";
 		$condition = ( !empty ( $condition ) ) ? " WHERE {$condition}" : "";
 		$sql = "SELECT {$fields} FROM {$table } {$condition}";
-		$consult = $this->query ( $sql );
-		$result = Array ( );
-		while ( $row = $consult->fetch(PDO::FETCH_ASSOC) ) {
-			$result = array_merge ( $result, array ( $row ) );
-		};
-		return $result;
+		return $this->query ( $sql )->fetchAll( PDO::FETCH_ASSOC );
 	}
 
-	public function update ( string $table = "", string $data = "" , string $condition = "" ): bool
-	{
-		$sql = "UPDATE {$table} SET user = :user, email = :email WHERE id= :id";
-		$data = Array( ':id' => '24', ':user' => 'user aaa', ':email' => "email aaa" );
+	# atualiza caonteúdo no banco de dados
+	public function update ( string $table = "", string $fields = "" , string $values = "", string $condition = "" ): bool
+	{	
+		$params = $this->getParams ( $fields );
+		$fields = $this->getFields ( $fields );
+		$consult = $this->getConsult ( $params, $fields );
+		$data = $this->getData ( $params, $values );
+
+		$sql = "UPDATE {$table} SET {$consult} WHERE {$condition}";
 		$update = $this->query ( $sql, $data );
 		return  ( $update->rowCount ( ) > 0 ) ? TRUE : FALSE;
+	}
+
+	# deleta consteúdo no banco de dados
+	public function delete ( string $table = "", string $condition = "" ): bool
+	{
+		$sql = "DELETE FROM {$table} WHERE {$condition}";
+		$delete = $this->query ( $sql );
+		return  ( $delete->rowCount ( ) > 0 ) ? TRUE : FALSE;
 	}
 
 	# Protetor Singletom na Construção da classe
@@ -121,7 +163,8 @@ class Connect
 };
 
 $conn = Connect::on ( "callcommunity" );
-#$conn->insert ( "registers", "user, email", "'user1', 'email1 , teste: email.'" );
-#$data = $conn->select ( "registers", "user, email, country" );
+#echo $conn->insert ( "registers", "user, email", "'userinsert', 'emailinsert , teste: email.'" );
+#$data = $conn->select ( "registers", "id, user, email, country", "user='root' AND password='root1234'" );
 #echo json_encode ( $data );
-var_dump ( $conn->update ( "registers", "user='userAAA', email='emailAAA'", "id='24'" ) );
+#echo $conn->update ( "registers", "user, email", "'userupdate', 'emailupdate'", "id='6'" );
+#echo $conn->delete ( "registers", "id=6" );
