@@ -1,0 +1,31 @@
+/* Background Color Blue */
+[blue]{ background-color: #2196F3; }
+[blue="1"] { background-color: #E3F2FD; }
+[blue="2"] { background-color: #BBDEFB; }
+[blue="3"] { background-color: #90CAF9; }
+[blue="4"] { background-color: #64B5F6; }
+[blue="5"] { background-color: #42A5F5; }
+[blue="6"] { background-color: #1E88E5; }
+[blue="7"] { background-color: #1976D2; }
+[blue="8"] { background-color: #1565C0; }
+[blue="9"] { background-color: #0D47A1; }
+[blue="a-1"] { background-color: #82B1FF; }
+[blue="a-2"] { background-color: #448AFF; }
+[blue="a-3"] { background-color: #2979FF; }
+[blue="a-4"] { background-color: #2962FF; }
+
+/* Text Color Blue */
+[color="blue"]{ color: #2196F3; }
+[color="blue-1"] { color: #E3F2FD; }
+[color="blue-2"] { color: #BBDEFB; }
+[color="blue-3"] { color: #90CAF9; }
+[color="blue-4"] { color: #64B5F6; }
+[color="blue-5"] { color: #42A5F5; }
+[color="blue-6"] { color: #1E88E5; }
+[color="blue-7"] { color: #1976D2; }
+[color="blue-8"] { color: #1565C0; }
+[color="blue-9"] { color: #0D47A1; }
+[color="blue-a-1"] { color: #82B1FF; }
+[color="blue-a-2"] { color: #448AFF; }
+[color="blue-a-3"] { color: #2979FF; }
+[color="blue-a-4"] { color: #2962FF; }

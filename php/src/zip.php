@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 $arquivo = getcwd().'/magento.zip';
 $destino = getcwd().'/';

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class Galery
 {
     public function addImages($path)

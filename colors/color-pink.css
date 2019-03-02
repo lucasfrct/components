@@ -1,0 +1,29 @@
+/* Background Color Pink */
+[pink] { background-color: #e91e63; }
+[pink="1"] { background-color: #fce4ec; }
+[pink="2"] { background-color: #f8bbd0; }
+[pink="3"] { background-color: #f48fb1; }
+[pink="4"] { background-color: #f06292; }
+[pink="5"] { background-color: #ec407a; }
+[pink="6"] { background-color: #e91e63; }
+[pink="7"] { background-color: #d81b60; }
+[pink="8"] { background-color: #c2185b; }
+[pink="9"] { background-color: #ad1457; }
+[pink="10"] { background-color: #880e4f; }
+[pink="a-1"] { background-color: #ff80ab; }
+[pink="a-2"] { background-color: #ff4081; }
+[pink="a-3"] { background-color: #f50057; }
+[pink="a-4"] { background-color: #c51162; }
+
+/* Text Color Pink*/
+[color="pink"] { color: #e91e63; }
+[color="pink-1"] { color: #fce4ec; }
+[color="pink-2"] { color: #f8bbd0; }
+[color="pink-3"] { color: #f48fb1; }
+[color="pink-4"] { color: #f06292; }
+[color="pink-5"] { color: #ec407a; }
+[color="pink-6"] { color: #e91e63; }
+[color="pink-7"] { color: #d81b60; }
+[color="pink-8"] { color: #c2185b; }
+[color="pink-9"] { color: #ad1457; }
+[color="pink-10"] { color: #880e4f; }

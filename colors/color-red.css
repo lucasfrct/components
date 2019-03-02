@@ -1,0 +1,28 @@
+/* Background Color Red */
+[red] { background-color: #e51c23; }
+[red="1"] { background-color: #fdeaeb; }
+[red="2"] { background-color: #f8c1c3; }
+[red="3"] { background-color: #f3989b; }
+[red="4"] { background-color: #ee6e73; }
+[red="5"] { background-color: #ea454b; }
+[red="6"] { background-color: #d0181e; }
+[red="7"] { background-color: #b9151b; }
+[red="8"] { background-color: #a21318; }
+[red="9"] { background-color: #8b1014; }
+[red="a-1"] { background-color: #FF8A80; }
+[red="a-2"] { background-color: #FF5252; }
+[red="a-3"] { background-color: #FF1744; }
+[red="a-4"] { background-color: #D50000; }
+
+/* Text Color Red*/
+[color="red"] { color: #F44336; }
+[color="red-1"] { color: #fdeaeb; }
+[color="red-2"] { color: #f8c1c3; }
+[color="red-3"] { color: #f3989b; }
+[color="red-4"] { color: #ee6e73; }
+[color="red-5"] { color: #ea454b; }
+[color="red-6"] { color: #e51c23; }
+[color="red-7"] { color: #d0181e; }
+[color="red-8"] { color: #b9151b; }
+[color="red-9"] { color: #a21318; }
+[color="red-10"] { color: #8b1014; }

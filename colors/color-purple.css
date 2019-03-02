@@ -1,0 +1,31 @@
+/* Background Color Purple*/
+[purple ] { background-color: #9c27b0; }
+[purple="1"] { background-color: #f3e5f5; }
+[purple="2"] { background-color: #e1bee7; }
+[purple="3"] { background-color: #ce93d8; }
+[purple="4"] { background-color: #ba68c8; }
+[purple="5"] { background-color: #ab47bc; }
+[purple="6"] { background-color: #8e24aa; }
+[purple="7"] { background-color: #7b1fa2; }
+[purple="8"] { background-color: #6a1b9a; }
+[purple="9"] { background-color: #4a148c; }
+[purple="a-1"] { background-color: #ea80fc; }
+[purple="a-2"] { background-color: #e040fb; }
+[purple="a-3"] { background-color: #d500f9; }
+[purple="a-4"] { background-color: #aa00ff; }
+
+/* Text Color Purple*/
+[color="purple" ] { color: #9c27b0; }
+[color="purple-1"] { color: #f3e5f5; }
+[color="purple-2"] { color: #e1bee7; }
+[color="purple-3"] { color: #ce93d8; }
+[color="purple-4"] { color: #ba68c8; }
+[color="purple-5"] { color: #ab47bc; }
+[color="purple-6"] { color: #8e24aa; }
+[color="purple-7"] { color: #7b1fa2; }
+[color="purple-8"] { color: #6a1b9a; }
+[color="purple-9"] { color: #4a148c; }
+[color="purple-a-1"] { color: #ea80fc; }
+[color="purple-a-2"] { color: #e040fb; }
+[color="purple-a-3"] { color: #d500f9; }
+[color="purple-a-4"] { color: #aa00ff; }
