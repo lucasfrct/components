@@ -9,9 +9,9 @@ include_once ( "config/recover.config.php" );
 
 class Recover 
 {
-	private $connection = NULL;
-	private $log = NULL;
-	private $crypt = NULL;
+	private $connection = NULL; # Classe de conexão ao banco de dados 
+	private $log = NULL; # Classe que registra os logs 
+	private $crypt = NULL; # Classe de encriptação
 	private $table = "";
 	private $email = "root@root.com";
 	private $token = "";
@@ -27,8 +27,8 @@ class Recover
 		$this->domain 		= $GLOBALS [ "RECOVER" ] [ "DOMAIN" ];
 	}
 
-	# Método que captura uma postagem POST
-	private function getPost ( ): bool 
+	# Método que captura o email para recuperação
+	private function requestPost ( ): bool 
 	{
 		# Verifica se houve um a postagem
 		$status = ( $_SERVER [ "REQUEST_METHOD" ] == "POST" ) ? TRUE : FALSE;
@@ -41,11 +41,28 @@ class Recover
 		return $status;
 	}
 
-	# Método que captura uma postagem GET
-	private function methodGet ( ): bool 
+	# Método que verifica a existência do email no banco de dados
+	private function validateEmail ( ): bool
+	{
+		# Seleciona a tabela
+		$sql = "SELECT email FROM ".$this->table;
+		# Consulta a existência do usuário
+		$sql .= " WHERE email=:email LIMIT 1";
+
+		$data = array ( ":email"=> $this->email );
+
+		# Executa a consulta e retorna o usuário existente
+		$email = $this->connection->query ( $sql, $data )->fetchAll ( PDO::FETCH_ASSOC );
+		# Retorna TRUE para usuário encontrado e FALSE caso ele não exista
+		$status = ( count ( $email ) == 1 ) ? TRUE : FALSE;
+		return $status;
+	}
+
+	# Método que captura o token para validar a recuperação
+	private function requestGet ( ): bool 
 	{
 		# Verifica se houve um a postagem do tipo GET
-		$status = ( $_SERVER [ "REQUEST_METHOD" ] == "GET" && isset ( $_GET [ "token" ] ) ) ? TRUE : FALSE;
+		$status = ( $_SERVER [ "REQUEST_METHOD" ] == "GET" ) ? TRUE : FALSE;
 
 		# Havendo uma postagem, carrega o token para a recuperação
 		if ( $status ) { 
@@ -55,26 +72,40 @@ class Recover
 		return $status;
 	}
 
-	# Método que verifica a existência do usuário no banco de dados
-	private function validate ( ): bool
+	# Método que gera o token de recuperação 
+	private function gerateToken (  ): string
 	{
-		# Seleciona a tabela
-		$sql = "SELECT email FROM ".$this->table;
-		# Consulta a existência do usuário
-		$sql .= " WHERE email=:email LIMIT 1";
-
-		$data = array ( 
-			":email"=> $this->email
-		);
-
-		# Executa a consulta e retorna o usuário existente
-		$email = $this->connection->query ( $sql, $data )->fetchAll ( PDO::FETCH_ASSOC );
-		# Retorna TRUE para usuário encontrado e FALSE caso ele não exista
-		$status = ( count ( $email ) == 1 ) ? TRUE : FALSE;
-		return $status;
+		$token = $this->email.":&&:".$this->crypt->hash ( $this->email );
+		return $this->token = $this->crypt->encode ( $token );
 	}
 
-	# Método que verifica a existência do usuário no banco de dados
+	# Método insere o token de recuperação no banco de dados baseado no email
+	private function insertToken ( ): bool
+	{
+		# consulta SQL para atualizar conteúdo do email no banco de dados
+		#$sql = "UPDATE ".$this->table." SET recover=:recover, expire=SYSDATE() WHERE email=:email";
+		$sql = "UPDATE ".$this->table." SET recover=:recover, expire=SYSDATETIME() WHERE email=:email";
+
+		# Pilha com o email e o token de recuperação
+		$data = array ( 
+			":recover" => $this->token,
+			":email"=> $this->email
+		);
+		#consulta update no MySqli (PDO)
+		$insert = $this->connection->query ( $sql, $data );
+		return  ( $insert->rowCount ( ) > 0 ) ? TRUE : FALSE;
+	}
+
+	# Método que ler o link e recupera o email e o token para recuperação
+	private function digestToken ( ): bool
+	{
+		$data = explode ( ":&&:", $this->crypt->decode ( $this->token ) );
+		$this->email = $data [ 0 ];
+		$this->token = $data [ 1 ];
+		return ( !empty ( $this->email ) && !empty ( $this->token ) ) ? TRUE : FLASE;
+	}
+
+	# Método que verifica a existência do email e token no banco de dados
 	private function validateToken ( ): bool
 	{
 		# Seleciona a tabela
@@ -94,59 +125,33 @@ class Recover
 		return $status;
 	}
 
-	# Método que atulizada o trecover do usuário no banco de dados
-	private function insertToken ( string $token = "" ): bool
+	# Método que gera o link para ser enviado ao email de solicitação
+	private function gerateLink ( ): string
 	{
-		# consulta SQL para atualizar conteúdo no banco de dados
-		$sql = "UPDATE ".$this->table." SET recover=:recover, expire=SYSDATE() WHERE email=:email";
-
-		# Pilha com a hash de recuperação
-		$data = array ( 
-			":recover" => $token,
-			":email"=> $this->email
-		);
-		#consulta update no MySqli (PDO)
-		$insert = $this->connection->query ( $sql, $data );
-		return  ( $insert->rowCount ( ) > 0 ) ? TRUE : FALSE;
+		return $this->domain."?token=".$this->token;
 	}
 
-	public function token (  ): string
+	# Método que solicita a recuperação do email e gera o token
+	public function requisition ( ): string
 	{
-		$token = $this->email.":&&:".$this->crypt->hash ( $this->email );
-		return $this->crypt->encode ( $token );
-	}
-
-	public function digest ( string $token = "" ): array
-	{
-		$data = explode ( ":&&:", $this->crypt->decode ( $token ) );
-		return $data;
-	}
-
-	public function link ( string $token = "" ): string
-	{
-		return $this->domain."?token=".$token;
-	}
-
-	public function get ( )
-	{
-		$get = "";
-		# Verifica se houve uma postagem tipo POST
-		if ( $this->getPost ( ) && !empty ( $this->email ) ) {
-			if ( $this->validate ( ) ) {
-				$token = $this->token ( );
-				if ( $this->insertToken ( $token ) ) {
-					$get =  $this->link ( $token );
-				};
+		$request = "";
+		if ( $this->requestPost ( ) && $this->validateEmail ( ) ) {
+			if ( !empty ( $this->gerateToken ( ) ) && $this->insertToken ( ) ) {
+				$request = $this->gerateLink ( );
 			};
 		};
+		return $request;
+	}
 
-		# Verifica se houve uma postagem tipo GET
-		if ( $this->methodGet ( ) ) {
+	# Método que faz a requisição de conferência do token recebido
+	public function access ( ): string
+	{
+		$requisition = "";
+		if ( $this->requestGet ( ) && $this->digestToken ( ) ) {
 			if ( $this->validateToken ( ) ) {
-				$get = TRUE;
+				$requisition = $GLOBALS [ "RECOVER" ] [ "REDIRECT" ];
 			};
 		};
-
-		return $get;
+		return $requisition;
 	}
-}
+};

@@ -7,13 +7,12 @@ use PDO;
 # Dependência: arquivo de configuração de Login
 include_once ( "config/login.config.php" );
 
-
 class Login
 {
 	private $connection = NULL; # Classe de conecxaõ ao banco de dados 
 	private $session = NULL; # Classe de sessão no servidor
 	private $log = NULL; # Classe que insere log no banco de dados 
-	private $name = "root"; # Nome so usuário que tenta logar
+	private $email = "root@root.com"; # Email do usuário que tenta logar
 	private $password = "root1234"; # Senha do usuário que tenta logar
 	private $table = ""; # Tabela no banco de dados que contém o registro do usuário
 	private $user = Array ( ); # Pilha com informações do usuário logado
@@ -21,10 +20,10 @@ class Login
 	# Método que inicia as dependências e configuração da classe Login 
 	public function __construct ( object $connection = NULL, object $session = NULL, object $log = NULL )
 	{
-		$this->connection = $connection;
-		$this->session    = $session;
-		$this->log        = $log;
-		$this->table      = $GLOBALS [ "LOGIN" ] [ "TABLE" ];
+		$this->connection = $connection; # Classe de conexaõ ao banco de cadosd
+		$this->session    = $session; # Classe que carrega as sessãoes
+		$this->log        = $log; # Classe que registra os logs
+		$this->table      = $GLOBALS [ "LOGIN" ] [ "TABLE" ]; # tabela login no database
 	}
 
 	# Método que captura uma postagem com nome e senha do usuário 
@@ -35,8 +34,8 @@ class Login
 
 		# Havendo uma postagem, carrega as variáveis para a classe
 		if ( $status ) { 
-			$this->name = $_POST [ "name" ];
-			$this->password = $_SERVER [ "HTTP_AUTHENTICATION" ];
+			$this->email = $_POST [ "email" ] ?? "";
+			$this->password = $_SERVER [ "HTTP_AUTHENTICATION" ] ?? "";
 		};
 
 		return $status;
@@ -46,68 +45,96 @@ class Login
 	private function validate ( ): bool
 	{
 		# Seleciona a tabela
-		$sql = "SELECT id as ru, user as name FROM ".$this->table;
+		$sql = "SELECT id, user, email FROM ".$this->table;
 		# Consulta a existência do usuário
-		$sql .= " WHERE user='".$this->name."' AND password='".$this->password."' LIMIT 1";
+		$sql .= " WHERE email='".$this->email."' AND password='".$this->password."' LIMIT 1";
 		# Executa a consulta e retorna o usuário existente
 		$user = $this->connection->query ( $sql )->fetchAll ( PDO::FETCH_ASSOC );
 		# Retorna TRUE para usuário encontrado e FALSE caso ele não exista
 		$status = ( count ( $user ) == 1 ) ? TRUE : FALSE;
-		# Se existir um usuário, cria um novo token de acesso 
-		if ( $status ) {
-			$this->user = array_merge ( $user [ 0 ] , array ( "token"=> $this->token ( $user ) ) );
+		# Carrega dadfos do usuário para a classe
+		if ( $status ) {  
+			$data = array ( 
+				"date"=> date ( "c" ), 
+				"token"=>$this->session->id ( ) 
+			);
+			$this->user = array_merge ( $user [ 0 ], $data );
 		};
 		return $status;
 	}
 
-	# Método para criar um novo token de acesso com base no usuário
-	private function token ( array $user = Array ( ) )
+	# Método que carrega uma sessao no servidor 
+	private function loadSession ( ): void
 	{
-		return sha1 ( serialize ( $user ).date ( "c" ) );
+		$this->session->user ( $this->user );
 	}
 
-	# Método que carrega uma sessao no servidor um base no usuário 
-	private function loadSession ( array $user = Array ( ) )
-	{
-		$this->session->open ( $user [ "token" ] );
-		$this->session->user ( $user );
-	}
-
-	private function checkSession ( )
+	# Método que verifica o status da sessão
+	private function checkSession ( ): bool
 	{
 		return $this->session->status ( );
 	}
 
-	private function denySession ( )
+	# Método que destrói a sessão atual
+	private function denySession ( ): void
 	{
 		$this->session->destroy ( );
 	}
 
-	public function access ( )
-	{
-		if ( $this->getPost ( ) && $this->validate ( ) ) { 
-			$this->loadSession ( $this->user );
-			$this->log->register ( "init login and session" );
+	# Método que concede acesso ao usuário
+	public function access ( string $email = "", string $password = "" )
+	{	
+		# Vairável de status no método
+		$access = FALSE;
+
+		# Verifica se o usuário estã se logango diretamente 
+		if ( !empty ( $email ) && !empty ( $password ) ) {
+			$this->email = $email; # Carrega o email
+			$this->password = $password; # Carrega o password
+			
+			# Verifica a existência no usuário no database
+			if ( $this->validate ( ) ) {
+				# Carrega um sessão de usuário
+				$this->loadSession ( );
+				# Registra um log de acesso
+				$this->log->register ( "Action: init login and session || User: ".json_encode ( $this->user ) );
+			};
 		};
-		return $this->user;
+
+		# Verifica se houve uma postagem, coleta os dados e consulta o database 
+		if ( $this->getPost ( ) && $this->validate ( ) ) { 
+			# Carrega um sessão de usuário
+			$this->loadSession ( );
+			# Registra um log de acesso
+			$this->log->register ( "Action: init login and session || User: ".json_encode ( $this->user ) );
+		};
+
+		# Verifica se a sessão está ativa
+		$access = $this->checkSession ( );
+
+		return $access;
 	}
 
+	# Método que nega o acesso e destrói a sessãos
 	public function deny ( string $redirect = "" )
-	{
-		$this->log->register ( "deny login and session" );
+	{	
+		# Apaga a sessão atual do usuário
 		$this->denySession ( );
-		header ( "location: ".$redirect );
+		# Registra a cação no Log
+		$this->log->register ( "Action: deny login and session || User: ".json_encode ( $this->user ) );
+		# Retorna o stados da sessão
+		return $this->checkSession ( );
 	}
 
+	# Método que verifica a validade o acesso
 	public function check ( string $redirect = "" )
 	{
-		$check = $this->checkSession ( );
-		if ( !$check ) {
-			header ( "location: ".$redirect );
-			$this->log->register ( "Expire session" );
-		} else {
-			$this->log->register ( "revalid session" );
-		};
-		return $check;
+		# Retorna o estado da sessão
+		return $this->checkSession ( );
 	}
-}
+};
+
+# $login = new Login ( Connect::on ( database ), Session::on ( 1 ), new Log ( Connect::on ( database ) ) );
+# $login->access ( email, password );
+# $login->check ( );
+#  $login->deny( );

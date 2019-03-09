@@ -12,6 +12,7 @@ class Sigin
 	private $connect = NULL;  # Classe de conecxaõ ao banco de dados 
 	private $log = NULL; # Classe que insere log no banco de dados
 	private $table = ""; # Tabela no banco de dados que armazenará o registro do usuário
+	private $direct = FALSE; # Armazena o comando para acesso direto os save
 	# Campos com conteúdo para inserir no banco de dados
 	private $user = "";
 	private $email = "";
@@ -72,12 +73,31 @@ class Sigin
 		return  ( $insert->rowCount ( ) > 0 ) ? TRUE : FALSE;
 	}
 
-	# Método que verifica a postagem do cadastro e inserer os dados
+	public function data ( 
+		string $user = "", 
+		string $email = "", 
+		string $country = "", 
+		string $ddd = "", 
+		string $telephone = "", 
+		string $password = "" 
+	): void
+	{
+		# Carrega dados dos para inserção no banco de dados
+		$this->user = $user;
+		$this->email = $email;
+		$this->country = $country;
+		$this->ddd = $ddd;
+		$this->telephone = $telephone;
+		$this->password = $password;
+		$this->direct = TRUE;
+	}
+
+	# Método que verifica a postagem do cadastro e insere os dados
 	public function save ( ) : bool
 	{
 		$status = FALSE;
 		# Verifica se houve um apostagem
-		if ( $this->getPost ( ) ) { 
+		if ( $this->getPost ( ) || $this->direct ) { 
 			# Insere os conteúdo postado no banco de dados
 			$status = $this->insert ( ); 
 			# Verifica se houve uma inserção no banco de dados 
@@ -93,3 +113,7 @@ class Sigin
 		return $status;
 	}
 }
+
+# $sigin = new Sigin ( Connect::on ( "modules" ), new Log ( Connect::on ( "modules" ) ) );
+# $sigin->data ( user, email, country, ddd, telephone, password );
+# $sigin->save ( );

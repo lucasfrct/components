@@ -97,7 +97,7 @@ class Connect
 	private function __wakeup ( ) { }
 };
 
-#$conn = Connect::on ( "callcommunity" );
-#$result = $conn->query ( "SELECT id, user FROM registers WHERE id>1" );
+#$conn = Connect::on ( "database" );
 #$conn->instance ( );
+#$result = $conn->query ( "SQL" );
 #var_dump ( $result->fetchAll( PDO::FETCH_ASSOC ));
