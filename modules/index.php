@@ -134,10 +134,42 @@ Test::on ( "Sigin->save ( )", function ( $assert ) {
 } );
 
 Test::on ( "Recover ( Connect::on ( database ), Log ( Connect::on ( database ) ), Crypt )", function ( $assert ) {
-	$recover = new Recover ( Connect::on ( "modules" ), new Log ( Connect::on ( "modules" ), new Crypt ) );
+	$recover = new Recover ( Connect::on ( "modules" ), new Log ( Connect::on ( "modules" ) ), new Crypt );
 
 	$assert::ok ( ( gettype( $recover ) == "object" ), "Testa o tempo para inicar a classe Recove r e carregar as dependências" );
 } );
+
+Test::on ( "Recover->requisition ( email )", function ( $assert ) {
+	$recover = new Recover ( Connect::on ( "modules" ), new Log ( Connect::on ( "modules" ) ), new Crypt );
+	$requisition = $recover->requisition ( "root@root.com" );
+
+	$assert::ok ( $requisition, "Testa o método de requisição para uma recuperação de senha." );
+} );
+
+Test::on ( "Recover->token ( )", function ( $assert ) {
+	$recover = new Recover ( Connect::on ( "modules" ), new Log ( Connect::on ( "modules" ) ), new Crypt );
+	$requisition = $recover->requisition ( "admin@admin.com" );
+	$token = $recover->token ( );
+
+	$assert::ok ( ( $requisition && strlen ( $token ) > 0 ), "Testa o método que retorn a o token gerado para recuperar senha." );
+} );
+
+Test::on ( "Recover->link ( )", function ( $assert ) {
+	$recover = new Recover ( Connect::on ( "modules" ), new Log ( Connect::on ( "modules" ) ), new Crypt );
+	$requisition = $recover->requisition ( "user@user.com" );
+	$link = $recover->link ( );
+	$assert::ok ( ( $requisition && strlen ( $link ) > 0 ), "Testa o método que retorna o link de recuperação." );
+} );
+
+Test::on ( "Recover->access ( )", function ( $assert ) {
+	$recover = new Recover ( Connect::on ( "modules" ), new Log ( Connect::on ( "modules" ) ), new Crypt );
+
+	$requisition = $recover->requisition ( "guest@guest.com" );
+	$access = $recover->access ( $recover->token ( ) );
+
+	$assert::ok ( $access, "Testa o método que recebe o token e valida o acesso ao painel de recuperação da senha." );
+} );
+
 
 
 #echo "<br><br>";
