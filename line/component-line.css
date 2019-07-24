@@ -1,23 +1,22 @@
 /*component-line.css*/
-
-html .line,
-html * [ class*="line-" ] {
+html [ line ],
+html * [ line ] {
     border-color: rgba( 255, 0, 0, 0.3 ) !important;
     border-width: 0.25px !important;
 }
 
-html .line {
+html [ line ] {
 	border-style: solid !important;
 }
 
-html .line-dashed {
+html [ line="dashed" ] {
     border-style: dashed !important;
 }
 
-html .line-dotted {
+html [ line="dotted" ] {
     border-style: dotted !important;
 }
 
-html .line-double {
+html [ line="double" ] {
     border-style: double !important;
 }
