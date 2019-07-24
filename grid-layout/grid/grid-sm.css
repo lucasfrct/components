@@ -1,6 +1,5 @@
 /*landscape phones:; 576px, 767px*/
 @media ( min-width: 576px ) {
-     font-size: 14px;
     [ sm^="1-"  ] { grid-column-start: 1;  }
     [ sm^="2-"  ] { grid-column-start: 2;  }
     [ sm^="3-"  ] { grid-column-start: 3;  }
@@ -25,4 +24,10 @@
     [ sm$="-10" ] { grid-column-end: 11; }
     [ sm$="-11" ] { grid-column-end: 12; }
     [ sm$="-12" ] { grid-column-end: 13; }
+
+    [ sm-hide ]      { display: none; }
+    [ sm-show ]      { display: block; }
+    [ sm-invisible ] { visibility: hidden; }
+    [ sm-visible ]   { visibility: visible; }
+    font-size: 14px;
 }

@@ -8,21 +8,27 @@
     grid-template-columns: repeat( 12, 1fr );
     grid-template-rows: auto;
     grid-auto-flow: row;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
     page-break-after: always;
+    position: relative;
+    vertical-align: top;
 }
 
 [ container ]::before,
 [ container ]::after {
     content: "";
     clear: both;
+    display: table;
 }
 
 [ container ], 
 [ container ] * {
-    position: relative;
     box-sizing: border-box;
+    clear: both;
+    position: relative;
     word-break: keep-all;
     word-wrap: break-word;
     white-space: normal;
-    clear: both;
 }

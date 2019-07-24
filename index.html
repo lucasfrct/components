@@ -7,8 +7,9 @@
 	<meta http-equiv="cache-control" content="no-cache" />
 	<meta http-equiv="expires" content="0" />
 	<meta http-equiv="pragma" content="no-cache" />
-	<link rel="stylesheet" type="text/css" href="grid-layout/grid.min.css">
 	<title>Components CSS</title>
+	<link rel="stylesheet" type="text/css" href="grid-layout/compile-grid-css.php" />
+	<link rel="stylesheet" type="text/css" href="grid-layout/grid.min.css" />
 	<style type="text/css" media="screen">
 		[ container ] > div {
 			border: solid 1px #AAA;
@@ -31,11 +32,45 @@
 		<div xs="11-11">11</div>
 		<div xs="12-12">12</div>
 
-		<div xs="1-2">col="1-2"</div>
-		<div xs="3-5">col="3-5"</div>
-		<div xs="6-9">col="6-9"</div>
-		<div xs="10-12">col="10-12"</div>
-				
+		<div xs="1-2">xs="1-2"</div>
+		<div xs="3-5">xs="3-5"</div>
+		<div xs="6-9">xs="6-9"</div>
+		<div xs="10-12">xs="10-12"</div>
 	</section>
+	<section>
+		<a href="#">Link a</a>
+		<strong>strong</strong>
+		<mark>mark</mark>
+		<small>small</small>
+		<strong>teste<sup>sup</sup></strong>
+		<strong>teste<sub>sub</sub></strong>
+		<hr>
+		<img alt="img: text aternative">
+		<hr>
+		<sgv></sgv>
+		<hr>
+		<canvas>canvas</canvas>
+		<div hide > teste hide </div>
+		<div invisible > teste invisible </div>
+		<div divider ></div>
+		<div center-vertical style="width:500px; height: 200px; border: solid 1px #F00;"> 
+			texto no centro vertical (center-vertical)
+		</div>
+		<div divider ></div>
+		<div center-horizontal style="width:500px; height: 200px; border: solid 1px #F00;"> 
+			texto no centro Horizontal (center-horizontal)
+		</div>
+		<div divider ></div>
+		<div center-block style="width:500px; height: 200px; border: solid 1px #F00;"> 
+			texto no  (center-horizontal)centro do bloco (center-block)
+		</div>
+	</section>
+	<section>
+		<div left >left</div>
+		<div right>right</div>
+		<div clear>clear</div>
+		<div circle></div>
+	</section>
+	<footer class="page-footer"> <span class="copyright">Lucas Costa</span></footer>
 </body>
 </html>

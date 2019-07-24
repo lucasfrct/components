@@ -1,6 +1,5 @@
 /*tablets: 768px, 991px*/
 @media ( min-width: 768px ) {
-     font-size: 14px;
     [ md^="1-"  ] { grid-column-start: 1;  }
     [ md^="2-"  ] { grid-column-start: 2;  }
     [ md^="3-"  ] { grid-column-start: 3;  }
@@ -25,4 +24,10 @@
     [ md$="-10" ] { grid-column-end: 11; }
     [ md$="-11" ] { grid-column-end: 12; }
     [ md$="-12" ] { grid-column-end: 13; }
+
+    [ md-hide ]      { display: none; }
+    [ md-show ]      { display: block; }
+    [ md-invisible ] { visibility: hidden; }
+    [ md-visible ]   { visibility: visible; }
+    font-size: 14px;
 }

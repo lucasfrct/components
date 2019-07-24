@@ -1,6 +1,5 @@
 /*portrait phones: 320px, 575px*/
 @media ( min-width: 32px ) {
-     font-size: 14px;
     [ xs^="1-"  ] { grid-column-start: 1;  }
     [ xs^="2-"  ] { grid-column-start: 2;  }
     [ xs^="3-"  ] { grid-column-start: 3;  } 
@@ -25,4 +24,10 @@
     [ xs$="-10" ] { grid-column-end: 11; }
     [ xs$="-11" ] { grid-column-end: 12; }
     [ xs$="-12" ] { grid-column-end: 13; }
+
+    [ xs-hide ]      { display: none; }
+    [ xs-show ]      { display: block; }
+    [ xs-invisible ] { visibility: hidden; }
+    [ xs-visible ]   { visibility: visible; }
+    font-size: 14px
 }

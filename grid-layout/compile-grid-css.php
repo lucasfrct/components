@@ -18,4 +18,4 @@ $compile->getList ( $grid );
 $compile->joinFiles ( );
 $compile->minify ( );
 $compile->writeFile ( "grid.min.css" );
-$compile->content ( );
+#$compile->content ( );

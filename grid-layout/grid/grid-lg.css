@@ -1,6 +1,5 @@
 /*desktops:; 992px, 1199px*/
 @media ( min-width: 992px ) {
-     font-size: 14.5px;
     [ lg^="1-"  ] { grid-column-start: 1;  }
     [ lg^="2-"  ] { grid-column-start: 2;  }
     [ lg^="3-"  ] { grid-column-start: 3;  }
@@ -24,5 +23,11 @@
     [ lg$="-9"  ] { grid-column-end: 10; }
     [ lg$="-10" ] { grid-column-end: 11; }
     [ lg$="-11" ] { grid-column-end: 12; }
-    [ lg$="-12" ] { grid-column-end: 13; }   
+    [ lg$="-12" ] { grid-column-end: 13; }
+
+    [ lg-hide ]      { display: none; }
+    [ lg-show ]      { display: block; }
+    [ lg-invisible ] { visibility: hidden; }
+    [ lg-visible ]   { visibility: visible; }
+    font-size: 14.5px;
 }
