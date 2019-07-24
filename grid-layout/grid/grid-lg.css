@@ -1,5 +1,6 @@
 /*desktops:; 992px, 1199px*/
 @media ( min-width: 992px ) {
+     font-size: 14.5px;
     [ lg^="1-"  ] { grid-column-start: 1;  }
     [ lg^="2-"  ] { grid-column-start: 2;  }
     [ lg^="3-"  ] { grid-column-start: 3;  }

@@ -1,5 +1,6 @@
 /*portrait phones: 320px, 575px*/
 @media ( min-width: 32px ) {
+     font-size: 14px;
     [ xs^="1-"  ] { grid-column-start: 1;  }
     [ xs^="2-"  ] { grid-column-start: 2;  }
     [ xs^="3-"  ] { grid-column-start: 3;  } 

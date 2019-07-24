@@ -1,5 +1,6 @@
 /*landscape phones:; 576px, 767px*/
 @media ( min-width: 576px ) {
+     font-size: 14px;
     [ sm^="1-"  ] { grid-column-start: 1;  }
     [ sm^="2-"  ] { grid-column-start: 2;  }
     [ sm^="3-"  ] { grid-column-start: 3;  }

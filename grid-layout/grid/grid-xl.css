@@ -1,5 +1,6 @@
 /*large desktops:; 1200px and up */
 @media ( min-width: 1200px ) {
+     font-size: 15px;
     [ xl^="1-"  ] { grid-column-start: 1;  }
     [ xl^="2-"  ] { grid-column-start: 2;  }
     [ xl^="3-"  ] { grid-column-start: 3;  }
