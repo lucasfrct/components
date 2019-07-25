@@ -11,6 +11,7 @@ $grid = array (
 	'grid/grid-md.css',
 	'grid/grid-lg.css',
 	'grid/grid-xl.css',
+	'grid/typography.css',
 );
 
 $compile = new Compile;
