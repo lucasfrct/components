@@ -1,3 +1,0 @@
-<?php 
-
-$GLOBALS [ "SSL" ] = Array ( );
