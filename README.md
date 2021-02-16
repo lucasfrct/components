@@ -1,2 +1,23 @@
 # components
-Um conjunto de classes e marcações CSS, mais cum conjunto de funções Javascript e mais um conjunto de funções de classes PHP para facilitar o desenvolvimento 
+    Componentes simples para uso geral na Web.
+
+## CSS componentes
+
+- [x] Grid Layout
+- [x] Colors Palettes
+- [x] Classes Full Image
+- [x] Styles to Lines
+- [x] Effect Pulse (Materialize)
+- [x] Style Form
+- [x] Modal
+- [x] xmp
+- [x] z-depth (shadows)
+
+## JS
+
+- [x] Array1.union(Array2)
+- [x] Array1.intersection(Array2)
+- [x] Array.difference(Array2)
+- [x] Array.detectIndex(value)
+- [x] Array.retire(value) || Array.retire(index, true)
+- [x] Array.clean()
