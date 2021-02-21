@@ -85,4 +85,3 @@ console.log("===================================================================
 console.log("Prototype Array.retire(value)")
 console.log("clean values [null, false, undefined]: ", numbersA.clean())
 console.log(".")
-
