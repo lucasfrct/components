@@ -15,8 +15,8 @@
 
 ## JS
 
-- [x] Array1.union(Array2)
-- [x] Array1.intersection(Array2)
+- [x] Array.union(Array2)
+- [x] Array.intersection(Array2)
 - [x] Array.difference(Array2)
 - [x] Array.detectIndex(value)
 - [x] Array.retire(value) || Array.retire(index, true)
